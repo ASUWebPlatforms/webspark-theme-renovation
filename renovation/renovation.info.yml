@@ -1,0 +1,17 @@
+name: Renovation
+type: theme
+description: "ASU's implementation of Web Standards 2.0 in Drupal 8+"
+package: ASU
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - renovation/global-styling
+ 
+base theme: classy
+
+regions:
+  header: Header
+  menu: Menu
+  content: Content
+  mega_footer: Mega Footer
+  footer: Footer

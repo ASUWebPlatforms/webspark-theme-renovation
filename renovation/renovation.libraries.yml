@@ -1,0 +1,6 @@
+global-styling:
+  css:
+    theme:
+      css/bootstrap-asu.css: {}
+  js:
+    js/global-header.js: {}
