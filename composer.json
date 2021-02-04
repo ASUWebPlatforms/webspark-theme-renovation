@@ -1,0 +1,13 @@
+{
+    "name": "asuwebplatforms/webspark-theme-renovation",
+    "description": "Theme for Webspark 2: Implements Web Standards 2.0",
+    "type": "drupal-custom-theme",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Manny Singh",
+            "email": "msingh45@asu.edu"
+        }
+    ],
+    "require": {}
+}
