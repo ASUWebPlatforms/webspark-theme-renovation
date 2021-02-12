@@ -31,11 +31,13 @@
  */
 #}
 {% if items %}
-  {% set DESKTOP_DEFAULT_SIZE, MOBILE_DEFAULT_SIZE = 6, 4 %}
   <nav role="navigation" aria-labelledby="{{ heading_id }}">
+    {# Hidden title of pagination component (for accessibility) #}
     <h4 id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
+
+    {# Actual pagination markup #}
     <ul class="pagination">
-      {# Print previous item if we are not on the first page. #}
+      {# Render "Previous page" button (either enabled or disabled) #}
       {% if items.previous %}
         <li class="page-item">
       {% else %}
@@ -46,47 +48,51 @@
             <span aria-hidden="true">{{ 'Prev'|t }}</span>
           </a>
         </li>
-      {# Add an ellipsis if there are further previous pages. #}
-      {# {% if ellipses.previous %}
-        <li class="page-item" role="presentation">&hellip;</li>
-      {% endif %} #}
-      {# Now generate the actual pager piece. #}
-      {% if pager_max <= DESKTOP_DEFAULT_SIZE %}
-        {% for key, item in items.pages %}
-          <li class="page-item{{ current == key ? ' active' : '' }}">
-            {% if current == key %}
-              {% set title = 'Current page'|t %}
-            {% else %}
-              {% set title = 'Go to page @key'|t({'@key': key}) %}
-            {% endif %}
-            <a class="page-link" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
-              <span class="visually-hidden">
-                {{ current == key ? 'Current page'|t : 'Page'|t }}
-              </span>
-              {{- key -}}
-            </a>
+      
+      {% if current == 1 %}
+        <li class="page-item active">
+          <a class="page-link" href="{{ items.pages[current].href }}" title={{ 'Current' |t }}><span class="visually-hidden">{{ 'Current page' |t}}</span>{{ current }}</a>
+        </li>
+        {% if items.pages[current + 1] %}
+          <li class="page-item">
+            <a class="page-link" href="{{ items.pages[current + 1].href }}" title={{ 'Go to page @key' |t({'@key': current + 1}) }}><span class="visually-hidden">{{ 'Page' |t }} </span>{{ current + 1 }}</a>
           </li>
-        {% endfor %}
-      {% else %}
-        {% set prevPages = [current - 1, current, current + 1] %}
-        {% set lastPages = [pager_max - 2, pager_max - 1, pager_max] %}
-        {% for key, item in items.pages %}
-          <li class="page-item{{ current == key ? ' active' : '' }}">
-            {% if current == key %}
-              {% set title = 'Current page'|t %}
-            {% else %}
-              {% set title = 'Go to page @key'|t({'@key': key}) %}
-            {% endif %}
-            <a class="page-link" href="{{ item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
-              <span class="visually-hidden">
-                {{ current == key ? 'Current page'|t : 'Page'|t }}
-              </span>
-              {{- key -}}
-            </a>
+        {% endif %}
+        {% if items.pages[current + 2] %}
+          <li class="page-item">
+            <a class="page-link" href="{{ items.pages[current + 2].href }}" title={{ 'Go to page @key' |t({'@key': current + 2}) }}><span class="visually-hidden">{{ 'Page' |t }} </span>{{ current + 2 }}</a>
           </li>
-        {% endfor %}
+        {% endif %}
+        {% if ellipses.next %}
+          <li class="page-item" role="presentation">&hellip;</li>
+        {% endif %}
+        {% for item in items.pages %} {{ 1 }} {% endfor %}
+        <li>{{ items.pages[17].href }}</li>
       {% endif %}
-      {# Print next item if we are not on the last page. #}
+
+      {% if current > 1 and current < pager_max - 2 %}
+        <li class="page-item">
+          <a class="page-link" href="{{ items.pages[current - 1].href }}" title={{ 'Go to page @key' |t({'@key': current - 1}) }}><span class="visually-hidden">{{ 'Page' |t}}</span>{{ current - 1}}</a>
+        </li>
+        {% if items.pages[current] %}
+          <li class="page-item active">
+            <a class="page-link" href="{{ items.pages[current].href }}" title={{ 'Current page' |t}}><span class="visually-hidden">{{ 'Current Page' |t }} </span>{{ current }}</a>
+          </li>
+        {% endif %}
+        {% if items.pages[current + 1] %}
+          <li class="page-item">
+            <a class="page-link" href="{{ items.pages[current + 1].href }}" title={{ 'Go to page @key' |t({'@key': current + 1}) }}><span class="visually-hidden">{{ 'Page' |t }} </span>{{ current + 1 }}</a>
+          </li>
+        {% endif %}
+        {% if ellipses.next %}
+          <li class="page-item" role="presentation">&hellip;</li>
+        {% endif %}
+      {% endif %}
+
+      {% if current >= pager_max - 2 and current != pager_max %}{% endif %}
+      {% if current == pager_max %}{% endif %}
+
+      {# Render "Next page" button (either enabled or disabled) #}
       {% if items.next %}
         <li class="page-item">
       {% else %}
@@ -98,5 +104,6 @@
           </a>
         </li>
     </ul>
+    {# End pagination markup #}
   </nav>
 {% endif %}
