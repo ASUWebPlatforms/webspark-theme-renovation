@@ -1,6 +1,10 @@
-global-styling:
+style:
+  version: VERSION
   css:
     theme:
-      css/bootstrap-asu.css: {}
+      assets/css/renovation.style.css: {}
   js:
-    js/global-header.js: {}
+    assets/js/renovation.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
