@@ -1,6 +1,12 @@
-# Ignore SASS files
+# Ignore SASS files.
 /.sass-cache
+# Ignore OSX index files.
 .DS_Store
+# Ignore IDE/app specific files.
 *.codekit
 .idea
+.vscode
+# Ignore node modules.
 node_modules
+# Ignore assets folder as this should be rebuilt.
+assets

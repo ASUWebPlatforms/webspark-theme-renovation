@@ -4,7 +4,7 @@ Theme for Webspark 2: Implements Web Standards 2.0
 
 ## Installation
 
-Ensure that the Radix theme is installed. Later we can decouple this.
+Ensure that the Radix theme and the components moule are installed. Later we can decouple this.
 
 For historical reasons when cloning this repo use:
 

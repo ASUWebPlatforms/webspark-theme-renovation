@@ -5,10 +5,10 @@ import 'bootstrap';
 
   'use strict';
 
-  Drupal.behaviors.helloWorld = {
+  /*Drupal.behaviors.helloWorld = {
     attach: function (context) {
       console.log('Hello World');
     }
-  };
+  };*/
 
 })(jQuery, Drupal);

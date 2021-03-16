@@ -1,7 +1,7 @@
 // css Bootstrap doesn't have variables for
 @import 'extends/misc';
 @import 'extends/alerts';
-@import 'extends/banners';
+@import '../components/banners/banners';
 @import 'extends/buttons';
 @import 'extends/badges';
 @import 'extends/icons';
