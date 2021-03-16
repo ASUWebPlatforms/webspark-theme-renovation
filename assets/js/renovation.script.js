@@ -18093,12 +18093,11 @@ __webpack_require__.r(__webpack_exports__);
 
 (function () {
   'use strict';
-
-  Drupal.behaviors.helloWorld = {
-    attach: function attach(context) {
+  /*Drupal.behaviors.helloWorld = {
+    attach: function (context) {
       console.log('Hello World');
     }
-  };
+  };*/
 })(jQuery, Drupal);
 
 /***/ }),

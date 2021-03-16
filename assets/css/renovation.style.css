@@ -23605,6 +23605,12 @@ div[class="alert alert-block"] {
   flex: 2;
   margin-top: -1rem;
   margin-right: -1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner #btn-close {
+  outline: none;
+  border: none;
 }
 
 .banner-green {
@@ -27340,6 +27346,12 @@ div[class="alert alert-block"] {
   flex: 2;
   margin-top: -1rem;
   margin-right: -1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner #btn-close {
+  outline: none;
+  border: none;
 }
 
 .banner-green {

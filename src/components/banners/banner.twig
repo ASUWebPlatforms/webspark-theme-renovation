@@ -1,6 +1,6 @@
 <div class="banner {{ background_color }}" role="banner">
   <div class="banner-icon">
-    <span title="Banner" class="fa fa-icon fa-bell"></span>
+    {{ icon }}
   </div>
   <div class="banner-content">
     {{ heading }}
@@ -10,6 +10,11 @@
     {{ cta }}
   </div>
   <div class="banner-close">
-    <button type="button" class="btn btn-circle btn-circle-alt-white close" aria-label="Close" onclick="event.target.parentNode.parentNode.style.display='none';">x</button>
+    <button type="button" id="btn-close" class="fa-layers fa-fw fa-2x" style="background-color: transparent; border:none;">
+    <i class="fas fa-circle" style="color:white"></i>
+    <i class="fas fa-times" data-fa-transform="shrink-6"></i>
+  </button>
   </div>
 </div>
+
+{{ attach_library('renovation/banner') }}
