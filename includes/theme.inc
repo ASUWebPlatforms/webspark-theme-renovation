@@ -8,8 +8,9 @@
 /**
  * Implements hook_library_info_build().
  * Automatically creates components libraries (Not visible in theme's libraries.yml file)
- * You can directly use the component name as a library, f.x
- *  {{ attach_library('SUBTHEME_MACHINE_NAME/block') }}.
+ * This allows us to add js files/behaviours to components within the components own folder.
+ * Note that the component should have the same name as the folder.
+ *  {{ attach_library('renovation/block') }}.
  */
 function renovation_library_info_build() {
   $extensions = ['css', 'js'];
@@ -53,6 +54,7 @@ function renovation_preprocess(&$variables) {
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
 
+  // Inject the base url into every template
   global $base_url;
   $variables['base_url'] = $base_url;
 }
