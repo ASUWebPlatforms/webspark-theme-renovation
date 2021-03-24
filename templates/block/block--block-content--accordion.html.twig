@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Template for a banner block.
+ */
+#}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="container">
+    <div class="accordion">
+      <div class="card mb-0">
+        {# Hide color select field as not imp-lemented yet.#}
+        {{ content|without('field_color') }}
+      </div>
+    </div>
+  </div>
+</div>
