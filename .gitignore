@@ -8,5 +8,3 @@
 .vscode
 # Ignore node modules.
 node_modules
-# Ignore assets folder as this should be rebuilt.
-assets
