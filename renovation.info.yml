@@ -23,6 +23,10 @@ libraries:
 
 libraries-override:
   radix/bootstrap: false
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        core/misc/dialog/off-canvas.reset.css: css/core/dialog/off-canvas.reset.css
 
 ckeditor_stylesheets:
   - assets/css/renovation.style.css
