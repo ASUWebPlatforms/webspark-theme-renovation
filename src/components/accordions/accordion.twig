@@ -1,0 +1,14 @@
+<div class="card card-foldable">
+  <div class="card-header">
+    <h4>
+      <a id="{{ heading }}" class="collapsed" data-toggle="collapse" href="#example-content-1" role="button"
+         aria-expanded="false" aria-controls="{{ heading }}">{{ heading }}
+        <span class="fas fa-chevron-up"></span>
+      </a>
+    </h4>
+  </div>
+  <div id="example-content-1" class="collapse card-body" aria-labelledby="example-header-1">
+    {{ body_text|raw }}
+  </div>
+</div>
+
