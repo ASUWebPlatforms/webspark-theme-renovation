@@ -9,3 +9,18 @@ $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function renovation_preprocess_pager(array &$variables) {
+  // Access current pager using Pager service
+  $pagerRef = $variables['pager']['#element'];
+  $pager = \Drupal::service('pager.manager')->getPager($pagerRef);
+  
+  // Get total number of pages
+  $pager_max = $pager->getTotalPages();
+
+  // Pass total number of pages to template
+  $variables['pager_max'] = $pager_max;
+}
