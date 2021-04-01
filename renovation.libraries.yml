@@ -50,6 +50,7 @@ style:
       assets/css/partials/_headings.css: {}
       assets/css/partials/_typography.css: {}
       assets/css/partials/_misc.css: {}
+      assets/css/renovation.style.css: {}
   js:
     assets/js/renovation.script.js: {}
   dependencies:
