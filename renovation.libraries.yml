@@ -1,8 +1,55 @@
 style:
   version: VERSION
   css:
+    base:
+      assets/css/partials/_base.css: {}
+    layout:
+      assets/css/partials/_layout.css: {}
+      assets/css/partials/_spacing.css: {}
+    component:
+      assets/css/partials/_accordions.css: {}
+      assets/css/partials/_alerts.css: {}
+      assets/css/partials/_badges.css: {}
+      assets/css/partials/_banners.css: {}
+      assets/css/partials/_blockquotes.css: {}
+      assets/css/partials/_breadcrumbs.css: {}
+      assets/css/partials/_button-groups.css: {}
+      assets/css/partials/_buttons.css: {}
+      assets/css/partials/_cards.css: {}
+      assets/css/partials/_carousel.css: {}
+      assets/css/partials/_dropdown.css: {}
+      assets/css/partials/_footer.css: {}
+      assets/css/partials/_forms.css: {}
+      assets/css/partials/_global_header.css: {}
+      assets/css/partials/_hero.css: {}
+      assets/css/partials/_images.css: {}
+      assets/css/partials/_input.css: {}
+      assets/css/partials/_jumbotron.css: {}
+      assets/css/partials/_links.css: {}
+      assets/css/partials/_list-groups.css: {}
+      assets/css/partials/_lists.css: {}
+      assets/css/partials/_media.css: {}
+      assets/css/partials/_modals.css: {}
+      assets/css/partials/_nav.css: {}
+      assets/css/partials/_pagination.css: {}
+      assets/css/partials/_popover.css: {}
+      assets/css/partials/_print.css: {}
+      assets/css/partials/_progress.css: {}
+      assets/css/partials/_quicklinks.css: {}
+      assets/css/partials/_sidebar.css: {}
+      assets/css/partials/_spinner.css: {}
+      assets/css/partials/_tables.css: {}
+      assets/css/partials/_tabs.css: {}
+      assets/css/partials/_testimonials.css: {}
+      assets/css/partials/_toast.css: {}
+      assets/css/partials/_tooltips.css: {}
+    state:
+      assets/css/partials/_close.css: {}
     theme:
-      assets/css/renovation.style.css: {}
+      assets/css/partials/_colors.css: {}
+      assets/css/partials/_headings.css: {}
+      assets/css/partials/_typography.css: {}
+      assets/css/partials/_misc.css: {}
   js:
     assets/js/renovation.script.js: {}
   dependencies:
