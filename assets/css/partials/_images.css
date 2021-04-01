@@ -1,0 +1,114 @@
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
+}
+
+.img-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+}
+
+/*--------------------------------------------------------------
+# Content Image Overlap
+
+1. Mobile
+2. Desktop lg
+3. Desktop xl
+--------------------------------------------------------------*/
+.uds-image-overlap {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.uds-image-overlap:before {
+  content: '';
+  height: 1.5rem;
+  width: calc(100% - 4rem);
+  background-color: #ffc627;
+  position: absolute;
+  left: 2rem;
+  top: 0;
+}
+
+/*------------------------------------------------------------------
+2. Desktop, large
+------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .uds-image-overlap {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr 10rem 1fr 10rem 1fr 1.5rem;
+    grid-template-rows: minmax(0, auto) minmax(0, 2rem) 1fr minmax(0, 2rem) minmax(0, auto);
+    gap: 0px 0px;
+  }
+  .uds-image-overlap:before {
+    display: none;
+  }
+  .uds-image-overlap img {
+    width: 100%;
+    height: auto;
+    grid-column: 2 / span 4;
+    grid-row: 2 / 5;
+  }
+  .uds-image-overlap .content-wrapper {
+    grid-column: 5 / span 3;
+    grid-row: 3 / 4;
+    background-color: #ffffff;
+    padding: 2rem;
+  }
+  .uds-image-overlap:after {
+    content: '';
+    width: 1.5rem;
+    background-color: #ffc627;
+    grid-column: 1 / 2;
+    grid-row: 3 / span 1;
+  }
+  .uds-image-overlap.content-left img {
+    grid-column: 3 / span 4;
+    grid-row: 2 / 5;
+  }
+  .uds-image-overlap.content-left .content-wrapper {
+    grid-column: 1 / span 3;
+    grid-row: 3 / 4;
+  }
+  .uds-image-overlap.content-left:after {
+    grid-column: 7 / 8;
+    grid-row: 3 / span 1;
+  }
+}
+
+/*------------------------------------------------------------------
+2. Desktop, XL
+--------------------------------------------------------------------*/
+@media (min-width: 1260px) {
+  .uds-image-overlap {
+    grid-template-rows: minmax(0, auto) minmax(0, 4.5rem) 1fr minmax(0, 4.5rem) minmax(0, auto);
+  }
+  .uds-image-overlap .content-wrapper {
+    padding: 3rem;
+  }
+}

@@ -1,0 +1,180 @@
+/* Blockquotes */
+/*
+ * blockquotes-output - Return base64-encoded string for rendering open quote.
+ * @param (str) $color - (optional) defaults to dark gray. Alt options (gold, maroon, white)
+ */
+/*
+ * blockquotes-quotes - Returns background-image CSS rule
+ * @param (str) $color - desired colors (gold, maroon, white)
+ */
+/*
+ * Variables
+ * @TODO - Replace with design tokens
+ */
+/*
+ * element-margins-vertical - Generates top and bottom margins for containers
+ * @param (str) $type - Type of container. Options:
+ *   - default: Content/copy-level element (body content, inside WYSIWYG editors, etc.; Smaller margins.)
+ *   - ws2-container: Layout-level element (generally not for content body or WYSIWYG-generated content; (Larger margins)
+ * @param (int) $scale - multiples of the base px size (usually 16px). Defaults to 3 (for 3rem == 48px).
+ */
+
+ .initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 80%;
+  color: #6c757d;
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0";
+}
+
+ .ws2-element-spacing-entityq {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.ws2-element-spacing-entityq-full {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+
+.uds-element-spacing-inline {
+  margin-top: 0;
+  margin-bottom: 96px;
+}
+
+/* =Global alternative styling : Gray, Black backgrounds
+-------------------------------------------------------------- */
+.ws2-element-alt {
+  padding: 24px 24px;
+  border-style: solid;
+  border-width: 1px;
+  /*
+   * Gray
+   */
+  /*
+   * Black
+   */
+}
+
+.ws2-element-alt > *:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.ws2-element-alt > *:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ws2-element-alt.ws2-element-alt-gray {
+  color: #191919;
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+}
+
+.ws2-element-alt.ws2-element-alt-black {
+  color: #fafafa;
+  background-color: #191919;
+  border-color: #191919;
+}
+
+.ws2-element-alt.ws2-element-alt-black a {
+  color: #ffc627;
+}
+
+/* Blockquote SASS
+----------------------------------------------*/
+blockquote {
+  border-left: none;
+  font-weight: bold;
+  padding-left: 4rem;
+  max-width: 75ch;
+  /* Signatures (beneath content) */
+  /* Content customizations */
+}
+
+blockquote.ws2-element-alt {
+  padding: 24px 24px 24px 4rem;
+}
+
+blockquote:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDIuODcgMjQ1LjgyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkxOTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMTMuNjEsMjQ1LjgySDBWMTY0LjU2cTAtNDkuMzQsOC42OS03Ny44M1Q0MC44NCwzNS41OFE2NC4yOSwxMi45NSwxMDAuNjcsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NFQ1OC42MywxMzIuMjFoNTVabTE4MCwwSDE4MFYxNjQuNTZxMC00OS43NCw4LjctNzhUMjIxLDM1LjU4UTI0NC42NSwxMi45NSwyODAuNjMsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NHQtMTUuNTcsNTMuNzdoNTVaIi8+PC9nPjwvZz48L3N2Zz4K);
+  background-repeat: no-repeat;
+  content: '';
+  min-height: 3rem;
+  min-width: 2.375rem;
+  float: left;
+  margin-left: -4rem;
+  color: #d0d0d0;
+}
+
+blockquote > p:not([class*=sig-]):after {
+  content: '"';
+}
+
+blockquote.ws2-element-maroon:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDIuODcgMjQ1LjgyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzhjMWQ0MDt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMTMuNjEsMjQ1LjgySDBWMTY0LjU2cTAtNDkuMzQsOC42OS03Ny44M1Q0MC44NCwzNS41OFE2NC4yOSwxMi45NSwxMDAuNjcsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NFQ1OC42MywxMzIuMjFoNTVabTE4MCwwSDE4MFYxNjQuNTZxMC00OS43NCw4LjctNzhUMjIxLDM1LjU4UTI0NC42NSwxMi45NSwyODAuNjMsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NHQtMTUuNTcsNTMuNzdoNTVaIi8+PC9nPjwvZz48L3N2Zz4K);
+}
+
+blockquote.ws2-element-gold:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDIuODcgMjQ1LjgyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmYzYyNzt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMTMuNjEsMjQ1LjgySDBWMTY0LjU2cTAtNDkuMzQsOC42OS03Ny44M1Q0MC44NCwzNS41OFE2NC4yOSwxMi45NSwxMDAuNjcsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NFQ1OC42MywxMzIuMjFoNTVabTE4MCwwSDE4MFYxNjQuNTZxMC00OS43NCw4LjctNzhUMjIxLDM1LjU4UTI0NC42NSwxMi45NSwyODAuNjMsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NHQtMTUuNTcsNTMuNzdoNTVaIi8+PC9nPjwvZz48L3N2Zz4K);
+}
+
+blockquote.ws2-element-white:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDIuODcgMjQ1LjgyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZmZmZjt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMTMuNjEsMjQ1LjgySDBWMTY0LjU2cTAtNDkuMzQsOC42OS03Ny44M1Q0MC44NCwzNS41OFE2NC4yOSwxMi45NSwxMDAuNjcsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NFQ1OC42MywxMzIuMjFoNTVabTE4MCwwSDE4MFYxNjQuNTZxMC00OS43NCw4LjctNzhUMjIxLDM1LjU4UTI0NC42NSwxMi45NSwyODAuNjMsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NHQtMTUuNTcsNTMuNzdoNTVaIi8+PC9nPjwvZz48L3N2Zz4K);
+}
+
+blockquote.ws2-bq-image {
+  overflow: auto;
+  padding-left: 14.3625rem;
+}
+
+blockquote.ws2-bq-image img:first-of-type {
+  -webkit-clip-path: circle(90px);
+          clip-path: circle(90px);
+  float: left;
+  position: absolute;
+  margin-left: -14.375rem;
+}
+
+blockquote.ws2-bq-image:before {
+  font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  font-size: initial;
+  content: initial;
+  margin-left: -14.3625rem;
+  color: #d0d0d0;
+}
+
+blockquote .ws2-sig-title,
+blockquote .ws2-sig-byline {
+  font-size: 16px;
+  font-style: inherit;
+}
+
+blockquote .ws2-sig-title:before {
+  padding-right: 0.5em;
+  content: "\2014";
+}
+
+blockquote .ws2-sig-byline {
+  clear: left;
+  display: block;
+  font-weight: normal;
+  padding-left: 1.5em;
+}
+
+blockquote.ws2-element-black a {
+  color: #ffc627;
+}

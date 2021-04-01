@@ -1,0 +1,61 @@
+.nav-tabs .nav-link {
+  color: #000;
+  padding: 0.25em 1em;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 8px solid #8c1d40;
+}
+
+/* hover - maroon text */
+.mobile-tabs {
+  -ms-flex-wrap: inherit;
+      flex-wrap: inherit;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-shadow: inset 0px -2px 0px 0px #cdcdcd;
+          box-shadow: inset 0px -2px 0px 0px #cdcdcd;
+}
+
+.mobile-tabs .nav-tabs {
+  -ms-flex-wrap: inherit;
+      flex-wrap: inherit;
+  position: relative;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+  left: 0px;
+}
+
+.mobile-tabs .nav-tabs .nav-link:hover,
+.mobile-tabs .nav-tabs .nav-link:focus {
+  color: #8c1d40;
+}
+
+.mobile-tabs .nav-tabs::-webkit-scrollbar {
+  /*display: none;*/
+}
+
+.tab-content {
+  padding-top: 32px;
+}
+
+.mobile-tabs {
+  position: relative;
+}
+
+.mobile-tabs .scroll::-webkit-scrollbar {
+  display: none;
+}

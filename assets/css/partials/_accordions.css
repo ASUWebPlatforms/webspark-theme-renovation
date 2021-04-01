@@ -1,0 +1,27 @@
+.accordion {
+  overflow-anchor: none;
+}
+
+.accordion > .card {
+  overflow: hidden;
+}
+
+.accordion > .card:not(:last-of-type) {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion > .card:not(:first-of-type) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.accordion > .card > .card-header {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.accordion .card.card-foldable {
+  border-bottom: 1px solid #d0d0d0;
+}

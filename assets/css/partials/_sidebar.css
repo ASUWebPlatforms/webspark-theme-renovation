@@ -1,0 +1,104 @@
+/*------------------------------------------------------------------
+Sidebar Navigation
+
+1. Component Mixins
+2. Sidebar
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+2. Sidebar
+--------------------------------------------------------------------*/
+.sidebar .nav-text {
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: -0.015em;
+  color: #191919;
+  padding: 1rem;
+  border: 1px solid #e8e8e8;
+}
+
+.sidebar .nav-text:not(:last-child) {
+  border-bottom: 0;
+}
+
+.sidebar .nav-link {
+  color: #191919;
+}
+
+.sidebar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.sidebar .nav-link:visited {
+  color: #191919;
+}
+
+.sidebar .nav-link.active {
+  text-decoration: none;
+  padding-bottom: 0;
+}
+
+.sidebar .nav-link.active:after {
+  content: '';
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+  height: 0.5rem;
+  width: 100%;
+  background-color: #ffc627;
+  text-decoration: none;
+}
+
+.sidebar > .nav-link {
+  border: 1px solid #e8e8e8;
+  padding: 1.5rem 1rem;
+  overflow: hidden;
+  color: #191919;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.037rem;
+}
+
+.sidebar > .nav-link:not(:last-child) {
+  border-bottom: 0;
+}
+
+.sidebar .card-foldable {
+  border: 1px solid #e8e8e8;
+}
+
+.sidebar .card-foldable .card-header,
+.sidebar .card-foldable .card-body {
+  background-color: transparent;
+}
+
+.sidebar .card-foldable .card-header h1, .sidebar .card-foldable .card-header h2, .sidebar .card-foldable .card-header h3, .sidebar .card-foldable .card-header h4, .sidebar .card-foldable .card-header h5 {
+  font-weight: 400;
+}
+
+.sidebar .card-foldable .card-header a {
+  padding: 1rem 0.5rem;
+}
+
+.sidebar .card-foldable .card-header ~ .card-body {
+  border-top: 0;
+}
+
+.sidebar .card-foldable .card-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.sidebar .card-foldable .card-body > .nav-link {
+  padding: 0 2.5rem 0 1.5rem;
+}
+
+.sidebar .card-foldable .card-body > .nav-link:after {
+  margin-top: 0.5rem;
+}
+
+.sidebar .card-foldable .card-body > .nav-link + .nav-link {
+  padding-top: 1rem;
+}
+
+.sidebar .card-foldable:not(:last-child) {
+  border-bottom: 0;
+}

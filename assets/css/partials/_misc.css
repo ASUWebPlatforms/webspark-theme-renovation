@@ -1,0 +1,61 @@
+.bg {
+  background: transparent #fff 0% 0% repeat padding-box;
+  opacity: 1;
+}
+
+.bg.morse-code-white {
+  background-image: url("/img/background-patterns/MorseCodeWhite.png");
+}
+
+.bg.morse-code-black {
+  background-image: url("/img/background-patterns/MorseCodeBlack.png");
+}
+
+.bg.network-white {
+  background-image: url("/img/background-patterns/NetworkWhite.png");
+}
+
+.bg.network-black {
+  background-image: url("/img/background-patterns/NetworkBlack.png");
+}
+
+.bg.topo {
+  opacity: 1;
+}
+
+.bg.topo-white {
+  background-image: url("/img/background-patterns/TopoPatternBlack.png");
+}
+
+.bg.topo-black {
+  background-image: url("/img/background-patterns/TopoPatternWhite.png");
+}
+
+hr {
+  border-top: 0;
+  height: 1px;
+  margin: 3rem 0;
+  background-color: #d0d0d0;
+}
+
+hr.copy-divider {
+  height: 0.5rem;
+  background-color: #ffc627;
+  max-width: 16rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

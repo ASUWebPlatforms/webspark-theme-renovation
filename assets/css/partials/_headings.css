@@ -1,0 +1,129 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  text-align: left;
+  opacity: 1;
+  margin: 1rem 0;
+  line-height: calc(100% + .12em);
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -0.035em;
+}
+
+h1.article {
+  font-size: 3rem;
+}
+
+@media (max-width: 577px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 577px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.035em;
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+h5 {
+  font-size: 1rem;
+  letter-spacing: -0.015em;
+}
+
+h1 span.highlight-gold,
+h2 span.highlight-gold {
+  -webkit-box-shadow: -0.15em 0 0 #ffc627, 0.15em 0 0 #ffc627;
+          box-shadow: -0.15em 0 0 #ffc627, 0.15em 0 0 #ffc627;
+  background: #ffc627;
+  color: #191919;
+}
+
+h1 span.highlight-black,
+h2 span.highlight-black {
+  -webkit-box-shadow: -0.15em 0 0 #191919, 0.15em 0 0 #191919;
+          box-shadow: -0.15em 0 0 #191919, 0.15em 0 0 #191919;
+  background: #191919;
+  color: #fafafa;
+}
+
+h1 span.highlight-white,
+h2 span.highlight-white {
+  -webkit-box-shadow: -0.15em 0 0 #ffffff, 0.15em 0 0 #ffffff;
+          box-shadow: -0.15em 0 0 #ffffff, 0.15em 0 0 #ffffff;
+  background: #ffffff;
+  color: #191919;
+}
+
+h3 span.highlight-gold,
+h4 span.highlight-gold {
+  -webkit-box-shadow: -0.15em 0 0 #ffc627, 0.15em 0 0 #ffc627;
+          box-shadow: -0.15em 0 0 #ffc627, 0.15em 0 0 #ffc627;
+  background: #ffc627;
+  color: #191919;
+}
+
+h3 span.highlight-black,
+h4 span.highlight-black {
+  -webkit-box-shadow: -0.15em 0 0 #191919, 0.15em 0 0 #191919;
+          box-shadow: -0.15em 0 0 #191919, 0.15em 0 0 #191919;
+  background: #191919;
+  color: #fafafa;
+}
+
+h3 span.highlight-white,
+h4 span.highlight-white {
+  -webkit-box-shadow: -0.15em 0 0 #ffffff, 0.15em 0 0 #ffffff;
+          box-shadow: -0.15em 0 0 #ffffff, 0.15em 0 0 #ffffff;
+  background: #ffffff;
+  color: #191919;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
