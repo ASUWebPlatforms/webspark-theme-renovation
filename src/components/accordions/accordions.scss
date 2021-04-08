@@ -1,0 +1,17 @@
+@import '../../sass/extends/cards';
+
+// Cards overrides for accordion.
+.accordion .card>div:last-child {
+  padding-bottom: 0;
+}
+.accordion .card-foldable .card-body > p:last-child {
+  margin-bottom: 1rem;
+}
+
+.accordion .card.card-foldable:first-child {
+  border-bottom: 0;
+}
+
+.accordion p {
+  max-width: 75ch;
+}

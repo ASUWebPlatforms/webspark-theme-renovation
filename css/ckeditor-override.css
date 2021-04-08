@@ -1,0 +1,34 @@
+span.btn.btn-maroon a:link,
+span.btn.btn-dark a:link {
+  color: #fff;
+  text-decoration: none;
+}
+span.btn.btn-maroon a:visited,
+span.btn.btn-dark a:visited,
+span.btn.btn-maroon a:hover,
+span.btn.btn-dark a:hover,
+span.btn.btn-maroon a:active,
+span.btn.btn-dark a:active {
+  color: #fff;
+}
+
+span.btn.btn-gold a:link,
+span.btn.btn-gray a:link {
+  color: #212529;
+  text-decoration: none;
+}
+span.btn.btn-gold a:visited,
+span.btn.btn-gray a:visited,
+span.btn.btn-gold a:hover,
+span.btn.btn-gray a:hover,
+span.btn.btn-gold a:active,
+span.btn.btn-gray a:active {
+  color: #212529;
+}
+
+hr {
+  height: .5rem;
+  background-color: #ffc627;
+  max-width: 16rem;
+}
+

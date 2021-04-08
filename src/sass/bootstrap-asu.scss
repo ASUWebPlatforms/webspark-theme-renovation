@@ -34,9 +34,9 @@ $image-assets-path: '/img' !default;
 @import 'variables/dropdown';
 
 //== Bootstrap Required
-// @import '../../node_modules/bootstrap/scss/functions';
-// @import '../../node_modules/bootstrap/scss/variables';
-// @import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
 
 // To remove values from Bootstrap maps, these must occur between Required and Optional imports.
 

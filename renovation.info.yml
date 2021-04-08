@@ -26,15 +26,15 @@ libraries-override:
   core/drupal.dialog.off_canvas:
     css:
       base:
-        core/misc/dialog/off-canvas.reset.css: css/core/dialog/off-canvas.reset.css
+        misc/dialog/off-canvas.reset.css: css/core/dialog/off-canvas.reset.css
 
 ckeditor_stylesheets:
   - assets/css/renovation.style.css
+  - css/ckeditor-override.css
 
 components:
   namespaces:
-    renovation:
-      - ./src/components
+    renovation: ./src/components
 
 # Information added by Drupal.org packaging script on 2020-09-30
 version: '8.x-4.10'

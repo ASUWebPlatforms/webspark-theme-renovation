@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Template for a Nav component.
+ *
+ * Available config:
+ * - alignment: left | right | center | vertical.
+ * - style: tabs | pills
+ * - fill: fill | justify
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% import _self as menus %}
+
+{% set alignment = 'flex-column' %}
+
+{% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
+
+{% if items %}
+  <nav id="sidebar-left" class="sidebar" aria-label="Secondary">
+    {% block items %}
+      {% for item in items %}
+
+        {% set nav_link_class = [
+          'nav-link',
+          item.in_active_trail ? 'active',
+        ] %}
+
+        {% if item.is_expanded and item.below %}
+          <div class="card card-foldable">
+            <div class="card-header">
+              <h4>
+                <a id="{{ item.title|replace({' ' : '-'})|lower }}" class="collapsed" href="#{{ item.title|replace({' ' : '-'})|lower }}" data-toggle="collapse" data-target="#{{ item.title|replace({' ' : '-'})|lower }}"
+                   aria-expanded="false" aria-controls="{{ item.title|replace({' ' : '-'})|lower }}">{{ item.title }}
+                  <span class="fas fa-chevron-up"></span>
+                </a>
+              </h4>
+            </div>
+              {% if item.below %}
+                {% include '@renovation/dropdown/dropdown-menu.twig' with {
+                  items: item.below,
+                  item_title: item.title,
+                } %}
+              {% endif %}
+          </div>
+
+        {% else %}
+          {{ link(item.title, item.url, { 'class': nav_link_class }) }}
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+  </nav>
+{% endif %}
+
+
+
+
+
