@@ -1,22 +1,24 @@
 {#
 /**
  * @file
- * Default template for a CTA field.
+ * Template for a ctas field.
  */
 #}
-{%
-  set classes = [
-  bundle|clean_class ~ '__' ~ field_name_clean|clean_class,
-  label_display == 'inline' ? 'd-flex',
-]
-%}
-{% for item in items %}
-  <div{{ attributes.addClass(classes) }}>
-    {% include '@renovation/buttons/button-cta.twig' with {
-      url : item.content['#url'],
-      title: item.content['#title'],
-      button_color: bg_color == 'banner-black' ? 'btn-gold' : 'btn-dark',
-    } %}
-  </div>
-{% endfor %}
 
+{# Variables come from preprocess field function #}
+{% for button in buttons %}
+  {% if button.icon == '' %}
+    {% include '@renovation/buttons/button-action.twig' with {
+      url : button.link,
+      title: button.title,
+      button_color: button.color == '' ? 'btn-gold' : button.color,
+    } %}
+  {% else %}
+    {% include '@renovation/buttons/button-icon.twig' with {
+      url : button.link,
+      title: button.title,
+      button_color: button.color,
+      icon: button.icon
+    } %}
+  {% endif %}
+{% endfor %}

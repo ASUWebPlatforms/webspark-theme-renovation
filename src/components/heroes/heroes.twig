@@ -1,21 +1,17 @@
-<div class="uds-hero uds-hero-{{ size }}"
+<div class="uds-hero uds-hero-{{ size }} mb-4"
      style="background-image: linear-gradient(180deg, #19191900 0%, #191919c9 100%), url({{ hero_background }});">
   <div class="container uds-hero-container">
     {# Headings Template #}
     {% include '@renovation/headings/heading-highlighted.twig' with {
-      html_tag : html_tag,
+      html_tag : 'h1',
       heading: heading,
-      highlight: 'gold',
+      highlight: heading_background,
     } %}
     {% if size != 'sm' %}
       <div class="uds-hero-text col-sm-12 col-md-7">
-        <p>{{ hero_body }}</p>
+        <p>{{ hero_body|raw }}</p>
         {# Button link template #}
-        {% include '@renovation/links/button-link.twig' with {
-          url : url,
-          label: label,
-          color: 'gold',
-        } %}
+        {{ cta_btn }}
       </div>
     {% endif %}
   </div>
