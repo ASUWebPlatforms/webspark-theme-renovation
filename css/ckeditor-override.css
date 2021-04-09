@@ -1,3 +1,10 @@
+span.btn.btn-maroon,
+span.btn.btn-dark,
+span.btn.btn-gold,
+span.btn.btn-gray {
+  margin-right: 2rem;
+}
+
 span.btn.btn-maroon a:link,
 span.btn.btn-dark a:link {
   color: #fff;
