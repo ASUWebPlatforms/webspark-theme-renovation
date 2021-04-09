@@ -370,6 +370,9 @@
   background: white;
 }
 
+.field--name-field-ctas .fieldset-legend,
+.field--name-field-ctas .paragraph-type-label,
+.field--name-field-ctas .paragraph-type-title,
 .paragraph-type--cta .fieldset-legend,
 .paragraph-type--cta .paragraph-type-label{
   display: none !important;
