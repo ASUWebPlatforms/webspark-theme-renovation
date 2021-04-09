@@ -37,6 +37,11 @@ function renovation_preprocess_field(&$variables) {
     $variables['buttons'] = $buttons;
   }
 
+  // Background color field.
+  if ($field_name == 'field_banner_background_color') {
+    $variables['background_class'] = $container->get('field_banner_background_color')->value;
+  }
+
   // Field Tab Field.
   if ($field_name == 'field_tab') {
 
@@ -71,8 +76,8 @@ function get_icon(\Drupal\paragraphs\Entity\Paragraph $paragraph_values) {
 }
 
 function getBackgroundColor($container) {
-  if ($container->hasField('field_background_color') && !$container->get('field_background_color')->isEmpty()) {
-    return $container->get('field_background_color')->value;
+  if ($container->hasField('field_banner_background_color') && !$container->get('field_banner_background_color')->isEmpty()) {
+    return $container->get('field_banner_background_color')->value;
   }
   else {
     return null;
