@@ -8,8 +8,11 @@
   margin-bottom: 1rem;
 }
 
-.accordion .card.card-foldable:first-child {
-  border-bottom: 0;
+.accordion .card.card-foldable {
+  border-bottom: none;
+}
+.accordion {
+  border-bottom: 1px solid $uds-color-base-gray-3;
 }
 
 .accordion p {
