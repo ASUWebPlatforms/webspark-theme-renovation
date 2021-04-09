@@ -369,3 +369,8 @@
   border: 1px solid gray;
   background: white;
 }
+
+.paragraph-type--cta .fieldset-legend,
+.paragraph-type--cta .paragraph-type-label{
+  display: none !important;
+}
