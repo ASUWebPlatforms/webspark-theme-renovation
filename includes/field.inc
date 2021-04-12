@@ -22,17 +22,19 @@ function renovation_preprocess_field(&$variables) {
     foreach ( $paragraphs as $paragraph) {
       /** @var  \Drupal\paragraphs\Entity\Paragraph */
       $paragraph_values = $paragraph['content']['#paragraph'];
-      // Get the CTA.
-      $cta = $paragraph_values->get('field_cta_link')->getValue()[0];
-      // Get the icon.
-      $icon = get_icon($paragraph_values);
-      $buttons[] = [
-        'background_color' => $background_color,
-        'link' => $cta['uri'],
-        'title' => $cta['title'],
-        'color' => isset($cta['options']['attributes']['class']) ? $cta['options']['attributes']['class'] : '',
-        'icon' => $icon ? $icon : '',
-      ];
+      if ($paragraph_values->hasField('field_cta_link') && !$paragraph_values->get('field_cta_link')->isEmpty()) {
+        // Get the CTA.
+        $cta = $paragraph_values->get('field_cta_link')->getValue()[0];
+        // Get the icon.
+        $icon = get_icon($paragraph_values);
+        $buttons[] = [
+          'background_color' => $background_color,
+          'link' => $cta['uri'],
+          'title' => $cta['title'],
+          'color' => isset($cta['options']['attributes']['class']) ? $cta['options']['attributes']['class'] : '',
+          'icon' => $icon ? $icon : '',
+        ];
+      }
     }
     $variables['buttons'] = $buttons;
   }
