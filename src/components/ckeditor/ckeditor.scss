@@ -34,8 +34,20 @@ span.btn.btn-gray {
   }
 }
 
-hr {
+div.copy-divider {
   height: .5rem;
-  background-color: #ffc627;
   max-width: 16rem;
+  margin: 45px 0;
+}
+
+div.copy-divider.gold {
+  background-color: #ffc627;
+}
+
+div.copy-divider.dark {
+  background-color: #212529;
+}
+
+div.copy-divider.maroon {
+  background-color: #8c1d40;
 }

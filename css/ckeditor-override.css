@@ -32,10 +32,3 @@ span.btn.btn-gold a:active,
 span.btn.btn-gray a:active {
   color: #212529;
 }
-
-hr {
-  height: .5rem;
-  background-color: #ffc627;
-  max-width: 16rem;
-}
-
