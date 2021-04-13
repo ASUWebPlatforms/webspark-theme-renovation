@@ -377,3 +377,15 @@
 .paragraph-type--cta .paragraph-type-label{
   display: none !important;
 }
+
+#drupal-off-canvas .form-required:after {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0.3em;
+  content: "*";
+  vertical-align: super;
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+  color: #ff0000;
+}
