@@ -7,12 +7,12 @@
       heading: heading,
       highlight: heading_background,
     } %}
-    <div class="uds-hero-text col-sm-12 col-md-7">
-      <p>{{ hero_body|raw }}</p>
-      {# Button link template #}
-      {{ cta_btn }}
-    </div>
+    {% if size != 'sm' %}
+      <div class="uds-hero-text col-sm-12 col-md-7">
+        <p>{{ hero_body|raw }}</p>
+        {# Button link template #}
+        {{ cta_btn }}
+      </div>
+    {% endif %}
   </div>
 </div>
-
-
