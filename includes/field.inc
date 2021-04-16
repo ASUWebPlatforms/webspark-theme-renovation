@@ -59,7 +59,6 @@ function renovation_preprocess_field(&$variables) {
     }
     $variables['tabs'] = $tabs;
   }
-
 }
 
 /**

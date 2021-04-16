@@ -1,0 +1,60 @@
+{# Media #}
+{{ media }}
+{# wrapper for horizontal cards. #}
+{% if card_view_mode != 'card_arrangement_vertical'%}
+  <div class="card-content-wrapper">
+{% endif %}
+{# Heading #}
+<div class="card-header">
+  {% include '@renovation/headings/card-heading.twig' with {
+    html_tag : 'h3',
+    heading: heading,
+  } %}
+</div>
+  {# Body text #}
+<div class="card-body">
+  <p class="card-text">{{ body|raw|striptags }}</p>
+</div>
+{# Location #}
+{% if location != false %}
+  <div class="card-event-details">
+    <div class="card-event-icons">
+      <div><i class="fas fa-map-marker-alt"></i></div>
+      <div>{{ location }}</div>
+    </div>
+  </div>
+{% endif %}
+  {# Buttons #}
+<div class="card-button">
+  {% for cta in card.ctas %}
+    {% include '@renovation/links/cta-link.twig' with {
+      url: cta.uri,
+      label: cta.title,
+      size: loop.first ? '' : '-sm',
+      options: cta.options,
+      color: 'dark',
+    } %}
+  {% endfor %}
+</div>
+{# Links #}
+<div class="card-link">
+  {% for link in links %}
+    {% include '@renovation/links/link.twig' with {
+      uri: link.uri,
+      label: link.title,
+      options: link.options,
+    } %}
+  {% endfor %}
+</div>
+{# Tags #}
+<div class="card-tags">
+  {% for tag in tags %}
+    {% include '@renovation/links/tags.twig' with {
+      url: tag.url,
+      name: tag.name,
+    } %}
+  {% endfor %}
+</div>
+{% if card_view_mode != 'card_arrangement_vertical'%}
+  </div>
+{% endif %}
