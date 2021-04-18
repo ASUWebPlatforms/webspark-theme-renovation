@@ -28,3 +28,14 @@
     border: none;
   }
 }
+
+// Media Queries
+.banner {
+  // Mobile tweaks. 576px
+  @media screen and (max-width: $uds-breakpoint-sm) {
+    .banner-close {
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
+}
