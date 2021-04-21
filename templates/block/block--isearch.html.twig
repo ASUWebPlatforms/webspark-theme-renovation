@@ -1,21 +1,28 @@
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+] %}
+
 {{ attach_library('webspark_isearch/reactjs') }}
 {{ attach_library('webspark_isearch/isearch') }}
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
   <div class="clas-isearch-view" data-config='{
           "type":"customList",
-          "defaultPhoto":"{{ isearch_image }}",
+          "defaultPhoto":"{{ isearch_image|striptags }}",
           "testURL":"/isearch/?",
-          "displayType":"{{ isearch_display }}",
+          "displayType":"{{ isearch_display|striptags }}",
           "ids":[
-              {{ isearch_ids }}
+              {{ isearch_ids|striptags }}
           ],
-        "sourceIds":[{{ isearch_source_ids }}],
-        "showPhoto":{{ isearch_show_photo }},
-        "showTitle":{{ isearch_show_title }},
-        "showBio":{{ isearch_show_bio }},
-        "showEmail":{{ isearch_show_email }},
-        "showPhone":{{ isearch_show_phone }}
-        }'> iSearch block
+        "sourceIds":[{{ isearch_source_ids|striptags }}],
+        "showPhoto":{{ isearch_show_photo|striptags }},
+        "showTitle":{{ isearch_show_title|striptags }},
+        "showBio":{{ isearch_show_bio|striptags }},
+        "showEmail":{{ isearch_show_email|striptags }},
+        "showPhone":{{ isearch_show_phone|striptags }}
+        }'>iSearch block
   </div>
 </div>
+
