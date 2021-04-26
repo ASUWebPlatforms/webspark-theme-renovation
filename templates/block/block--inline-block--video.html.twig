@@ -1,21 +1,18 @@
 {#
 /**
  * @file
- * Template for a block.
+ * Template for a accordion block.
  */
 #}
 {% set classes = [
-  'row',
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
 ] %}
+
+{{ content|without('field_media', 'field_add_drop_shadow', 'field_image_size') }}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
+  {# To allow contextual links to display the title_suffix is required. #}
   {{ title_suffix }}
-
-  {% block content %}
-    {{ content|without('field_anchor') }}
-  {% endblock %}
-
+  {{ content }}
 </div>

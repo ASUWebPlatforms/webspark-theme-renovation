@@ -1,0 +1,6 @@
+
+  {% include '@renovation/block/video-block.twig' with {
+    media: content.field_media_oembed_video,
+    caption: content.field_caption[0]['#context']['value'],
+  } %}
+
