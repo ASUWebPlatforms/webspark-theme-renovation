@@ -1,0 +1,62 @@
+
+  {% block paragraph %}
+
+      {{ kint(content['#paragraph']) }}
+      {% set cols = content['#paragraph'].field_card_style.value == 'portrait' ? 'col-lg-4': 'col-lg-6' %}
+      {% set style = content['#paragraph'].field_card_style.value == 'portrait' ? '' : 'card-horizontal' %}
+    <div class="col col-12 col-md-12 {{ cols }}">
+      <div class="card {{ style }}">
+        {{ content['#paragraph'].field_media.target.id }}
+        {# Wrapper for landscape #}
+        {% if style == 'card-horizontal' %}
+        <div class="card-content-wrapper">
+          {% endif %}
+
+          {# Heading text #}
+          <div class="card-header">
+          {% include '@renovation/headings/heading.twig' with {
+            html_tag : 'h3',
+            heading: content['#paragraph'].field_heading.value,
+          } %}
+          </div>
+
+          {# Body text #}
+          <div class="card-body">
+            <p class="card-text">{{ content['#paragraph'].field_body.value|raw }}</p>
+          </div>
+
+          {# Location #}
+          {% if content.field_card_location|render %}
+            <div class="card-event-details">
+              <div class="card-event-icons">
+                <div><i class="fas fa-map-marker-alt"></i></div>
+                <div>{{ content.field_card_location[0]['#title'] }}</div>
+              </div>
+            </div>
+          {% endif %}
+
+          {# Card links #}
+          {{ kint(paragragh.content.field_card_location) }}
+          <div class="card-link">
+            {{ paragraph.field_link }}
+          </div>
+
+          {# Buttons #}
+          <div class="card-button">
+            {{ content.field_cta }}
+          </div>
+
+          {# Field Tags #}
+          <div class="card-tags">
+            {{ content.field_tags }}
+          </div>
+
+          {# End wrapper for landsape #}
+          {% if style == 'card-horizontal' %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+  {% endblock paragraph %}
+
