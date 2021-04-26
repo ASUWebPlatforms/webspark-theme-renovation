@@ -12,22 +12,24 @@
       </div>
     {% endif %}
 
+    {% if page.pre_content %}
+      <div class="page__pre-content">
+        <div class="container">
+          {{ page.pre_content }}
+        </div>
+      </div>
+    {% endif %}
+
     {% if page.content %}
       <div class="page__content">
-        <div class="container">
-          {{ page.content }}
-        </div>
+        {{ page.content }}
       </div>
     {% endif %}
   </main>
 
   {% if page.footer %}
-    <footer class="page__footer">
-      <div class="container">
-        <div class="d-flex justify-content-md-between align-items-md-center">
-          {{ page.footer }}
-        </div>
-      </div>
+    <footer class="page__footer" role="contentinfo">
+      {{ page.footer }}
     </footer>
   {% endif %}
 </div>
