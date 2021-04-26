@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Template for event block.
+ */
+#}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+] %}
+{{ attach_library('asu_news/event-components-library') }}
+{{ attach_library('asu_react_integration/reactjs') }}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="clas-news-react-base" data-feed="/asu-news-feed/{{ content.field_news_feed_filter.0 }}" data-items="{{ content.field_news_items_to_display.0 }}">ASU News</div>
+</div>
