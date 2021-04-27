@@ -12,13 +12,15 @@
       url : button.link,
       title: button.title,
       button_color: button.color == '' ? 'btn-gold' : button.color,
+      target: button.target,
     } %}
   {% else %}
     {% include '@renovation/buttons/button-icon.twig' with {
       url : button.link,
       title: button.title,
       button_color: button.color,
-      icon: button.icon
+      icon: button.icon,
+      target: button.target,
     } %}
   {% endif %}
 {% endfor %}
