@@ -58,3 +58,17 @@ function renovation_preprocess(&$variables) {
   global $base_url;
   $variables['base_url'] = $base_url;
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function renovation_theme_suggestions_image_style_alter(array &$suggestions, array $variables) {
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function renovation_theme_suggestions_image_alter(array &$suggestions, array $variables) {
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
+}

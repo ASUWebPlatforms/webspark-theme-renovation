@@ -70,13 +70,6 @@ h2 span.highlight {
       $heading-highlight-white-text-color
     );
   }
-
-  &-maroon {
-    @include heading-highlight-large-box-shadow(
-        $heading-highlight-maroon-background-color,
-        $heading-highlight-maroon-text-color
-    );
-  }
 }
 
 h3 span.highlight,
