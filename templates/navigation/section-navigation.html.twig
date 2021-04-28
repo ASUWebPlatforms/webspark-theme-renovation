@@ -17,7 +17,7 @@
   <div id="collapseExample" class="card card-body collapse">
     <nav class="nav" aria-label="Same Page">
       {% for link in links %}
-        <a class="nav-link" href="{{ link['#url'] }}"><span class="fa fa-lightbulb"></span>{{ link['#title'] }}</a>
+        <a class="nav-link" href="{{ link['#url'] }}"><span class="{{ link['#icon_style'] }} fa-{{ link['#icon'] }}"></span>{{ link['#title'] }}</a>
       {% endfor %}
     </nav>
   </div>
