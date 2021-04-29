@@ -35,6 +35,7 @@ Sidebar Navigation
 
   .nav-link {
     color: $uds-color-base-gray-7;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
@@ -72,6 +73,10 @@ Sidebar Navigation
     &:not(:last-child) {
       border-bottom: 0;
     }
+  }
+
+  .card{
+    margin-bottom: unset;
   }
 
   .card-foldable {

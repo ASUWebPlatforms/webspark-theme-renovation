@@ -1,24 +1,18 @@
-{#
-/**
- * @file
- * Template for a Breadcrumb component.
- *
- * Available config:
- * - utility_classes: An array of utility classes.
- */
-#}
-{% if breadcrumb %}
-  <nav aria-label="breadcrumb" class="{{ utility_classes|join(' ') }}">
+{% set is_black = bg_color %}
+<nav aria-label="breadcrumb" class="container">
+  {% if links is not empty %}
     <ol class="breadcrumb">
-      {% for item in breadcrumb %}
-        <li class="breadcrumb-item {{ not item.url ? 'active' }}">
-          {% if item.url %}
-            <a href="{{ item.url }}">{{ item.text }}</a>
+      {% for link in links %}
+          {% if link.url.routeName != '<nolink>'%}
+            <li class="breadcrumb-item">
+              <a href="{{ link.url }}">{{ link.text }}</a>
+            </li>
           {% else %}
-            {{ item.text }}
+            <li {% if is_black == 'bg-gray-7' %}class="breadcrumb-item text-gray-1"{% else %}class="breadcrumb-item{{ not item.url ? ' active' }}"{% endif %} aria-current="page">
+              {{ link.text }}
+            </li>
           {% endif %}
-        </li>
       {% endfor %}
     </ol>
-  </nav>
 {% endif %}
+</nav>
