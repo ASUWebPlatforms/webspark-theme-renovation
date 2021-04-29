@@ -67,9 +67,9 @@
       {% endfor %}
       {# Show last page and ellipsis if last page not shown in pages. #}
       {% if show_last == true %}
-        {# Get the last pages array element to get value of the href #}
-        {% set last_pages_page = items.pages|last %}
-        {% if items.last.href != last_pages_page.href %}
+        {# Don't print the last element twice #}
+        {% set page_keys = items.pages|keys %}
+        {% if last_page not in page_keys %}
           <li class="page-item pager__item pager__item--ellipsis disabled" role="presentation"><span class="page-link">&hellip;</span></li>
           <li class="page-item pager__item">
             <a href="{{ items.last.href }}" title="{{ 'Go to last page'|t }}"class="page-link">{{ last_page }}</a>
