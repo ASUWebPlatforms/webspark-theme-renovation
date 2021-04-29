@@ -5,4 +5,11 @@
  */
 
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function renovation_preprocess_input__submit(&$variables) {
+  $variables['attributes']['class'][] = 'btn-maroon';
+}
+
 
