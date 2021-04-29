@@ -33,6 +33,7 @@ function renovation_preprocess_field(&$variables) {
           'title' => $cta['title'],
           'color' => isset($cta['options']['attributes']['class']) ? $cta['options']['attributes']['class'] : '',
           'icon' => $icon ? $icon : '',
+          'target' => isset($cta['options']['attributes']['target']) ? $cta['options']['attributes']['target'] : '',
         ];
       }
     }
@@ -59,6 +60,13 @@ function renovation_preprocess_field(&$variables) {
     }
     $variables['tabs'] = $tabs;
   }
+
+  if ($field_name == 'field_cards') {
+
+    if (isset($variables['element']['#view_mode'])) {
+      $variables['view_mode'] = $variables['element']['#view_mode'];
+    }
+  }
 }
 
 /**
@@ -83,5 +91,14 @@ function getBackgroundColor($container) {
   else {
     return null;
   }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function renovation_theme_suggestions_field_alter(&$suggestions, $variables) {
+  $suggestions[] = 'field__' .
+    $variables['element']['#field_name'] . '__' .
+    $variables['element']['#view_mode'];
 }
 

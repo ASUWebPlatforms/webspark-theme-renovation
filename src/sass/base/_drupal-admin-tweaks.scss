@@ -1,0 +1,15 @@
+.layout-builder-form {
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    background: #efefef;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 400px);
+    z-index: 10;
+    align-items: baseline;
+    border-radius: 20px 20px 0 0;
+    width: 800px;
+  }
+}

@@ -10,12 +10,13 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 
+{% set unique_label = configuration['label'] %}
+{% set unique_id = unique_label|replace({' ': '-'}) %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-  <div class="container">
-    <div class="accordion mb-3 mt-3">
-      {# Hide color select field as not imp-lemented yet.#}
-      {{ content|without('field_color', 'field_anchor') }}
-    </div>
+  <div class="accordion" id="{{ unique_id|lower }}">
+    {# Hide color select field as not imp-lemented yet.#}
+    {{ content|without('field_color', 'field_anchor', 'field_icon') }}
   </div>
 </div>

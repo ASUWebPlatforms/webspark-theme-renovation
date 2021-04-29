@@ -1,3 +1,9 @@
+/* Overide the default focus on ckeditor */
+.ck_editable:focus {
+  outline: 0;
+  box-shadow: 0 0 8px grey !important;
+}
+
 span.btn.btn-maroon,
 span.btn.btn-dark,
 span.btn.btn-gold,

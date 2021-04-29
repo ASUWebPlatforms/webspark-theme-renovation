@@ -1,15 +1,38 @@
-{% set link = heading|replace({' ': '-'}) %}
-<div class="card card-foldable">
-  <div class="card-header">
+{% set is_icon = content.field_icon|render %}
+
+{% set link_id = heading|replace({' ': '-'}) %}
+{# Card #}
+<div class="card card-foldable mt-3{% if color != 'default' %} {{ color }}{% endif %}">
+
+  {# Card Header #}
+  <div class="card-header{% if is_icon  %} card-header-icon{% endif %}">
     <h4>
-      <a id="{{ heading }}" class="collapsed" data-toggle="collapse" href="#{{ link|lower }}" role="button"
-         aria-expanded="false" aria-controls="{{ heading }}">{{ heading }}
+      <a id="card-{{ link_id|lower }}" class="collapsed" href="#card-body-{{ link_id|lower }}" data-toggle="collapse"
+         data-target="#card-body-{{ link_id|lower }}" role="button" aria-expanded="false"
+         aria-controls="card-body-{{ link_id|lower }}">
+
+        {% if is_icon  %}
+        <span class="card-icon">
+          <i class="{{ content.field_icon[0]['#icons'][0]['#style'] }} {{ content.field_icon[0]['#icons'][0]['#name'] }}  mr-2" role="img" aria-label="..."></i>
+          {{ heading }}
+         </span>
+        {% else %}
+          {{ heading }}
+        {% endif %}
+
         <span class="fas fa-chevron-up"></span>
       </a>
     </h4>
   </div>
-  <div id="{{ link|lower }}" class="collapse card-body" aria-labelledby="{{ heading }}">
+
+  {# Card Body #}
+  <div id="card-body-{{ link_id|lower }}" class="collapse card-body" aria-labelledby="{{ heading }}"
+       data-parent="#{{ parent_label|replace({' ': '-'})|lower }}">
+    {# Body value #}
     {{ body_text|raw }}
   </div>
+  {# End body #}
+
 </div>
+{# End card #}
 

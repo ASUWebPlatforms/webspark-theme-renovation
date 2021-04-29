@@ -9,6 +9,7 @@ base theme: radix
 
 regions:
   header: Header
+  pre_content: Pre Content
   content: Content
   page_bottom: Page bottom
   mega_footer: Mega Footer
@@ -24,6 +25,8 @@ libraries-override:
     css:
       base:
         misc/dialog/off-canvas.reset.css: css/core/dialog/off-canvas.reset.css
+      component:
+        misc/dialog/off-canvas.table.css: css/core/dialog/off-canvas.table.css
 
 ckeditor_stylesheets:
   - assets/css/renovation.style.css
