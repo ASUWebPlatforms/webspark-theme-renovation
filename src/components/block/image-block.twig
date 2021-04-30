@@ -1,8 +1,17 @@
-<div class="uds-img{% if drop_shadow[0]['#markup'] == '1' %} uds-img-drop-shadow{% endif %}">
-  <figure class="figure uds-figure">
-    {{ media }}
-    <figcaption class="figure-caption uds-figure-caption"><span class="uds-caption-text">
+{% if style != 'default' %}
+<div style="width:{{ size }}%;">
+  {% endif %}
+  <div class="uds-img{% if drop_shadow[0]['#markup'] == '1' %} uds-img-drop-shadow{% endif %}">
+    <figure class="figure uds-figure">
+      {{ media }}
+      {% if caption|render %}
+      <figcaption class="figure-caption uds-figure-caption">
+      <span class="uds-caption-text">
         {{ caption }}
       </span></figcaption>
-  </figure>
+    </figure>
+    {% endif %}
+  </div>
+  {% if style != 'default' %}
 </div>
+{% endif %}
