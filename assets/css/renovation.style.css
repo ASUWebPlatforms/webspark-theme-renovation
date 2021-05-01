@@ -9596,7 +9596,7 @@ a.text-dark:hover, a.text-dark:focus {
  * ======================================================================== */
 :focus {
   outline: 0;
-  box-shadow: 0 0 8px #00baff !important;
+  box-shadow: 0 0 8px #8c1d40 !important;
 }
 
 body {
@@ -27793,7 +27793,7 @@ a.page-link:visited {
 }
 a.page-link:hover {
   color: #191919;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 span.page-link:hover {
@@ -28090,13 +28090,6 @@ Sidebar Navigation
 /*------------------------------------------------------------------
 2. Sidebar
 --------------------------------------------------------------------*/
-.sidebar a {
-  color: #191919;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: -0.037rem;
-}
 .sidebar .nav-text {
   font-size: 1rem;
   line-height: 1rem;
@@ -28110,7 +28103,6 @@ Sidebar Navigation
 }
 .sidebar .nav-link {
   color: #191919;
-  text-decoration: none;
 }
 .sidebar .nav-link:hover {
   text-decoration: underline;
@@ -28137,15 +28129,12 @@ Sidebar Navigation
   padding: 1.5rem 1rem;
   overflow: hidden;
   color: #191919;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   letter-spacing: -0.037rem;
 }
 .sidebar > .nav-link:not(:last-child) {
   border-bottom: 0;
-}
-.sidebar .card {
-  margin-bottom: unset;
 }
 .sidebar .card-foldable {
   border: 1px solid #e8e8e8;
@@ -32236,7 +32225,7 @@ a.page-link:visited {
 }
 a.page-link:hover {
   color: #191919;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 span.page-link:hover {
@@ -32533,13 +32522,6 @@ Sidebar Navigation
 /*------------------------------------------------------------------
 2. Sidebar
 --------------------------------------------------------------------*/
-.sidebar a {
-  color: #191919;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: -0.037rem;
-}
 .sidebar .nav-text {
   font-size: 1rem;
   line-height: 1rem;
@@ -32553,7 +32535,6 @@ Sidebar Navigation
 }
 .sidebar .nav-link {
   color: #191919;
-  text-decoration: none;
 }
 .sidebar .nav-link:hover {
   text-decoration: underline;
@@ -32580,15 +32561,12 @@ Sidebar Navigation
   padding: 1.5rem 1rem;
   overflow: hidden;
   color: #191919;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   letter-spacing: -0.037rem;
 }
 .sidebar > .nav-link:not(:last-child) {
   border-bottom: 0;
-}
-.sidebar .card {
-  margin-bottom: unset;
 }
 .sidebar .card-foldable {
   border: 1px solid #e8e8e8;
