@@ -9,7 +9,7 @@
     } %}
     {% if size != 'sm' %}
       <div class="uds-hero-text col-sm-12 col-md-7">
-        <p>{{ hero_body|raw }}</p>
+        <p>{{ hero_body|raw.text|length > 125 ? hero_body|raw.text|slice(0, 125) : hero_body|raw  }}</p>
         {# Button link template #}
         {{ cta_btn }}
       </div>
