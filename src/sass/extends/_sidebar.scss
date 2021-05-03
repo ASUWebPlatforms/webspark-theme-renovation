@@ -22,6 +22,11 @@ Sidebar Navigation
 --------------------------------------------------------------------*/
 
 .sidebar {
+
+  .card{
+    margin-bottom: unset;
+  }
+
   .nav-text {
     @include like-an-h5;
     color: $uds-color-base-gray-7;

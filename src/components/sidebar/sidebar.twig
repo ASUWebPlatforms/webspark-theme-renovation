@@ -17,52 +17,53 @@
 {% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <h3>{{ title }}</h3>
-  <nav id="sidebar-left" class="sidebar accordion" aria-label="Secondary">
+<h3>{{ title }}</h3>
+<nav id="sidebar-left" class="sidebar accordion" aria-label="Secondary">
     {% block items %}
-      {% for item in items %}
-        {% set nav_link_class = [
-          'nav-link',
-          item.in_active_trail ? 'active',
-        ] %}
-        {% if item.is_expanded and item.below %}
-          <div class="card card-foldable">
-            <div class="card-header">
-              <h4>
-                <a id="{{ item.title|replace({' ' : '-'})|lower }}"
-                   class="collapsed"
-                   href="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
-                   data-toggle="collapse"
-                   data-target="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
-                   aria-expanded="false"
-                   aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}">
-                    {{ item.title }}
-                  <span class="fas fa-chevron-up"></span>
-                </a>
-              </h4>
-            </div>
-            <div id="cardBody{{ item.title|replace({' ' : '-'})|lower }}"
-                 class="collapse card-body"
-                 aria-labelledby="cardOne"
-                 data-parent=".sidebar">
-            {% if item.below %}
-              {% for subitem in item.below %}
-                {%  set link_class = subitem.link['#options'].set_active_class ? 'active' %}
-                {{ link(subitem.title, subitem.url, { 'class': nav_link_class }) }}
-              {% endfor %}
+        {% for item in items %}
+            {% set nav_link_class = [
+                'nav-link',
+                item.in_active_trail ? 'active',
+            ] %}
+            {% if item.is_expanded and item.below %}
+                <div class="card card-foldable">
+
+                    <div class="card-header">
+                        <a id="{{ item.title|replace({' ' : '-'})|lower }}"
+                           class="collapsed nav-link"
+                           href="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                           data-toggle="collapse"
+                           data-target="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                           aria-expanded="false"
+                           aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}">
+                            {{ item.title }}
+                            <span class="fas fa-chevron-up"></span>
+                        </a>
+                    </div>
+
+                    <div id="cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                         class="collapse card-body"
+                         aria-labelledby="{{ item.title|replace({' ' : '-'})|lower }}"
+                         data-parent=".sidebar">
+                        {% if item.below %}
+                            {% for subitem in item.below %}
+                                {{ link(subitem.title, subitem.url, { 'class': nav_link_class }) }}
+                            {% endfor %}
+                        {% endif %}
+
+                    </div><!-- end .card-body -->
+
+                </div><!-- end .card -->
+            {% else %}
+            <a id="{{ item.title|replace({' ' : '-'})|lower }}"
+               class="nav-link"
+               href="{{ item.url }}">
+                {{ item.title }}
+            </a>
             {% endif %}
-            </div>
-          </div>
-        {% else %}
-          <a id="{{ item.title|replace({' ' : '-'})|lower }}"
-             class="nav-link"
-             href="{{ item.url }}">
-              {{ item.title }}
-          </a>
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
     {% endblock %}
-  </nav>
+</nav><!-- end .sidebar -->
 {% endif %}
 
 
