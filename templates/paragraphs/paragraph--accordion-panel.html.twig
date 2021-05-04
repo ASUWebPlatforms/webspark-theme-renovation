@@ -17,6 +17,8 @@
   ]
 %}
 
+{% set unique_id = paragraph.id.value %}
+<div class="accordion" id="accordion-{{ unique_id }}">
 {% block paragraph %}
   {% block content %}
     {% include '@renovation/accordions/accordion.twig' with {
@@ -24,7 +26,8 @@
       heading: content.field_heading[0]['#context']['value'],
       body_text: content.field_formatted_text[0]['#text'],
       color: content.field_color_options,
+      unique_id: unique_id,
     } %}
   {% endblock %}
 {% endblock paragraph %}
-
+</div>
