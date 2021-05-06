@@ -15,8 +15,8 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-  <div class="accordion" id="{{ unique_id|lower }}">
+
     {# Hide color select field as not imp-lemented yet.#}
     {{ content|without('field_color', 'field_anchor', 'field_icon') }}
-  </div>
+
 </div>
