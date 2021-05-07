@@ -18,6 +18,7 @@
 %}
 
 {% set unique_id = paragraph.id.value %}
+
 <div class="accordion" id="accordion-{{ unique_id }}">
 {% block paragraph %}
   {% block content %}
@@ -25,7 +26,7 @@
       icon: content.field_icon,
       heading: content.field_heading[0]['#context']['value'],
       body_text: content.field_formatted_text[0]['#text'],
-      color: content.field_color_options,
+      color: content.field_color_options[0]['#markup'],
       unique_id: unique_id,
     } %}
   {% endblock %}
