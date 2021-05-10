@@ -52,13 +52,13 @@
           <div class="card card-foldable desktop-disable-xl">
             <div class="card-header">
               <h5>
-                <a id="footlink-header-two" class="collapsed" data-toggle="collapse" href="#footlink-two" role="button" aria-expanded="false" aria-controls="footlink-two">
+                <a id="footlink-header-{{ loop.index }}" class="collapsed" data-toggle="collapse" href="#footlink-{{ loop.index }}" role="button" aria-expanded="false" aria-controls="footlink-{{ loop.index }}">
                   {{ column.title }}
                   <span class="fas fa-chevron-up"></span>
                 </a>
               </h5>
             </div>
-            <div id="footlink-two" class="collapse card-body" aria-labelledby="footlink-header-two">
+            <div id="footlink-{{ loop.index }}" class="collapse card-body" aria-labelledby="footlink-header-{{ loop.index }}">
               {{ column.menu_items }}
             </div>
           </div>
@@ -74,7 +74,6 @@
     <div class="row">
       <div class="col">
         <div class="d-flex footer-innovation-links">
-          <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
           <nav class="nav" aria-label="University Services">
             <a class="nav-link" href="https://www.asu.edu/map/">Maps and Locations</a>
             <a class="nav-link" href="https://www.asu.edu/asujobs">Jobs</a>
@@ -82,6 +81,9 @@
             <a class="nav-link" href="https://www.asu.edu/contactasu/">Contact ASU</a>
             <a class="nav-link" href="https://my.asu.edu/">My ASU</a>
           </nav>
+          <a href="https://www.asu.edu/rankings">
+            <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
+          </a>
         </div>
       </div>
     </div>
