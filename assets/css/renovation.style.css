@@ -27943,7 +27943,6 @@ span.page-link:hover {
   top: 0;
   background: rgba(0, 0, 0, 0);
   left: 0;
-  background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, rgba(25, 25, 25, 0.25) 100%);
 }
 .scroll-control-prev span.carousel-control-prev-icon {
   margin: 0 42px 0 12px;
@@ -27974,12 +27973,7 @@ span.page-link:hover {
 }
 
 .tab-content {
-  padding: 96px 48px;
-}
-@media screen and (max-width: 768px) {
-  .tab-content {
-    padding: 48px 32px;
-  }
+  padding: 32px 0px;
 }
 
 .carousel-control-next-icon {
@@ -29887,6 +29881,45 @@ form.uds-form.uds-form-gray7 .valid-feedback svg {
 }
 form.uds-form.uds-form-gray7 .input-group-trailing-icon svg {
   color: #fafafa;
+}
+
+.article--full .uds-story-hero img {
+  width: 100%;
+}
+
+.uds-back-to-top-button {
+  align-items: center;
+  background-color: #747474;
+  border: none;
+  bottom: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  font-size: 1rem;
+  height: 67px;
+  justify-content: center;
+  line-height: 1;
+  outline: none;
+  padding: 8px 40px 8px 8px;
+  position: fixed;
+  right: -26px;
+  text-align: right;
+  transform: rotate(-90deg);
+  width: 119px;
+  margin-bottom: -33.5px;
+  z-index: 99;
+}
+.uds-back-to-top-button-show {
+  display: inline-flex;
+}
+.uds-back-to-top-button:hover .fa-chevron-right {
+  right: 6px;
+}
+.uds-back-to-top-button .fa-chevron-right {
+  font-size: 2rem;
+  right: 12px;
+  position: absolute;
+  z-index: -1;
 }
 
 .img-background {
@@ -32375,7 +32408,6 @@ span.page-link:hover {
   top: 0;
   background: rgba(0, 0, 0, 0);
   left: 0;
-  background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, rgba(25, 25, 25, 0.25) 100%);
 }
 .scroll-control-prev span.carousel-control-prev-icon {
   margin: 0 42px 0 12px;
@@ -32406,12 +32438,7 @@ span.page-link:hover {
 }
 
 .tab-content {
-  padding: 96px 48px;
-}
-@media screen and (max-width: 768px) {
-  .tab-content {
-    padding: 48px 32px;
-  }
+  padding: 32px 0px;
 }
 
 .carousel-control-next-icon {
@@ -34319,6 +34346,45 @@ form.uds-form.uds-form-gray7 .valid-feedback svg {
 }
 form.uds-form.uds-form-gray7 .input-group-trailing-icon svg {
   color: #fafafa;
+}
+
+.article--full .uds-story-hero img {
+  width: 100%;
+}
+
+.uds-back-to-top-button {
+  align-items: center;
+  background-color: #747474;
+  border: none;
+  bottom: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  font-size: 1rem;
+  height: 67px;
+  justify-content: center;
+  line-height: 1;
+  outline: none;
+  padding: 8px 40px 8px 8px;
+  position: fixed;
+  right: -26px;
+  text-align: right;
+  transform: rotate(-90deg);
+  width: 119px;
+  margin-bottom: -33.5px;
+  z-index: 99;
+}
+.uds-back-to-top-button-show {
+  display: inline-flex;
+}
+.uds-back-to-top-button:hover .fa-chevron-right {
+  right: 6px;
+}
+.uds-back-to-top-button .fa-chevron-right {
+  font-size: 2rem;
+  right: 12px;
+  position: absolute;
+  z-index: -1;
 }
 
 h1,
