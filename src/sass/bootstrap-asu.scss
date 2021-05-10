@@ -33,6 +33,7 @@ $image-assets-path: '/img' !default;
 @import 'variables/breadcrumb';
 @import 'variables/dividers';
 @import 'variables/dropdown';
+@import 'variables/back-to-top-button';
 
 //== Bootstrap Required
 @import '../../node_modules/bootstrap/scss/functions';
