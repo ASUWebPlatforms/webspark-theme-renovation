@@ -1,0 +1,7 @@
+{% block paragraph %}
+    {% block content %}
+      {% include '@renovation/lists/list-item-simple.twig' with {
+        list_item: content.field_formatted_text,
+      } %}
+    {% endblock %}
+{% endblock paragraph %}

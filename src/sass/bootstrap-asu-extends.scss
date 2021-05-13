@@ -1,31 +1,57 @@
 // css Bootstrap doesn't have variables for
-@import 'extends/misc';
+@import '../components/accordions/accordions';// imports cards.
 @import '../components/alerts/alerts';
-@import '../components/banners/banners';
-@import '../components/buttons/buttons';
-@import 'extends/badges';
-@import '../components/icons/icons';
-@import 'extends/images';
-@import 'extends/image-overlap';
-@import '../components/accordions/accordions';
-@import 'extends/list';
-@import '../components/headings/headings';
-@import 'extends/dividers';
-@import '../components/pager/pager';
-@import '../components/tabbed-panels/tabbed-panels';
-@import '../components/heroes/heroes';
-@import 'extends/breadcrumb';
-@import '../components/sidebar/sidebar';
-@import 'extends/globalfooter';
-@import 'extends/blockquotes';
-@import 'extends/global-header';
-@import '../components/paragraphs/paragraphs';
-@import '../components/ckeditor/ckeditor';
-@import '../components/cards/cards';
-@import '../components/testimonial-carousel/testimonial-carousel';
-@import 'extends/form-fields';
-@import '../components/story-hero/story-hero';
-@import "../components/video/video";
+@import 'extends/alt_styling';
+@import 'extends/anchor-menu';
 @import '../components/back-to-top/back-to-top';
-@import "../components/grid-links/grid-links";
+@import 'extends/backgrounds';
+@import 'extends/badges';
+@import '../components/banners/banners';
+@import 'extends/blockquotes';
+@import '../components/breadcrumb/breadcrumb';
+@import '../components/buttons/buttons';
+@import 'extends/card-and-image';
+@import 'extends/card-arrangements';
+@import 'extends/card-image-and-content';
+@import '../components/cards/cards';
+@import 'extends/charts-and-graphs';
+@import 'extends/display-list';
+@import 'extends/dividers';
+@import 'extends/form-fields';
+@import 'extends/global-header';
+@import 'extends/globalfooter';
+@import '../components/grid-links/grid-links';
+@import '../components/headings/headings';
+@import '../components/heroes/heroes';
+@import '../components/icons/icons';
+@import 'extends/image-background-with-cta';
+@import 'extends/image-overlap';
+@import 'extends/image-text-block';
+@import 'extends/images';
+@import 'extends/inset-box';
+@import 'extends/list';
+@import 'extends/misc';
+@import 'extends/modals';
+@import '../components/pager/pager';
+@import 'extends/pagination';
+@import '../components/paragraphs/paragraphs';
+@import 'extends/quote-image-background';
+@import '../components/sidebar/sidebar';
+@import '../components/tabbed-panels/tabbed-panels';
+@import 'extends/tabs';
+@import 'extends/testimonials';
+@import '../components/tooltips/tooltips';
+@import 'extends/typography';
+@import '../components/video/video';
+
+// Misc
+@import '../components/ckeditor/ckeditor';
+@import '../components/testimonial-carousel/testimonial-carousel';
+@import '../components/story-hero/story-hero'; // override for image.
+
+
+
+
+
+
 
