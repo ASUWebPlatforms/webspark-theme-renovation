@@ -13,28 +13,38 @@
 $image-assets-path: '/img' !default;
 
 // Apply variable overrides before importing Bootstrap’s Sass files
-@import 'variables/colors';
 @import 'variables/alerts';
+@import 'variables/back-to-top-button';
 @import 'variables/banners';
-@import 'variables/spacing';
-@import 'variables/typography';
-@import 'variables/buttons';
 @import 'variables/blockquotes';
-@import 'variables/cards';
-@import 'variables/icons';
-@import 'variables/images';
-@import 'variables/headings';
-@import 'variables/list';
-@import 'variables/heroes';
-@import 'variables/testimonials';
-@import 'variables/paragraphs';
-@import 'variables/pager';
-@import 'variables/tabbed-panels';
 @import 'variables/breadcrumb';
+@import 'variables/buttons';
+@import 'variables/card-and-image';
+@import 'variables/card-arrangements';
+@import 'variables/cards';
+@import 'variables/colors';
+@import 'variables/display-list';
 @import 'variables/dividers';
 @import 'variables/dropdown';
-@import 'variables/back-to-top-button';
+@import 'variables/form-fields';
 @import 'variables/grid-links';
+@import 'variables/headings';
+@import 'variables/heroes';
+@import 'variables/icons';
+@import 'variables/image-text-block';
+@import 'variables/images';
+@import 'variables/inset-box';
+@import 'variables/list';
+@import 'variables/modals';
+@import 'variables/pager';
+@import 'variables/paragraphs';
+@import 'variables/quote-image-background';
+@import 'variables/spacing';
+@import 'variables/tabbed-panels';
+@import 'variables/testimonials';
+@import 'variables/tooltips';
+@import 'variables/typography';
+@import 'variables/video';
 
 //== Bootstrap Required
 @import '../../node_modules/bootstrap/scss/functions';

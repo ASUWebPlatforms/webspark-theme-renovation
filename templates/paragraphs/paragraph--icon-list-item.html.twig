@@ -1,0 +1,9 @@
+{% block paragraph %}
+  {% block content %}
+    {% include '@renovation/lists/list-item-icon.twig' with {
+      icon: content.field_icon,
+      list_item: content.field_formatted_text[0]['#text'],
+    } %}
+  {% endblock %}
+{% endblock paragraph %}
+
