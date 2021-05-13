@@ -15,6 +15,7 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
+  {{ content.field_tooltip }}
   {% if content.field_media|render %}
     {% include '@renovation/blockquote/blockquote-image.twig' with {
       reversed: content.field_reverse_image[0]['#markup'],

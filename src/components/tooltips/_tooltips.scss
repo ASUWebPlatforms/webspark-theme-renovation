@@ -1,5 +1,6 @@
 @import '../../sass/extends/tooltips';
-
-.uds-tooltip-text {
-  left: 30px;
+.uds-tooltip {
+  .uds-tooltip-text {
+    margin-left: 2.5rem;
+  }
 }

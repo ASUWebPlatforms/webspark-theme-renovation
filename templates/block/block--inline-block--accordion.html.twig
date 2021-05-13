@@ -15,8 +15,7 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-
-    {# Hide color select field as not imp-lemented yet.#}
-    {{ content|without('field_color', 'field_anchor', 'field_icon') }}
+  {{ content.field_tooltip }}
+  {{ content|without('field_color', 'field_anchor', 'field_icon', 'field_tooltip') }}
 
 </div>
