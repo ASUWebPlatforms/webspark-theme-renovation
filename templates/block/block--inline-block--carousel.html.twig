@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Template for a video block.
+ * Template for a banner block.
  */
 #}
 {% set classes = [
@@ -10,9 +10,7 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 
-
 <div{{ attributes.addClass(classes) }}>
-  {# To allow contextual links to display the title_suffix is required. #}
   {{ title_suffix }}
   {{ content.field_tooltip }}
   {{ content|without('field_tooltip') }}

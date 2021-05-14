@@ -16,6 +16,5 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 
-  {{ content|without('field_list_color', 'field_step_list_color') }}
-
+  {{ content|without('field_list_color', 'field_step_list_color', 'field_tooltip') }}
 </div>

@@ -13,9 +13,9 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
-
+  {{ content.field_tooltip }}
   {% block content %}
-    {{ content|without('field_anchor') }}
+    {{ content|without('field_anchor', 'field_tooltip') }}
   {% endblock %}
 
 </div>

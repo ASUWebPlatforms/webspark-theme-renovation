@@ -13,5 +13,6 @@
 <div{{ attributes.addClass(classes) }}>
   {# To allow contextual links to display the title_suffix is required. #}
   {{ title_suffix }}
-  {{ content|without('field_anchor') }}
+  {{ content.field_tooltip }}
+  {{ content|without('field_anchor', 'field_tooltip') }}
 </div>

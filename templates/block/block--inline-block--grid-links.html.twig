@@ -13,7 +13,7 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
-
+  {{ content.field_tooltip }}
   {% block content %}
     {% include '@renovation/grid-links/grid-links.twig' with {
       links: content.field_links,
