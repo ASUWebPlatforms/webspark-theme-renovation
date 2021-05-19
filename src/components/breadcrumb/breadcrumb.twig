@@ -1,18 +1,18 @@
-{% set is_black = bg_color %}
+
 <nav aria-label="breadcrumbs" class="container">
   {% if links is not empty %}
-    <ol class="breadcrumb">
+    <ol class="breadcrumb {{ bg_color }}">
       {% for link in links %}
-          {% if (link.url.routeName == '<nolink>') or (link.url.routeName == '<none>') %}
-            <li {% if is_black == 'bg-gray-7' %}class="breadcrumb-item text-gray-1"{% else %}class="breadcrumb-item{{ not item.url ? ' active' }}"{% endif %} aria-current="page">
-              {{ link.text }}
-            </li>
-          {% else %}
-            <li class="breadcrumb-item">
-              <a href="{{ link.url }}">{{ link.text }}</a>
-            </li>
-          {% endif %}
+        {% if (link.url.routeName == '<nolink>') or (link.url.routeName == '<none>') %}
+          <li class="breadcrumb-item {{ not item.url ? ' active' }}" aria-current="page">
+            {{ link.text }}
+          </li>
+        {% else %}
+          <li class="breadcrumb-item">
+            <a href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
-{% endif %}
+  {% endif %}
 </nav>
