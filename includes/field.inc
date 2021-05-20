@@ -6,6 +6,9 @@
 /**
  * Implements hook_preprocess_HOOK().
  */
+
+use Drupal\Core\Url;
+
 function renovation_preprocess_field(&$variables) {
 
   $field_name = $variables['element']['#field_name'];
@@ -29,7 +32,7 @@ function renovation_preprocess_field(&$variables) {
         $icon = get_icon($paragraph_values);
         $buttons[] = [
           'background_color' => $background_color,
-          'link' => $cta['uri'],
+          'link' => Url::fromUri($cta['uri']),
           'title' => $cta['title'],
           'color' => isset($cta['options']['attributes']['class']) ? $cta['options']['attributes']['class'] : '',
           'icon' => $icon ? $icon : '',
