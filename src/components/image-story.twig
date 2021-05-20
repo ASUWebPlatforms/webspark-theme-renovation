@@ -10,9 +10,7 @@
  */
 #}
 {% set classes = [
-  responsive ? 'img-fluid' : 'img-thumbnail',
-  'uds-img',
-  'figure-img',
+  'hero',
 ]|merge(utility_classes ? utility_classes : []) %}
 
 <img{{ attributes.addClass(classes) }} />
