@@ -10,12 +10,19 @@
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
 ] %}
+{% set class_layout = content['#view_mode'] == 'landscape' ? 'uds-card-arrangement-vertical'%}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
   {{ content.field_tooltip }}
   {% block content %}
-    {{ content|without('field_anchor', 'field_tooltip') }}
+    {% include '@renovation/cards/card-arrangement.twig' with {
+      heading: content.field_heading,
+      cta: content.field_cta,
+      text: content.field_formatted_text[0],
+      cards: content.field_card_group,
+      class_layout: class_layout
+    } %}
   {% endblock %}
 
 </div>
