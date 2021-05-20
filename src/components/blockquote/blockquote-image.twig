@@ -1,17 +1,13 @@
-
-{% if reversed == 'reversed' %}
-<div class="wrapper p-4 p-sm-6 bg-gray-2">
-{% endif %}
-  <div class="uds-blockquote with-image{% if reversed == 'reversed' %} {{ reversed }}{% endif %}">
-    {{ media }}
-    <blockquote>
-      <p>{{ body_text }}</p>
-      <div class="citation">
-        <cite class="name">{{ citation_author }}</cite>
-        <cite class="description">{{ citation_description }}</cite>
-      </div>
-    </blockquote>
-  </div>
-{% if reversed == 'reversed' %}
+<div class="uds-blockquote with-image {% if image_position != 'left' %} reversed {% endif %} {{ text_color }}">
+  {{ media }}
+  <blockquote>
+    <h3>
+      <span class="{{ highlight }}">{{ heading }}</span>
+    </h3>
+    <p>{{ body_text }}</p>
+    <div class="citation">
+      <cite class="name">{{ citation_author }}</cite>
+      <cite class="description">{{ citation_description }}</cite>
+    </div>
+  </blockquote>
 </div>
-{% endif %}
