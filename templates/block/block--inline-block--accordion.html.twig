@@ -12,7 +12,8 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
+  {{ content.field_archon_menu_settings }}
   {{ content.field_tooltip }}
-  {{ content|without('field_color', 'field_anchor', 'field_icon', 'field_tooltip') }}
+  {{ content|without('field_color', 'field_archon_menu_settings', 'field_tooltip') }}
 
 </div>

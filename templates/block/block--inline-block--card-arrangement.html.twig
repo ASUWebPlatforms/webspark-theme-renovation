@@ -14,6 +14,7 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
+  {{ content.field_archon_menu_settings }}
   {{ content.field_tooltip }}
   {% block content %}
     {% include '@renovation/cards/card-arrangement.twig' with {
