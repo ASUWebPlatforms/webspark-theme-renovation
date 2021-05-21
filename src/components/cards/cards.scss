@@ -14,3 +14,19 @@
     border-radius: 0;
   }
 }
+
+.uds-card-arrangement-card-container {
+  .card-header {
+    padding-bottom: 16px;
+  }
+}
+.uds-card-arrangement>.uds-card-arrangement-content-container {
+  a {
+    margin-left: auto;
+  }
+}
+.uds-card-arrangement.uds-card-arrangement-vertical>.uds-card-arrangement-content-container {
+  a {
+    margin: initial
+  }
+}
