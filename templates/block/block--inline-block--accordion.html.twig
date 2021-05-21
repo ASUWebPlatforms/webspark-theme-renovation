@@ -10,9 +10,6 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 
-{% set unique_label = configuration['label'] %}
-{% set unique_id = unique_label|replace({' ': '-'}) %}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
   {{ content.field_tooltip }}

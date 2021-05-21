@@ -23,10 +23,4 @@ function renovation_preprocess_paragraph(&$variables) {
     $variables['button_action'] = TRUE;
   }
 
-  // Card Paragraph.
-  if ($bundle == 'accordion_panel') {
-    $parent = $paragraph->getParentEntity();
-    // Value used to associate accordion panel with its data-parent.
-    $variables['parent_label'] = $parent->info->value;
-  }
 }
