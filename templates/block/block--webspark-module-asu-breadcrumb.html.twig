@@ -12,10 +12,8 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-  <div class="{{ configuration['color'] }}">
     {% include '@renovation/breadcrumb/breadcrumb.twig' with {
       links: content['#links'],
-      bg_color: configuration['color']
+      bg_color: configuration['color'],
     } %}
-  </div>
 </div>
