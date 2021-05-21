@@ -1,6 +1,5 @@
-{% if style != 'default' %}
-<div style="width:{{ size }}%;">
-  {% endif %}
+{% set style = size == "default" ? '100%' : size ~ '%' %}
+  <div style="width:{{ style }};">
   <div class="uds-img{% if drop_shadow[0]['#markup'] == '1' %} uds-img-drop-shadow{% endif %}">
     <figure class="figure uds-figure">
       {{ media }}
@@ -12,6 +11,4 @@
     </figure>
     {% endif %}
   </div>
-  {% if style != 'default' %}
-</div>
-{% endif %}
+  </div>
