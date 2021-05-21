@@ -5,15 +5,18 @@
  */
 #}
 {% set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
 ] %}
 {{ attach_library('asu_events/event-components-library') }}
 {{ attach_library('asu_react_integration/reactjs') }}
 
 <div{{ attributes.addClass(classes) }}>
-    {{ title_suffix }}
+  {{ content.field_archon_menu_settings }}
+  {{ title_suffix }}
   {{ content.field_tooltip }}
-    <div class="clas-events-react-base" data-feed="/asu-events-feed/{{ content.field_events_feed_filter.0  }}" data-items="{{ content.field_events_items_to_display.0 }}">Events</div>
+  <div class="clas-events-react-base" data-feed="/asu-events-feed/{{ content.field_events_feed_filter.0 }}"
+       data-items="{{ content.field_events_items_to_display.0 }}">Events
+  </div>
 </div>

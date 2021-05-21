@@ -12,11 +12,11 @@
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
-
+  {{ content.field_archon_menu_settings }}
   <div class="container {{ content.field_background_color['0']['#markup'] }}">
     <div class="row">
       <div class="col-12 col-md-8 col-lg-10 col-xl-12">
-        {{ content|without('field_anchor', 'field_background_color', 'field_tooltip') }}
+        {{ content|without('field_anchor', 'field_background_color', 'field_tooltip', 'field_archon_menu_settings') }}
       </div>
     </div>
   </div>
