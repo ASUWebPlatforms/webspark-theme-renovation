@@ -4,11 +4,10 @@
  * Default template for a field.
  */
 #}
-
-{% for item in items %}
-
-  {% include '@renovation/paragraphs/paragraphs.twig' with {
-    body_copy: item.content,
-  } %}
-{% endfor %}
-
+<div class="formatted-text">
+  {% for item in items %}
+    {% include '@renovation/paragraphs/paragraphs.twig' with {
+      body_copy: item.content,
+    } %}
+  {% endfor %}
+</div>
