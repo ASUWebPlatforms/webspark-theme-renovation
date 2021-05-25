@@ -28,6 +28,10 @@ figure.caption-drupal-media {
       padding: .75rem;
       font-size: .75rem;
       text-align: left;
+      span {
+        color: $uds-color-base-gray-5;
+        max-width: 75ch;
+      }
     }
 
 }
