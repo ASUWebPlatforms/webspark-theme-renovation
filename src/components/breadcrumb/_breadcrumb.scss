@@ -1,5 +1,12 @@
 @import '../../sass/extends/breadcrumb';
 
-ol.breadcrumb.bg-white {
-  padding-left: 0;
+.block-webspark-module-asu-breadcrumb {
+  .breadcrumbs {
+  }
+  nav {
+    max-width: 1200px;
+    ol.breadcrumb {
+      padding-left: 0;
+    }
+  }
 }

@@ -11,7 +11,7 @@
           <div class="content">
           {% for key, item in content.first %}
             {% if not loop.first %}
-              {{ item.content }}
+              <div class="container">{{ item.content }}</div>
             {% endif %}
           {% endfor %}
           </div>
