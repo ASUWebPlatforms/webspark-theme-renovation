@@ -7,8 +7,8 @@
 
 function renovation_form_alter(&$form, &$form_state, $form_id) {
 
-  // Add classes to cancel button on Layout Builder discard changes.
-  if ($form_id == 'layout_builder_discard_changes') {
+  // Add classes to cancel button on Layout Builder discard/revert changes.
+  if ($form_id == 'layout_builder_discard_changes' || $form_id == 'layout_builder_revert_overrides') {
     $form['actions']['cancel']['#attributes']['class'][] = 'btn btn-dark';
   }
 }
