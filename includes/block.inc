@@ -33,4 +33,9 @@ function renovation_preprocess_block(&$variables) {
     $variables['content']['#links'][] = Link::fromTextAndUrl($page_title, Url::fromRoute('<nolink>'));
   }
 
+  $plugin_id = $variables['base_plugin_id'] ?? '';
+
+  if ($plugin_id == 'inline_block') {
+    $variables['block'] = $variables['content']['#block_content'];
+  }
 }
