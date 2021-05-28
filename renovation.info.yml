@@ -25,8 +25,10 @@ libraries-override:
     css:
       base:
         misc/dialog/off-canvas.reset.css: css/core/dialog/off-canvas.reset.css
+        misc/dialog/off-canvas.base.css: css/core/dialog/off-canvas.base.css
       component:
         misc/dialog/off-canvas.table.css: css/core/dialog/off-canvas.table.css
+
 
 ckeditor_stylesheets:
   - assets/css/renovation.style.css
