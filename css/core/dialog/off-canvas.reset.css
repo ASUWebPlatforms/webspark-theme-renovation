@@ -57,7 +57,7 @@
 #drupal-off-canvas kbd,
 #drupal-off-canvas label,
 #drupal-off-canvas legend,
-#drupal-off-canvas li,
+#drupal-off-canvas li:not(.jstree-node),
 #drupal-off-canvas main,
 #drupal-off-canvas mark,
 #drupal-off-canvas menu,
