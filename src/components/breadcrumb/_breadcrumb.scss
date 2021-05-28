@@ -1,11 +1,12 @@
 @import '../../sass/extends/breadcrumb';
 
 .block-webspark-module-asu-breadcrumb {
+  .breadcrumbs {
+  }
   nav {
     max-width: 1200px;
+    ol.breadcrumb {
+      padding-left: 0;
+    }
   }
-}
-
-ol.breadcrumb {
-  padding-left: 0;
 }
