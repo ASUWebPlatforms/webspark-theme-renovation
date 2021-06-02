@@ -205,6 +205,7 @@
 #drupal-off-canvas input {
   margin: 0;
   padding: 0;
+  padding: 8px;
 }
 #drupal-off-canvas input[type="checkbox"],
 #drupal-off-canvas input[type="radio"] {
@@ -388,4 +389,31 @@
   background-repeat: no-repeat;
   background-size: 6px 6px;
   color: #ff0000;
+}
+
+/* Color selection on notifications. */
+#drupal-off-canvas .banner-green {
+  background: #78be20;
+}
+#drupal-off-canvas span.banner-orange {
+  background-color: #ff7f32;
+}
+#drupal-off-canvas span.banner-blue {
+  background-color: #00a3e0;
+}
+#drupal-off-canvas span.banner-gray {
+  background-color: #e8e8e8;
+}
+#drupal-off-canvas span.banner-black {
+  background-color: #191919;
+}
+
+/* Float radios left on color selection */
+#drupal-off-canvas .form-item-settings-block-form-field-banner-background-color {
+  float: left;
+}
+
+/* Fix Fontawesome icon picker. */
+span.selected-icon .svg-inline--fa  {
+  vertical-align: -0.6em;
 }
