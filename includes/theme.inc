@@ -72,3 +72,14 @@ function renovation_theme_suggestions_image_style_alter(array &$suggestions, arr
 function renovation_theme_suggestions_image_alter(array &$suggestions, array $variables) {
   $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['style_name'];
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function renovation_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+  if (isset($element['#name']) && strpos($element['#name'], 'field_banner_background_color') > 0) {
+    // Specifically for radio inputs on color selector.
+    $suggestions[] = $variables['theme_hook_original'] . '__' . 'field_banner_background_color';
+  }
+}
