@@ -23,16 +23,6 @@ function renovation_preprocess_block(&$variables) {
     $variables['heading_background_color'] = $block_content->field_hero_background_color->value;
   }
 
-  if ($variables['plugin_id'] == 'webspark_module_asu_breadcrumb') {
-    // As we cannot pass a config var through the breadcrumb the only option is
-    // to add the page title through the block to the array of links.
-    $request = \Drupal::request();
-    $route_match = \Drupal::routeMatch();
-    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-
-    $variables['content']['#links'][] = Link::fromTextAndUrl($page_title, Url::fromRoute('<nolink>'));
-  }
-
   $plugin_id = $variables['base_plugin_id'] ?? '';
 
   if ($plugin_id == 'inline_block') {
