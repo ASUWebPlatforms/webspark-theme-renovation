@@ -13,12 +13,12 @@
 <div{{ attributes.addClass(classes) }}>
   {# To allow contextual links to display the title_suffix is required. #}
   {{ title_suffix }}
-
   {% include '@renovation/heroes/heroes.twig' with {
     size: content.field_hero_size[0]['#markup'],
     heading_background: heading_background_color,
     hero_background: file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value),
     hero_body: content.field_hero_unformatted_text[0]['#context']['value'],
+    sub_heading: content.field_sub_heading[0]['#context']['value'],
     heading: content.field_heading[0]['#context']['value'],
     cta_btn: content.field_cta
   } %}
