@@ -32,3 +32,16 @@ span.btn.btn-gold a:active,
 span.btn.btn-gray a:active {
   color: #212529;
 }
+
+ul ul {
+  list-style: none;
+}
+
+ol ol {
+  list-style: none;
+}
+
+.caption > figcaption {
+  display: block;
+  width: 100%;
+}
