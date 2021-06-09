@@ -35,6 +35,9 @@
   {% if type == 'error' %}
     {% set icon = 'fa-exclamation-triangle' %}
   {% endif %}
+  {% if type == 'danger' %}
+    {% set icon = 'fa-exclamation-triangle' %}
+  {% endif %}
 
   <div class="alert-icon"><i class="fas fa-2x {{ icon }}"></i></div>
   <div class="alert-content">
