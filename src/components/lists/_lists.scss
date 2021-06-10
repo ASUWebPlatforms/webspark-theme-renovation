@@ -1,0 +1,13 @@
+@import '../../sass/extends/list';
+
+ul ul {
+  list-style: none;
+}
+
+ol ol {
+  list-style: none;
+}
+
+ol.uds-list ol {
+  counter-reset: listcounter;
+}

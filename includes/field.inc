@@ -48,29 +48,6 @@ function renovation_preprocess_field(&$variables) {
     $variables['background_class'] = $container->get('field_banner_background_color')->value;
   }
 
-  // Field Tab Field.
-  if ($field_name == 'field_tab') {
-    // Create an array of tabs.
-    $paragraphs = $paragraphs = $variables['items'];
-    $tabs = [];
-    foreach ( $paragraphs as $paragraph) {
-      /** @var  \Drupal\paragraphs\Entity\Paragraph */
-      $paragraph_values = $paragraph['content']['#paragraph'];
-      $tabs[] = [
-        'heading' => $paragraph_values->get('field_heading')->value,
-        'copy' => $paragraph_values->get('field_body')->value
-      ];
-    }
-    $variables['tabs'] = $tabs;
-    // Pass the background color of the block to the template.
-    /** @var \Drupal\block_content\Entity\BlockContent $block */
-    $block = $variables['element']['#object'];
-    $variables['bg_color'] = $block->field_background_color->value;
-    if ($variables['bg_color'] == 'bg-dark') {
-      $variables['is_dark'] = TRUE;
-    }
-  }
-
   // Cards.
   if ($field_name == 'field_cards') {
 

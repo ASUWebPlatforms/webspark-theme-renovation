@@ -28,4 +28,23 @@ function renovation_preprocess_block(&$variables) {
   if ($plugin_id == 'inline_block') {
     $variables['block'] = $variables['content']['#block_content'];
   }
+
+  // Preprocess tabs for tabbed content.
+  if ($block_id == 'tabbed_content') {
+    $block_content = $variables['content']['#block_content'];
+    $paragraphs = $block_content->field_tab->referencedEntities();
+
+    // Create an array of tabs.
+    $tabs = [];
+    foreach ($paragraphs as $paragraph) {
+      $tabs[] = [
+        'heading' => $paragraph->get('field_heading')->value,
+        'copy' => $paragraph->get('field_body')->value
+      ];
+    }
+    $variables['tabs'] = $tabs;
+  }
+
+
+
 }
