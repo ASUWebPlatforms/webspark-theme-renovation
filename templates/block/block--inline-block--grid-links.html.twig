@@ -17,7 +17,8 @@
   {% block content %}
     {% include '@renovation/grid-links/grid-links.twig' with {
       links: content.field_links,
-      style: content.field_grid_links_style.0,
+      style: content.field_links_color.0,
+      display: content.field_grid_links_display.0
     } %}
   {% endblock %}
 </div>

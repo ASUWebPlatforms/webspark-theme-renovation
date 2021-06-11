@@ -16,9 +16,11 @@
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
   <div class="clas-news-react-base"
-    data-feed="/asu-news-feed/{{ content.field_news_feed_filter.0  }}"
-    data-items="{{ content.field_news_items_to_display.0 }}"
-    data-view="{{ content.field_display.0 }}">
+    data-header-title="{{ content.field_heading.0 }}"
+    data-view="{{ content.field_display.0 }}"
+    data-feed="/asu-news-feed/"
+    data-feed-section="{{ content.field_news_feed_filter.0  }}"
+    data-items="{{ content.field_news_items_to_display.0 }}">
     ASU News
   </div>
 </div>

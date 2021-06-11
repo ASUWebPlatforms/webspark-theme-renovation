@@ -25,5 +25,5 @@
       class_layout: class_layout
     } %}
   {% endblock %}
-
+  {{ content|without('field_heading', 'field_cta', 'field_formatted_text', 'field_card_group') }}
 </div>
