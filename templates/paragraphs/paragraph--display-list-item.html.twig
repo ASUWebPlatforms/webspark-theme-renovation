@@ -1,9 +1,0 @@
-{% block paragraph %}
-  {% block content %}
-    {% include '@renovation/lists/list-item-display.twig' with {
-      primary_text: content.field_formatted_text[0]['#text'],
-      secondary_text: content.field_secondary_text[0]['#text'],
-    } %}
-  {% endblock %}
-{% endblock paragraph %}
-

@@ -1,9 +1,0 @@
-{% block paragraph %}
-  {% block content %}
-    {% include '@renovation/lists/list-item-step.twig' with {
-      heading: content.field_heading[0]['#context']['value'],
-      list_item: content.field_formatted_text[0]['#text'],
-    } %}
-  {% endblock %}
-{% endblock paragraph %}
-
