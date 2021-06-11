@@ -10,13 +10,18 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 
+{{ content|without('field_background_color', 'field_tab', 'field_tooltip', 'field_anchor_menu_settings') }}
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
   <div class="container {{ content.field_background_color['0']['#markup'] }}">
     <div class="row">
       <div class="col-12 col-md-8 col-lg-10 col-xl-12">
-        {{ content|without('field_anchor', 'field_background_color', 'field_tooltip', 'field_anchor_menu_settings') }}
+        {% include '@renovation/tabbed-panels/tabbed-panels.twig' with {
+          tabs: tabs,
+          bg_color: content.field_background_color[0]['#markup'],
+          is_dark: content.field_background_color[0]['#markup'] == 'bg-dark' ? true : '',
+        } %}
       </div>
     </div>
   </div>
