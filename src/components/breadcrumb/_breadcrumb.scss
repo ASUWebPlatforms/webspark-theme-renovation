@@ -8,10 +8,10 @@
     ol.breadcrumb {
       padding-left: 0;
       @media screen and (max-width: $uds-breakpoint-sm) {
-        padding-left: 16px;
+        padding-left: 20px;
       }
       @media screen and (max-width: $uds-breakpoint-md) {
-        padding-left: 32px;
+        padding-left: 20px;
       }
     }
   }
