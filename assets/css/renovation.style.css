@@ -30132,6 +30132,20 @@ ol.uds-list ol {
   counter-reset: listcounter;
 }
 
+ul.uds-list.fa-ul.maroon li svg {
+  color: #8c1d40;
+}
+ul.uds-list.fa-ul.gold li svg {
+  color: #ffc627;
+}
+ul.uds-list.fa-ul li svg {
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+  left: -2.5rem;
+}
+
 .align-left.embedded-media {
   padding: 5px 10px 0 0;
 }
@@ -35899,6 +35913,20 @@ ol ol {
 
 ol.uds-list ol {
   counter-reset: listcounter;
+}
+
+ul.uds-list.fa-ul.maroon li svg {
+  color: #8c1d40;
+}
+ul.uds-list.fa-ul.gold li svg {
+  color: #ffc627;
+}
+ul.uds-list.fa-ul li svg {
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+  left: -2.5rem;
 }
 
 .align-left.embedded-media {
