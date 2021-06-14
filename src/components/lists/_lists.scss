@@ -11,3 +11,23 @@ ol ol {
 ol.uds-list ol {
   counter-reset: listcounter;
 }
+
+ul.uds-list {
+  &.fa-ul {
+    // Maroon icon bullets
+    &.maroon li svg {
+      color: $uds-component-list-icon-list-li-maroon-icon;
+    }
+    &.gold li svg {
+      color: $uds-component-list-darkmode-gold-color;
+    }
+    li svg{
+      position: absolute;
+      text-align: center;
+      width: 2em;
+      line-height: inherit;
+      left: $uds-component-list-icon-list-icon-left;
+    }
+  }
+}
+
