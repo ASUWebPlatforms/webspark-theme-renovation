@@ -4,3 +4,72 @@
     margin-left: 2.5rem;
   }
 }
+
+// Overrides as Drupal converts to SVG.
+.formatted-text {
+  .uds-tooltip {
+    .svg-inline--fa.fa-stack-2x {
+      height: 2em;
+      width: 2em;
+    }
+
+    // Turn tooltip icon blue on hover
+    &:hover {
+      .fa-stack .fa-circle {
+        fill: $uds-color-font-light-info;
+      }
+    }
+
+    // Default white.
+    &-white {
+      .fa-stack {
+        .fa-circle {
+          fill: $uds-color-base-gray-3;
+        }
+
+        .fa-info {
+          fill: $uds-color-base-white;
+        }
+      }
+    }
+
+    // Base gray colors
+    &-base-gray {
+      .fa-stack {
+        .fa-circle {
+          fill: $uds-color-base-gray-4;
+        }
+
+        .fa-info {
+          fill: $uds-color-base-gray-1;
+        }
+      }
+    }
+
+    // Gray colors
+    &-gray {
+      .fa-stack {
+        .fa-circle {
+          fill: $uds-color-base-gray-4;
+        }
+
+        .fa-info {
+          fill: $uds-color-background-gray;
+        }
+      }
+    }
+
+    // Dark colors
+    &-dark {
+      .fa-stack {
+        .fa-circle {
+          fill: $uds-color-base-gray-5;
+        }
+
+        .fa-info {
+          fill: $uds-color-font-dark-base;
+        }
+      }
+    }
+  }
+}
