@@ -8,3 +8,6 @@ style:
   dependencies:
     - core/jquery
     - core/drupal
+renovation.donut:
+  js:
+    js/donut.js: {}
