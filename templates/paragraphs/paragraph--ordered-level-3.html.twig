@@ -1,9 +1,0 @@
-
-{% block paragraph %}
-  {% block content %}
-    {% include '@renovation/lists/ordered-list-item-multi.twig' with {
-      list_item: content.field_formatted_text,
-      level_4: content.field_ordered_level_4,
-    } %}
-  {% endblock %}
-{% endblock paragraph %}

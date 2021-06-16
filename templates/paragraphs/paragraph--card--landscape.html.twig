@@ -1,13 +1,2 @@
-{% include '@renovation/cards/cards--landscape.twig' with {
-  type: null,
-  image: content.field_media,
-  image_enabled: paragraph.field_media.target_id,
-  heading : content.field_heading,
-  body: content.field_body|render,
-  event_date: null,
-  event_location: null,
-  cta: content.field_cta|render,
-  cta_secondary: content.field_cta_secondary|render,
-  plain_link: content.field_link|render,
-  tags: content.field_tags|render
-} %}
+<div class="div" id="card-{{ paragraph.uuid.value }}"></div>
+{{ content|without('field_media', 'field_media', 'field_heading', 'field_body', 'field_cta', 'field_cta_secondary', 'field_link', 'field_tags') }}

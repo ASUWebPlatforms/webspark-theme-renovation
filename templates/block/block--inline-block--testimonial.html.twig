@@ -11,14 +11,10 @@
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
   {{ title_suffix }}
+  {{ content.field_anchor_menu_settings }}
   {{ content.field_tooltip }}
   {% block content %}
-    {% include '@renovation/grid-links/grid-links.twig' with {
-      links: content.field_links,
-      style: content.field_links_color.0,
-      display: content.field_grid_links_display.0
-    } %}
+    {{ content|without('field_tooltip', 'field_anchor_menu_settings', 'field_accent_color', 'field_heading_highlight') }}
   {% endblock %}
 </div>
