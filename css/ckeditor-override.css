@@ -45,3 +45,40 @@ ol ol {
   display: block;
   width: 100%;
 }
+
+/*Overrides for Tool Tip*/
+.uds-tooltip .fa-stack {
+  height: 1em;
+  width: 1.5em;
+}
+.uds-tooltip .svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2em;
+}
+.uds-tooltip:hover .fa-stack .fa-circle {
+  fill: #00b0f3;
+}
+.uds-tooltip-white .fa-stack .fa-circle {
+  fill: #d0d0d0;
+}
+.uds-tooltip-white .fa-stack .fa-info {
+  fill: #ffffff;
+}
+.uds-tooltip-base-gray .fa-stack .fa-circle {
+  fill: #bfbfbf;
+}
+.uds-tooltip-base-gray .fa-stack .fa-info {
+  fill: #fafafa;
+}
+.uds-tooltip-gray .fa-stack .fa-circle {
+  fill: #bfbfbf;
+}
+.uds-tooltip-gray .fa-stack .fa-info {
+  fill: #e8e8e8;
+}
+.uds-tooltip-dark .fa-stack .fa-circle {
+  color: #747474;
+}
+.uds-tooltip-dark .fa-stack .fa-info {
+  color: #191919;
+}
