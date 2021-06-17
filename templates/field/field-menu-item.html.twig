@@ -8,9 +8,6 @@
  *   - tree
  */
 #}
-{% if title %}
-  <h2 class="menu-title">{{ title }}</h2>
-{% endif %}
 {% include '@renovation/menus/menu--sidebar-menu.html.twig' with {
- tree: tree
+  tree: tree
 } %}
