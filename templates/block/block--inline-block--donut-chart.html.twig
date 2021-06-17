@@ -12,7 +12,7 @@
 <div{{ attributes.addClass(classes) }}>
   {# To allow contextual links to display the title_suffix is required. #}
   {{ title_suffix }}
-  {% include '@renovation/charts/donut.twig' with {
+  {% include '@renovation/charts-and-graphs/donut.twig' with {
     number: content.field_number.0,
     text: content.field_heading.0
   } %}
