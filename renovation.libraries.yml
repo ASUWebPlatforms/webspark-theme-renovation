@@ -8,3 +8,12 @@ style:
   dependencies:
     - core/jquery
     - core/drupal
+renovation.chartjs:
+  remote: https://github.com/chartjs/Chart.js
+  version: 3.2.0
+  license:
+    name: MIT
+    url: https://github.com/chartjs/Chart.js/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js: { type: external, minified: true }
