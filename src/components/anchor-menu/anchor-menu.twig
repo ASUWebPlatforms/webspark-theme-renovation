@@ -1,0 +1,17 @@
+<div class="container-xl">
+  <div class="uds-anchor-menu-wrapper">
+    <h4 data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      On This Page: <span class="fas fa-chevron-down"></span>
+    </h4>
+
+    <div id="collapseExample" class="card card-body collapse">
+      <nav class="nav" aria-label="Same Page">
+        {% for link in links %}
+          <a class="nav-link" href="{{ link['#url'] }}"><span class="{{ link['#icon_style'] }} fa-{{ link['#icon'] }}"></span>{{ link['#title'] }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
+
+{{ attach_library('renovation/anchor-menu') }}
