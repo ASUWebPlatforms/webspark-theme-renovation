@@ -3,10 +3,14 @@
 .sidebar {
 
   .nav-link {
+    text-decoration: none;
     &.active,
     &.is-active {
       text-decoration: none;
       padding-bottom: 0;
+    }
+    &:focus {
+      text-decoration: underline;
     }
 
     &.active:after,
@@ -19,6 +23,14 @@
       width: 100%;
       background-color: $uds-color-base-gold;
       text-decoration: none;
+    }
+    &[aria-expanded='true'] {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    svg {
+      float: right;
     }
   }
   .card.card-foldable {

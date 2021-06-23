@@ -1,22 +1,33 @@
-<div class="uds-hero uds-hero-{{ size }}"
-     style="background-image: linear-gradient(180deg, #19191900 0%, #191919c9 100%), url({{ hero_background }});">
-  <div class="container uds-hero-container">
-    {# Sub Heading #}
-    {% if sub_heading is not empty %}
-      <h3 class="heading heading-one col-md-8"><span class="highlight highlight-black">{{ sub_heading }}</span></h3>
-    {% endif %}
-    {# Headings Template #}
-    {% include '@renovation/headings/heading-highlighted.twig' with {
-      html_tag : 'h1',
-      heading: heading,
-      highlight: heading_background,
-    } %}
-    {% if size != 'sm' %}
-      <div class="uds-hero-text col-sm-12 col-md-7">
-        <p>{{ hero_body|raw }}</p>
-        {# Button link template #}
-        {{ cta_btn }}
-      </div>
-    {% endif %}
+
+<div class="uds-hero-{{ size }} {% if size == 'lg' %} hide-content{% endif %}{% if has_button_row %} has-btn-row{% endif %}">
+  <img class="hero" src="{{ hero_background }}" alt="{{ hero_alt }}" />
+  <div role="doc-subtitle"><span class="{{ sub_heading_background }}">{{ sub_heading }}</span></div>
+  {% include '@renovation/headings/heading-highlighted.twig' with {
+    html_tag : 'h1',
+    heading: heading,
+    highlight: heading_background,
+  } %}
+
+  {% if size =='md' %}
+    <div class="content text-white">
+      <p>{{ hero_body|raw }}</p>
+    </div>
+  {% endif %}
+
+  {% if size =='lg' %}
+  <div class="content">
+    <p class="text-white">{{ hero_body|raw }}</p>
   </div>
+  {% endif %}
+
+  {# Print row of or single button. #}
+  {% if has_button_row %}
+    <div class="btn-row">
+      {{ cta_btn }}
+    </div>
+  {% else %}
+    {{ cta_btn }}
+  {% endif %}
 </div>
+
+

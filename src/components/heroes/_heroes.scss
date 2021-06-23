@@ -1,3 +1,12 @@
 @import '../../sass/extends/heroes';
-
-
+.block-inline-blockhero {
+  img.hero {
+    width: 100%;
+  }
+  .btn-row {
+    a.btn {
+      font-size: .875rem;
+      padding: .5rem 1rem;
+    }
+  }
+}
