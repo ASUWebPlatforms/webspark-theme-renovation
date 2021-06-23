@@ -8,13 +8,7 @@
     highlight: heading_background,
   } %}
 
-  {% if size =='md' %}
-    <div class="content text-white">
-      <p>{{ hero_body|raw }}</p>
-    </div>
-  {% endif %}
-
-  {% if size =='lg' %}
+  {% if size !='sm' %}
   <div class="content">
     <p class="text-white">{{ hero_body|raw }}</p>
   </div>
