@@ -417,3 +417,8 @@
 span.selected-icon .svg-inline--fa  {
   vertical-align: -0.6em;
 }
+
+/* Fix hidden js buttons */
+.js .js-hide {
+  display: none !important;
+}
