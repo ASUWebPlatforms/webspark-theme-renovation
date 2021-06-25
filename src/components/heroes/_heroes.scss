@@ -1,3 +1,15 @@
 @import '../../sass/extends/heroes';
-
-
+.block-inline-blockhero {
+  .uds-hero-sm,
+  .uds-hero-md,
+  .uds-hero-lg {
+    img.hero {
+      width: 100%;
+    }
+    .btn-row {
+      a {
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
