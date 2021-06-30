@@ -11,7 +11,7 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 {# Get an array of buttons so they can be counted. #}
-{%  set buttons = content.field_cta['#object'].get('field_cta').value %}
+{%  set buttons = content.field_two_cta['#object'].get('field_two_cta').value %}
 
 <div{{ attributes.addClass(classes) }}>
   {# To allow contextual links to display the title_suffix is required. #}
@@ -25,7 +25,7 @@
     sub_heading: content.field_sub_heading[0]['#context']['value'],
     sub_heading_background: content.field_sub_heading_background[0]['#markup'],
     heading: content.field_heading[0]['#context']['value'],
-    cta_btn: content.field_cta,
+    cta_btn: content.field_two_cta,
     has_button_row: buttons | length > 1 ? true : null,
   } %}
 </div>
