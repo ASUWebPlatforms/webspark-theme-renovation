@@ -5,9 +5,11 @@
       <span class="{{ highlight }}">{{ heading }}</span>
     </h3>
     <p>{{ body_text }}</p>
-    <div class="citation">
-      <cite class="name">{{ citation_author }}</cite>
-      <cite class="description">{{ citation_description }}</cite>
-    </div>
+    {% if citation_author is not empty or citation_description is not empty %}
+      <div class="citation">
+        <cite class="name">{{ citation_author }}</cite>
+        <cite class="description">{{ citation_description }}</cite>
+      </div>
+    {% endif %}
   </blockquote>
 </div>

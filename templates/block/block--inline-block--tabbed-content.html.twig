@@ -14,9 +14,9 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
-  <div class="container {{ content.field_background_color['0']['#markup'] }}">
+  <div class="container-xl {{ content.field_background_color['0']['#markup'] }}">
     <div class="row">
-      <div class="col-12 col-md-8 col-lg-10 col-xl-12">
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12 pl-0 pr-0">
         {% include '@renovation/tabbed-panels/tabbed-panels.twig' with {
           tabs: tabs,
           bg_color: content.field_background_color[0]['#markup'],
