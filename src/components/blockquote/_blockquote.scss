@@ -1,1 +1,8 @@
 @import '../../sass/extends/blockquotes';
+
+.uds-blockquote.with-image.reversed {
+  img {
+    width: 180px;
+    max-width: none;
+  }
+}
