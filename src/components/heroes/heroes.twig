@@ -1,6 +1,21 @@
 
-<div class="uds-hero-{{ size }} {% if size == 'lg' %} hide-content{% endif %}{% if has_button_row %} has-btn-row{% endif %}">
-  <img class="hero" src="{{ hero_background }}" alt="{{ hero_alt }}" />
+
+
+  {% if media_bundle == 'image' %}
+    <div class="uds-hero-{{ size }} {% if size == 'lg' %} hide-content{% endif %}{% if has_button_row %} has-btn-row{% endif %}">
+      <img class="hero" src="{{ hero_background }}" alt="{{ hero_alt }}" />
+  {% endif %}
+
+
+{% if media_bundle == 'video' %}
+  <div class="uds-video-hero {% if has_button_row %} has-btn-row{% endif %}">
+    <video autoplay muted loop playsinline class="fixed-background">
+      <source src="{{ video_url }}">
+    </video>
+    <div class="container">
+{% endif %}
+
+
   <div role="doc-subtitle"><span class="{{ sub_heading_background }}">{{ sub_heading }}</span></div>
   {% include '@renovation/headings/heading-highlighted.twig' with {
     html_tag : 'h1',
@@ -8,7 +23,7 @@
     highlight: heading_background,
   } %}
 
-  {% if size !='sm' %}
+  {% if size != 'sm' %}
   <div class="content">
     <p class="text-white">{{ hero_body|raw }}</p>
   </div>
@@ -22,6 +37,18 @@
   {% else %}
     {{ cta_btn }}
   {% endif %}
+
+  {% if media_bundle == 'video' %}
+    <div class="buttons">
+      <button class="first play" type="button">
+        <i class="fa fa-play"></i>
+      </button>
+      <button class="second pause" type="button">
+        <i class="fa fa-pause"></i>
+      </button>
+    </div>
+    {{ attach_library('renovation/heroes') }}
+  </div>
+  {% endif %}
+
 </div>
-
-
