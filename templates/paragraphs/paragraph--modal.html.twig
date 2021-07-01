@@ -46,31 +46,24 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{{ paragraph.field_cta.entity.field_banner_background_color.value }}
 {% block paragraph %}
-  {% block content %}
-    {% if button_action == 'true' %}
-        {% include '@renovation/buttons/button-action.twig' with {
-          url : content.field_cta_link[0]['#url'],
-          title: content.field_cta_link[0]['#title'],
-          button_color: 'btn-gold',
-        } %}
-    {% else %}
-      {% if not has_icon %}
-        {% include '@renovation/buttons/button-cta.twig' with {
-          url : content.field_cta_link[0]['#url'],
-          title: content.field_cta_link[0]['#title'],
-          button_color: bg_color == 'banner-black' ? 'btn-gold' : 'btn-dark',
-        } %}
-      {% else %}
-        {% include '@renovation/buttons/button-icon.twig' with {
-          url : content.field_cta_link[0]['#url'],
-          title: content.field_cta_link[0]['#title'],
-          icon: content.field_icon[0]['#icons'][0]['#name'],
-          button_color: content.field_cta_link[0]['#options']['attributes']['class']
-        } %}
-      {% endif %}
-    {% endif %}
-  {% endblock %}
-
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% include '@renovation/modals/modals.twig' with {
+        label: content.field_button_label[0]['#context']['value'],
+      } %}
+      <div id="uds-modal" class="uds-modal">
+        <div class="uds-modal-container">
+          <button id="closeModalButton" class="uds-modal-close-btn">
+            <i class="fas fa-times fa-stack-1x"></i>
+            <span class="sr-only">Close</span>
+          </button>
+          <div class="uds-modal-content">
+            <h1>{{ content.field_heading }}</h1>
+            {{ content|without('field_button_label', 'field_heading') }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
 {% endblock paragraph %}
