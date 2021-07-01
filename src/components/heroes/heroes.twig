@@ -30,13 +30,15 @@
   {% endif %}
 
   {# Print row of or single button. #}
-  {% if has_button_row %}
-    <div class="btn-row">
-      {{ cta_btn }}
-    </div>
-  {% else %}
-    {{ cta_btn }}
-  {% endif %}
+      {% if cta_btn %}
+        {% if has_button_row %}
+          <div class="btn-row">
+            {{ cta_btn }}
+          </div>
+        {% else %}
+          {{ cta_btn }}
+        {% endif %}
+      {% endif %}
 
   {% if media_bundle == 'video' %}
     <div class="buttons">
