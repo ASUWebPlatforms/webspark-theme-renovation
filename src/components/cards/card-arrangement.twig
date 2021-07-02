@@ -5,9 +5,15 @@
       <p>{{ text }}</p>
       {{ cta }}
     </div>
-    <div class="uds-card-arrangement-card-container">
-      {{ cards }}
-    </div>
+    {% if class_layout %}
+      <div class="uds-card-arrangement-card-container">
+        {{ cards }}
+      </div>
+    {% else %}
+      <div class="uds-card-arrangement-card-container  auto-arrangement">
+        {{ cards }}
+      </div>
+    {% endif %}
   </div>
 </div>
 
