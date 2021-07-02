@@ -11,8 +11,14 @@
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    {% block label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endblock %}
+  {% endif %}
   {{ title_suffix }}
-  {% include '@renovation/banners/banner.twig' with {
+  {% include '@renovation/banners/banners.twig' with {
     background_color: content.field_banner_background_color,
     icon: content.field_icon,
     heading: content.field_heading,

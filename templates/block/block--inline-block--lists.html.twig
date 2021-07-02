@@ -14,6 +14,12 @@
 {% set view_mode = content['#view_mode'] %}
 
 <div{{ attributes.addClass(classes) }}>
+  {{{ title_prefix }}
+  {% if label %}
+    {% block label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endblock %}
+  {% endif %}
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
   {{ content|without('field_list_color', 'field_step_list_color', 'field_anchor_menu_settings', 'field_tooltip') }}
