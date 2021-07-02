@@ -20,6 +20,7 @@
   {{ title_suffix }}
   {% include '@renovation/charts-and-graphs/donut.twig' with {
     number: content.field_number.0,
-    text: content.field_heading.0
+    text: content.field_heading.0,
+    text_color: content['#block_content'].field_text_color.value
   } %}
 </div>
