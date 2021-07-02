@@ -11,6 +11,12 @@
 ] %}
 <div{{ attributes.addClass(classes) }}>
   {# To allow contextual links to display the title_suffix is required. #}
+  {{ title_prefix }}
+  {% if label %}
+    {% block label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endblock %}
+  {% endif %}
   {{ title_suffix }}
   {% include '@renovation/charts-and-graphs/donut.twig' with {
     number: content.field_number.0,

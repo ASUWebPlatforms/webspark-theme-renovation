@@ -12,6 +12,12 @@
 
 {{ content|without('field_background_color', 'field_tab', 'field_tooltip', 'field_anchor_menu_settings') }}
 <div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    {% block label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endblock %}
+  {% endif %}
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
   <div class="{{ content.field_background_color['0']['#markup'] }}">
