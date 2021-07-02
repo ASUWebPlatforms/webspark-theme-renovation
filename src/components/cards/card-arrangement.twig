@@ -1,16 +1,18 @@
-<div class="uds-card-arrangement {{ class_layout }}">
-  <div class="uds-card-arrangement-content-container {{ text_color }}">
-    <h2>{{ heading }}</h2>
-    <p>{{ text }}</p>
-    {{ cta }}
+<div class="col">
+  <div class="uds-card-arrangement {{ class_layout }}">
+    <div class="uds-card-arrangement-content-container {{ text_color }}">
+      <h2>{{ heading }}</h2>
+      <p>{{ text }}</p>
+      {{ cta }}
+    </div>
+    {% if class_layout %}
+      <div class="uds-card-arrangement-card-container">
+        {{ cards }}
+      </div>
+    {% else %}
+      <div class="uds-card-arrangement-card-container  auto-arrangement">
+        {{ cards }}
+      </div>
+    {% endif %}
   </div>
-  {% if class_layout %}
-    <div class="uds-card-arrangement-card-container">
-      {{ cards }}
-    </div>
-  {% else %}
-    <div class="uds-card-arrangement-card-container  auto-arrangement">
-      {{ cards }}
-    </div>
-  {% endif %}
 </div>
