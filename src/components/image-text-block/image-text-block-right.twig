@@ -2,19 +2,19 @@
   <div class="uds-image-text-block-text-container">
     {{ heading }}
     <h4>{{ sub_heading }}</h4>
-    {{ content }}
+    <p>{{ content }}</p>
     <div class="row">
       <div class="col-12 col-md-6 py-1">
-        <a href="#" class="btn btn-dark">Button link here</a>
+        {{ first_cta }}
       </div>
       <div class="col-12 col-md-6 py-1">
-        <a href="#" class="btn btn-dark">Button link here</a>
+        {{ second_cta }}
       </div>
     </div>
   </div>
 
   <div class="uds-image-text-block-image-container">
-    <img src="{{ image }}"></img>
+    <img src="{{ image }}"  class="img-fluid"></img>
   </div>
 </div>
 
