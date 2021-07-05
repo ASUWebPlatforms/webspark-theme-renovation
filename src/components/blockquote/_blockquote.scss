@@ -2,7 +2,9 @@
 
 .uds-blockquote.with-image.reversed {
   img {
-    width: 180px;
-    max-width: none;
+    object-fit: cover;
+    border-radius: 100%;
+    width: 72px;
+    height: 72px;
   }
 }
