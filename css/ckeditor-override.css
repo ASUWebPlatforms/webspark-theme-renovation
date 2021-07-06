@@ -83,7 +83,8 @@ ol ol {
   color: #191919;
 }
 
-/* Media library. Positions the edit button top left of inserted image.*/
+/* Media library. Positions the edit button top left of inserted image as default position breaks the alignment of
+images in ckeditor.*/
 button.media-library-item__edit {
   position: absolute;
   left: 10px;
