@@ -1,0 +1,10 @@
+/* Hide the red star on the image size field. */
+
+#drupal-off-canvas {
+  .field--name-field-image-size .form-item-settings-block-form-field-image-size .form-required:after {
+    display: none!important;
+  }
+}
+
+
+
