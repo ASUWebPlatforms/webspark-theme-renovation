@@ -95,3 +95,75 @@
     margin-top: 4px;
   }
 }
+
+/* Fix for alert close icon as different to the status message alerts. */
+.media-library-add-form {
+  .container {
+    .alert {
+      .alert-close {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        button {
+          background: white;
+          padding: 0;
+          width: 34px;
+          height: 34px;
+          border-radius: 100%;
+          border: 1px solid $uds-color-base-gray-4;
+          font-size: 2.5em;
+        }
+        .fa-circle {
+          width: 1em;
+        }
+        .fa-times {
+          left: 0px;
+        }
+        .fa-fw {
+          text-align: center;
+        }
+        .fa-2x {
+          font-size: 2.5em;
+        }
+        .fa-layers {
+          display: inline-block;
+          position: relative;
+          vertical-align: -0.125em;
+        }
+      }
+    }
+  }
+}
+
+/* After an image is uploaded the add-form gets focus this overrides the blue. */
+.media-library-widget-modal .media-library-add-form__added-media:focus {
+  box-shadow: 0 0 8px $uds-color-base-gray-6 !important;
+}
+
+/* Media remove button on form */
+.media-library-widget-modal .media-library-add-form__remove-button[type="submit"] {
+  background-color: #007bc6;
+  background-image: linear-gradient(to bottom, #007bc6, #0071b8);
+  text-shadow: 0 1px rgb(0 0 0 / 50%);
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  color: $white;
+  text-align: center;
+  padding: 4px 1.5em;
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-decoration: none;
+  border: 1px solid #a6a6a6;
+  border-radius: 20em;
+  &:hover {
+    background-color: #007bc6;
+    background-image: linear-gradient(to bottom, #007bc6, #0071b8);
+    color: $white;
+    box-shadow: 0 1px 2px rgb(23 26 28 / 25%);
+    transform: scale(1.05);
+    border: 1px solid #bfbfbf;
+    border-radius: 20em;
+  }
+}
