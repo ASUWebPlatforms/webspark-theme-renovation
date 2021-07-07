@@ -3,6 +3,14 @@
 // Override for FA5 icon.
 
 .alert {
+  button {
+    border: 1px solid $uds-color-base-gray-3;
+    background: transparent;
+    border-radius: 100%;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+  }
   .alert-close {
     display: flex;
     flex-direction: column;
