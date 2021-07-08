@@ -17,17 +17,17 @@
   .layout__fixed-width {
     .layout__region {
       margin: 0 102px;
-      @media screen and (max-width: $uds-breakpoint-sm) {
-        margin: 0 20px;
-      }
-      @media screen and (max-width: $uds-breakpoint-md) {
-        margin: 0 16px;
+      @media screen and (max-width: $uds-breakpoint-xl) {
+        margin: 0 83px;
       }
       @media screen and (max-width: $uds-breakpoint-lg) {
         margin: 0 16px;
       }
-      @media screen and (max-width: $uds-breakpoint-xl) {
-        margin: 0 83px;
+      @media screen and (max-width: $uds-breakpoint-md) {
+        margin: 0 16px;
+      }
+      @media screen and (max-width: $uds-breakpoint-sm) {
+        margin: 0 20px;
       }
     }
   }
