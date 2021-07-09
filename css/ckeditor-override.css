@@ -82,3 +82,15 @@ ol ol {
 .uds-tooltip-dark .fa-stack .fa-info {
   color: #191919;
 }
+
+/* Media library. Positions the edit button top left of inserted image.*/
+button.media-library-item__edit {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* Figcaption uses table layout in CK which conflicts with renovation css. */
+.caption > figcaption {
+  display: block;
+}
