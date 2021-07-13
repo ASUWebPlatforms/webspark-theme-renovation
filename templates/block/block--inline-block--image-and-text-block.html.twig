@@ -30,6 +30,7 @@
         content: content.field_formatted_text[0],
         first_cta: content.field_two_cta[0],
         second_cta: content.field_two_cta[1],
+        background_color: content.field_bg_color_content_sections[0]['#markup'],
       } %}
     {% else %}
       {% include '@renovation/image-text-block/image-text-block-right.twig' with {
@@ -39,6 +40,7 @@
         content: content.field_formatted_text[0],
         first_cta: content.field_two_cta[0],
         second_cta: content.field_two_cta[1],
+        background_color: content.field_bg_color_content_sections[0]['#markup'],
       } %}
     {% endif %}
   {% endblock %}
