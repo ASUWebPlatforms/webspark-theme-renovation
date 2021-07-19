@@ -11,6 +11,11 @@ function renovation_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'layout_builder_discard_changes' || $form_id == 'layout_builder_revert_overrides') {
     $form['actions']['cancel']['#attributes']['class'][] = 'btn btn-dark';
   }
+
+  if ($form_id == 'editor_media_dialog') {
+    // Change selection caption on media edit form to true by default.
+    $form['caption']['#default_value'] = TRUE;
+  }
 }
 
 /**
@@ -21,5 +26,3 @@ function renovation_preprocess_input__submit(&$variables) {
   // Adds class to submit buttons.
   $variables['attributes']['class'][] = 'btn-maroon';
 }
-
-
