@@ -82,8 +82,6 @@ ol ol {
 .uds-tooltip-dark .fa-stack .fa-info {
   color: #191919;
 }
-<<<<<<< Updated upstream
-=======
 
 /* Media library. Positions the edit button top left of inserted image.*/
 button.media-library-item__edit {
@@ -225,4 +223,3 @@ button.media-library-item__edit {
     margin-left: 205px;
   }
 }
->>>>>>> Stashed changes
