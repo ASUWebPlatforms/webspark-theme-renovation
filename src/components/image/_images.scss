@@ -1,0 +1,8 @@
+@import '../../sass/extends/images';
+
+.uds-img {
+  /* Add margin to bottom of image with boxshadow.*/
+  &.uds-img-drop-shadow {
+    margin-bottom: 1em;
+  }
+}
