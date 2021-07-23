@@ -23,8 +23,11 @@
   {{ content.field_anchor_menu_settings }}
   <div class="clas-news-react-base"
     data-header-title="{{ content.field_heading.0 }}"
+    data-header-color="{{ content.field_heading_text_color[0]['#markup'] }}"
     data-cta-link="{{ content.field_news_link[0]['#url'] }}"
     data-cta-text="{{ content.field_news_link[0]['#title']  }}"
+    data-cta-color="{{ content.field_header_cta_color[0]['#markup'] }}"
+    data-cards-buttons-color="{{ content.field_card_cta_color[0]['#markup'] }}"
     data-view="{{ content.field_display.0 }}"
     data-feed="/asu-news-feed/"
     data-feed-section="{{ content.field_news_feed_filter.0  }}"
