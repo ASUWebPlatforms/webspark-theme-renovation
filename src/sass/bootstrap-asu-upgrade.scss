@@ -1,0 +1,8 @@
+/* ========================================================================
+ * This file should contain only css that is a difference between Bootstrap
+ * versions and should be deleted when Bootstrap is up to date.
+ * ======================================================================== */
+
+.nav-link {
+  text-decoration: if($link-decoration == none, null, none);
+}

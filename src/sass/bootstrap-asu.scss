@@ -125,5 +125,8 @@ $theme-colors: map-remove($theme-colors, 1, 3, 5);
 @import '../../node_modules/bootstrap/scss/utilities';
 @import '../../node_modules/bootstrap/scss/print';
 
+// css that is available after Bootstrap upgrade.
+@import 'bootstrap-asu-upgrade';
+
 // css Bootstrap doesn't have variables for
 @import 'bootstrap-asu-extends';
