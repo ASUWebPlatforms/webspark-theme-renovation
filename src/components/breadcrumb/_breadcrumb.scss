@@ -3,11 +3,14 @@
 // Override for full width layout.
 .layout__full-width {
   .block-webspark-module-asu-breadcrumb {
+    .container {
+      max-width: 100%;
+    }
     nav {
-      max-width: 1200px;
       ol.breadcrumb {
         border-radius: 0;
         padding-left: 0;
+        margin-bottom: 0;
         @media screen and (max-width: $uds-breakpoint-sm) {
           padding-left: 32px;
         }
