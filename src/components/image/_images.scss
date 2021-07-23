@@ -6,3 +6,17 @@
     margin-bottom: 1em;
   }
 }
+
+/* Apply border to embedded image. */
+.embedded-media {
+  img {
+    border: 1px solid $uds-color-base-gray-3;
+  }
+}
+
+/* Figcaption Overrides CKeditor. */
+.caption-drupal-media {
+  img {
+    border: 1px solid $uds-color-base-gray-3;
+  }
+}
