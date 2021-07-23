@@ -18,6 +18,7 @@ regions:
 libraries:
   - radix/style
   - renovation/style
+  - renovation/tables
 
 libraries-override:
   radix/bootstrap: false
