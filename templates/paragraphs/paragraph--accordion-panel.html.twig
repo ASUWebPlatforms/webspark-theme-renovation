@@ -25,7 +25,7 @@
     {% include '@renovation/accordions/accordion.twig' with {
       icon: content.field_icon,
       heading: content.field_heading[0]['#context']['value'],
-      body_text: content.field_formatted_text[0]['#text'],
+      body_text: content.field_formatted_text,
       color: content.field_color_options[0]['#markup'],
       unique_id: unique_id,
     } %}
