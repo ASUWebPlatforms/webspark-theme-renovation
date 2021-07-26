@@ -5,6 +5,7 @@
         url : content.field_cta_link[0]['#url'],
         title: content.field_cta_link[0]['#title'],
         button_color: content.field_cta_link[0]['#options']['attributes']['class'],
+        target: content.field_cta_link[0]['#options']['attributes']['target'],
       } %}
     {% elseif has_icon %}
       {% include '@renovation/buttons/button-icon.twig' with {
@@ -12,12 +13,14 @@
         title: content.field_cta_link[0]['#title'],
         icon: content.field_icon[0]['#icons'][0]['#name'],
         button_color: content.field_cta_link[0]['#options']['attributes']['class'],
+        target: content.field_cta_link[0]['#options']['attributes']['target'],
       } %}
     {% else %}
       {% include '@renovation/buttons/button-cta.twig' with {
         url : content.field_cta_link[0]['#url'],
         title: content.field_cta_link[0]['#title'],
         button_color: bg_color == 'banner-black' ? 'btn-gold' : 'btn-dark',
+        target: content.field_cta_link[0]['#options']['attributes']['target']
       } %}
     {% endif %}
   {% endblock %}
