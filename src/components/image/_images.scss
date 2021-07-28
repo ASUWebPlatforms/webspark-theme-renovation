@@ -9,10 +9,10 @@
 
 /* Apply border to embedded image. */
 .embedded-media {
-  width: 100% !important;
+  max-width: 100% !important;
   img {
     border: 1px solid $uds-color-base-gray-3;
-    width: 100%;
+    max-width: 100% !important;
     height: auto;
   }
 }
