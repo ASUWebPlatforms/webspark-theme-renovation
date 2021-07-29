@@ -27,6 +27,7 @@
       heading: content.field_heading,
       content: content.field_formatted_text[0],
       text_color: content['#block_content'].field_text_color.value,
+      heading_color: content['#block_content'].field_heading_color.value,
     } %}
   {% endblock %}
   {{ content|without('field_media', 'field_card', 'field_heading', 'field_formatted_text') }}

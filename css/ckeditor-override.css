@@ -157,6 +157,10 @@ button.media-library-item__edit {
   bottom: -1px;
 }
 
+.ckeditor-col-container > div {
+  margin: 0 !important;
+}
+
 @media screen and (max-width: 480px) {
   .details-wrapper th {
     display: none;
