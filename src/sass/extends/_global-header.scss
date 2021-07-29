@@ -599,6 +599,7 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
     padding: $uds-size-spacing-2;
     border: 0; // Overrides BS Option;
     border-top: 1px solid $uds-color-base-gray-3;
+    top: 102%;
 
     .btn {
       margin: $uds-size-spacing-1 0;
