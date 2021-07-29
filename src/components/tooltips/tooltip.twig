@@ -1,7 +1,7 @@
-{% set tooltip_color = 'uds-tooltip-' ~ background %}
+{% set tooltip_color = 'uds-tooltip-bg-' ~ background %}
 <div class="{{ tooltip_color }}">
   <div class="uds-tooltip-container">
-    <button tabindex="0" class="uds-tooltip uds-tooltip-white" aria-describedby="tooltip-desc">
+    <button tabindex="0" class="uds-tooltip uds-tooltip-{{ background }}" aria-describedby="tooltip-desc">
       <span class="fa-stack">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fas fa-info fa-stack-1x"></i>

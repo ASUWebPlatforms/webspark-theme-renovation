@@ -7,6 +7,10 @@
   text-decoration: if($link-decoration == none, null, none);
 }
 
+.fa-stack {
+  vertical-align: middle;
+}
+
 /* TODO::
 These CSS rules are taken from the bootstrap4-theme package.
 The same CSS rules as supposed to be insided the CMS,
