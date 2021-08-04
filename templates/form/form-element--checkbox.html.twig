@@ -33,9 +33,10 @@ set description_classes = [
   {{ label }}
 
   {% if errors %}
-    <div class="form-item--error-message">
+    <small class="invalid-feedback is-invalid">
+      <span title="Alert" class="fa fa-icon fa-exclamation-triangle"></span>
       {{ errors }}
-    </div>
+    </small>
   {% endif %}
 
   {% if description.content %}

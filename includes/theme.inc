@@ -49,7 +49,7 @@ function renovation_library_info_build() {
  * Preprocess variables for all templates.
  * @param $variables
  */
-function renovation_preprocess(&$variables) {
+function renovation_preprocess(&$variables, $hook) {
   // Inject the current language into every template
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
@@ -57,6 +57,14 @@ function renovation_preprocess(&$variables) {
   // Inject the base url into every template
   global $base_url;
   $variables['base_url'] = $base_url;
+
+  // Check if we have an error and add the required asu class.
+  // Add new hooks here if they need this class on error.
+  if (in_array($hook, ['input', 'textarea', 'select'])) {
+    if ($variables['element']['#errors']) {
+      $variables['attributes']['class'][] = 'is-invalid';
+    }
+  }
 }
 
 /**
