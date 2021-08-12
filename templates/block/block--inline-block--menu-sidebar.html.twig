@@ -18,7 +18,7 @@
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
-  {% include '@renovation/block/block-sidebar-menu.twig' with {
-    html_tag: 'div',
-  } %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
 </div>
