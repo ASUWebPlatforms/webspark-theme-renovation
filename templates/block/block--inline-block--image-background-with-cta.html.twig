@@ -21,7 +21,7 @@
   {{ content.field_anchor_menu_settings }}
   {% block content %}
     {% include '@renovation/image-background-with-cta/image-background-with-cta.twig' with {
-      heading: content.field_heading,
+      heading: content.field_heading[0]['#context']['value'],
       image: file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value),
       cta_btn: content.field_cta,
     } %}
