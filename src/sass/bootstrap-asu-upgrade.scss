@@ -11,6 +11,11 @@
   vertical-align: middle;
 }
 
+/* See _forms.scs from bootstrap */
+.invalid-feedback {
+  color: $uds-color-font-dark-error;
+}
+
 /* TODO::
 These CSS rules are taken from the bootstrap4-theme package.
 The same CSS rules as supposed to be insided the CMS,
