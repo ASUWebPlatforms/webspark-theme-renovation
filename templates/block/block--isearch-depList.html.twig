@@ -14,19 +14,19 @@
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
-    <div class="clas-isearch-view"
-         data-config='{
-            "type":"depList",
-            "displayType":"{{ isearch_display|striptags }}",
-            "defaultPhoto":"{{ isearch_image|striptags }}",
-            "testURL":"/isearch/?",
-            "selectedFilters":[{{ isearch_filters|striptags|raw }}],
-            "ids":[{{ isearch_ids|striptags }}],
-            "showPhoto":{{ isearch_show_photo|striptags }},
-            "showTitle":{{ isearch_show_title|striptags }},
-            "showBio":{{ isearch_show_bio|striptags }},
-            "showEmail":{{ isearch_show_email|striptags }},
-            "showPhone":{{ isearch_show_phone|striptags }}
-         }'>
-    </div>
+  <div class="clas-isearch-view"
+    data-config='{
+       "type":"depList",
+       "displayType":"default",
+       "defaultPhoto":"{{ defaultPhoto }}",
+       "testURL":"/isearch/?",
+       "selectedFilters":[],
+       "ids":[{{ ids }}],
+       "showPhoto":{{ block.field_show_photo.value ? 'true' : 'false'}},
+       "showTitle":{{ block.field_show_title.value ? 'true' : 'false'}},
+       "showBio":{{ block.field_show_bio.value ? 'true' : 'false'}},
+       "showEmail":{{ block.field_show_email.value ? 'true' : 'false'}},
+       "showPhone":{{ block.field_show_phone.value ? 'true' : 'false'}}
+    }'>iSearch block
+  </div>
 </div>
