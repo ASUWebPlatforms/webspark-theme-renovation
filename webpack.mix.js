@@ -6,8 +6,11 @@
  | Mix provides a clean, fluent API for defining some Webpack build steps
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
+ | Copy the contents of './config.default.js' into a new file called './config.local.js'.
+ | There, you can update the 'proxy' option to match your local development environment.
+ |
  */
-const proxy = 'http://asusite.ddev.site';
+const config = require('./config.local.js');
 const mix = require('laravel-mix');
 
 /*
@@ -28,7 +31,7 @@ mix
  |--------------------------------------------------------------------------
  */
 mix.browserSync({
-  proxy: proxy,
+  proxy: config.proxy,
   files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
   stream: true,
 });
