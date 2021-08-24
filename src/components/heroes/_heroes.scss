@@ -1,4 +1,5 @@
 @import '../../sass/extends/heroes';
+
 .block-inline-blockhero {
   .uds-hero-sm,
   .uds-hero-md,
@@ -6,6 +7,7 @@
     img.hero {
       width: 100%;
     }
+
     .btn-row {
       a {
         margin-right: 0.5em;
@@ -15,65 +17,64 @@
 }
 
 .uds-video-hero {
-
   display: flex;
-    height: 42.75rem;
+  height: 42.75rem;
+  position: relative;
+  overflow: hidden;
+  max-width: $uds-component-heroes-uds-hero-max-width; // Also exists as the class .max-size-container
+  margin: 0 auto;
+
+  & .container {
+    z-index: 1;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto auto 3rem auto;
+    width: 100%;
 
-    & .container {
-      z-index: 1;
-      position: relative;
+    h1 {
       padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: auto auto 3rem auto;
-      width: 100%;
-
-      h1 {
-        padding-left: 0;
-        color: #ffffff;
-      }
-
-      .buttons {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-
-        .first {
-          display: none;
-        }
-
-        button {
-          width: 56px;
-          height: 56px;
-          background: #ffffff;
-          opacity: .3;
-          border: 1px solid #d0d0d0;
-          text-align: center;
-          border-radius: 48px;
-          transition: .2s ease-out;
-          outline: none;
-
-          &:hover {
-            opacity: 1;
-            cursor: pointer;
-          }
-        }
-
-      }
-    }
-    video {
-      &.fixed-background {
-        min-width: 100%;
-        min-height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-      }
+      color: #ffffff;
     }
 
+    .buttons {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .first {
+        display: none;
+      }
+
+      button {
+        width: 56px;
+        height: 56px;
+        background: #ffffff;
+        opacity: .3;
+        border: 1px solid #d0d0d0;
+        text-align: center;
+        border-radius: 48px;
+        transition: .2s ease-out;
+        outline: none;
+
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  video {
+    &.fixed-background {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
 }
