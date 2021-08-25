@@ -20,7 +20,7 @@
   <h3>{{ title }}</h3>
   <div class="sidebar-toggler" data-toggle="collapse" data-target="#sidebar-left" aria-expanded="false" aria-controls="sidebar-left">
     <p>Select Section</p>
-    <span class="fas fa-chevron-up"/>
+    <span class="fas fa-chevron-down"/>
   </div>
   <nav id="sidebar-left" class="sidebar collapse" aria-label="Secondary">
     {% block items %}
@@ -41,7 +41,7 @@
                  aria-expanded="false"
                  aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}">
                 {{ item.title }}
-                <span class="fas fa-chevron-up"></span>
+                <span class="fas fa-chevron-down"></span>
               </a>
             </div>
 
