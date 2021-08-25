@@ -232,7 +232,7 @@
 #drupal-off-canvas input[role="button"] {
   cursor: pointer;
 }
-#drupal-off-canvas button,
+#drupal-off-canvas button:not(.close),
 #drupal-off-canvas input[type="reset"],
 #drupal-off-canvas input[type="submit"],
 #drupal-off-canvas input[type="button"] {
@@ -350,7 +350,7 @@
   padding: 0;
   border: 0;
 }
-#drupal-off-canvas * button {
+#drupal-off-canvas * button:not(.close) {
   overflow: visible;
   width: auto;
   padding: 0;
