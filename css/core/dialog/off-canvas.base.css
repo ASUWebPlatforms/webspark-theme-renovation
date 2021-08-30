@@ -394,3 +394,7 @@
   color: inherit;
   background: transparent;
 }
+
+#drupal-off-canvas .media-library-item__name {
+  color: black;
+}
