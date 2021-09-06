@@ -14,7 +14,6 @@
 {% set classes = [
   'alert',
   type ? 'alert-' ~ type,
-  dismissible ? 'alert-dismissible',
 ]|merge(utility_classes ? utility_classes : []) %}
 
 <div class="{{ classes|join(' ') }}" role="alert">
@@ -48,9 +47,8 @@
 
   {% if dismissible %}
     <div class="alert-close">
-      <button type="button" class="fa-layers fa-fw fa-2x" data-dismiss="alert" aria-label="Close">
-        <i class="fas fa-circle" aria-hidden="true" style="color:white"></i>
-        <i class="fas fa-times" aria-hidden="true" data-fa-transform="shrink-6"></i>
+      <button type="button" class="btn btn-circle btn-circle-alt-black close" data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times" aria-hidden="true"></i>
         </button>
     </div>
   {% endif %}

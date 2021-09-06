@@ -29,6 +29,7 @@ libraries-override:
         misc/dialog/off-canvas.base.css: css/core/dialog/off-canvas.base.css
       component:
         misc/dialog/off-canvas.table.css: css/core/dialog/off-canvas.table.css
+        misc/dialog/off-canvas.button.css: css/core/dialog/off-canvas.button.css
 
 
 ckeditor_stylesheets:
