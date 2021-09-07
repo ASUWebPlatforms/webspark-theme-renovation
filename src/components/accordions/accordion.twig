@@ -27,7 +27,7 @@
   </div>
 
   {# Card Body #}
-  <div id="accordion-content-{{ link_id }}" class="collapse card-body" aria-labelledby="{{ heading }}">
+  <div id="accordion-content-{{ link_id }}" class="collapse card-body" aria-labelledby="{{ heading }}" data-parent="#accordion-{{ parent_id }}">
     {# Body value #}
     {{ body_text  }}
   </div>
