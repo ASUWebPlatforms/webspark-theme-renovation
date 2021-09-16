@@ -9,8 +9,6 @@
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
 ] %}
-{{ attach_library('asu_news/event-components-library') }}
-{{ attach_library('asu_react_integration/reactjs') }}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -21,17 +19,20 @@
   {% endif %}
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
-  <div class="clas-news-react-base"
-    data-header-title="{{ content.field_heading.0 }}"
-    data-header-color="{{ content.field_heading_text_color[0]['#markup'] }}"
-    data-cta-link="{{ content.field_news_link[0]['#url'] }}"
-    data-cta-text="{{ content.field_news_link[0]['#title']  }}"
-    data-cta-color="{{ content.field_header_cta_color[0]['#markup'] }}"
-    data-cards-buttons-color="{{ content.field_card_cta_color[0]['#markup'] }}"
-    data-view="{{ content.field_display.0 }}"
-    data-feed="/asu-news-feed/"
-    data-feed-section="{{ content.field_news_feed_filter.0  }}"
-    data-items="{{ content.field_news_items_to_display.0 }}">
+
+  <div class="mt-2" id="{{ news_id }}">
     ASU News
+    {{ content|without(
+      'field_display',
+      'field_card_cta_color',
+      'field_news_link',
+      'field_news_feed_filter',
+      'field_heading',
+      'field_header_cta_color',
+      'field_heading_text_color',
+      'field_news_items_to_display',
+      'field_spacing_bottom',
+      'field_spacing_top')
+    }}
   </div>
 </div>
