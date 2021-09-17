@@ -5,12 +5,9 @@
         <div class="uds-video-player {{ player_class }}">
           {{ media }}
         </div>
-        {% if caption %}
-          <figure>
-            <figcaption>{{ caption }}</figcaption>
-          </figure>
-        {% endif %}
       </div>
     </div>
   </div>
 </div>
+        
+{{ attach_library('renovation/video') }}
