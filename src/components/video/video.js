@@ -12,7 +12,7 @@
           // Make the caption as wide as the video.
           var caption = fig.querySelector(':scope > figcaption');
           if (caption) {
-            var newHTML = '<div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-12"><div class="uds-video-container">' + caption.outerHTML + '</div></div></div></div>';
+            var newHTML = '<div class="uds-video-container">' + caption.outerHTML + '</div>';
             caption.outerHTML = newHTML;
           }
           
