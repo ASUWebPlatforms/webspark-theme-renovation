@@ -6,8 +6,10 @@
     <p>{{ body_text }}</p>
     {% if citation_author is not empty or citation_description is not empty %}
       <div class="citation">
-        <cite class="name">{{ citation_author }}</cite>
-        <cite class="description">{{ citation_description }}</cite>
+        <div class="citation-content">
+          <cite class="name">{{ citation_author }}</cite>
+          <cite class="description">{{ citation_description }}</cite>
+        </div>
       </div>
     {% endif %}
   </blockquote>
