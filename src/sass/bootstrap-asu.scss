@@ -141,9 +141,14 @@ that behavior at screens <= 575px. (The small breakpoint.)
 Should be included after @import scss/grid. Registered here for clarity.
 ------------------------------------------------------ */
 
-@include media-breakpoint-down(sm){
-  .container, .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
-    padding-left:2rem;
-    padding-right:2rem;
+@include media-breakpoint-down(md) {
+  .container,
+  .container-fluid,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
