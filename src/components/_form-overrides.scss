@@ -11,3 +11,15 @@ form.uds-form {
     padding-left: $uds-size-spacing-4 !important;
   }
 }
+
+form.uds-form.layout-builder-configure-block .form-check input[type=radio] {
+  opacity: 1;
+}
+
+form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label:before {
+  content: none;
+}
+
+form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label:after {
+  content: none;
+}

@@ -228,14 +228,12 @@ button.media-library-item__edit {
     margin-left: 205px;
   }
 }
-form.uds-form .form-check input[type=radio] {
-  opacity: 1;
+/* Override for the CKEditor table */
+.uds-table.uds-table-default > table {
+  width: auto;
 }
 
-form.uds-form .form-check input[type=radio]+label:before {
-  content: none;
-}
-
-form.uds-form .form-check input[type=radio]+label:after {
-  content: none;
+.uds-table.uds-table-default table tr :nth-child(n+1) {
+  min-width: unset;
+  max-width: unset;
 }
