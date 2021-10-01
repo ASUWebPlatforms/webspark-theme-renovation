@@ -29,6 +29,8 @@
   }
 }
 
-figure.align-center {
-  width: 100%; //(Used to be max-content)
+@include media-breakpoint-down(sm) {
+  figure.align-center {
+    width: 100%;
+  }
 }
