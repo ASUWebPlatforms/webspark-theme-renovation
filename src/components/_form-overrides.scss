@@ -5,3 +5,9 @@
     margin-top: 2.5rem;
   }
 }
+
+form.uds-form {
+  input {
+    padding-left: $uds-size-spacing-4 !important;
+  }
+}
