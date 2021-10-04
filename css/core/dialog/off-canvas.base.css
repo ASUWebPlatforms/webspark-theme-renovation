@@ -395,6 +395,6 @@
   background: transparent;
 }
 
-#drupal-off-canvas .media-library-item__name {
+#drupal-off-canvas .media-library-item__name, #drupal-off-canvas .js-media-library-item-preview {
   color: black;
 }
