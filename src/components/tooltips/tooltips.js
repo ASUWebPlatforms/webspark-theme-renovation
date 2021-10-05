@@ -1,4 +1,3 @@
-console.log('loads');
 (function ($) {
   jQuery(function () {
     'use strict';
