@@ -12,19 +12,59 @@
         <div class="col-md" id="social-media">
           <nav class="nav" aria-label="Social Media">
             {% if facebook_url %}
-              <a class="nav-link" href="{{ facebook_url }}"><span title="Facebook Social Media Icon" class="fab fa-facebook-square"></span></a>
+              <a
+                class="nav-link"
+                href="{{ facebook_url }}"
+                data-ga-footer-type="external link"
+                data-ga-footer-section="primary footer"
+                data-ga-footer="facebook icon"
+              >
+                <span title="Facebook Social Media Icon" class="fab fa-facebook-square"></span>
+              </a>
             {% endif %}
             {% if twitter_url %}
-              <a class="nav-link" href="{{ twitter_url }}"><span title="Twitter Social Media Icon" class="fab fa-twitter-square"></span></a>
+              <a
+                class="nav-link"
+                href="{{ twitter_url }}"
+                data-ga-footer-type="external link"
+                data-ga-footer-section="primary footer"
+                data-ga-footer="twitter icon"
+              >
+                <span title="Twitter Social Media Icon" class="fab fa-twitter-square"></span>
+              </a>
             {% endif %}
             {% if instagram_ulr %}
-              <a class="nav-link" href="{{ instagram_ulr }}"><span title="Instagram Social Media Icon" class="fab fa-instagram-square"></span></a>
+              <a
+                class="nav-link"
+                href="{{ instagram_ulr }}"
+                data-ga-footer-type="external link"
+                data-ga-footer-section="primary footer"
+                data-ga-footer="instagram icon"
+              >
+                <span title="Instagram Social Media Icon" class="fab fa-instagram-square"></span>
+              </a>
             {% endif %}
             {% if youtube_url %}
-              <a class="nav-link" href="{{ youtube_url }}"><span title="YouTube Social Media Icon" class="fab fa-youtube-square"></span></a>
+              <a
+                class="nav-link"
+                href="{{ youtube_url }}"
+                data-ga-footer-type="external link"
+                data-ga-footer-section="primary footer"
+                data-ga-footer="youtube icon"
+              >
+                <span title="YouTube Social Media Icon" class="fab fa-youtube-square"></span>
+              </a>
             {% endif %}
             {% if linkedin_url %}
-              <a class="nav-link" href="{{ linkedin_url  }}"><span title="LinkedIn Social Media Icon" class="fab fa-linkedin"></span></a>
+              <a
+                class="nav-link"
+                href="{{ linkedin_url  }}"
+                data-ga-footer-type="external link"
+                data-ga-footer-section="primary footer"
+                data-ga-footer="linkedin icon"
+              >
+                <span title="LinkedIn Social Media Icon" class="fab fa-linkedin"></span>
+              </a>
             {% endif %}
           </nav>
         </div>
@@ -78,11 +118,41 @@
             <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
           </a>
           <nav class="nav" aria-label="University Services">
-            <a class="nav-link" href="https://www.asu.edu/about/locations-maps">Maps and Locations</a>
-            <a class="nav-link" href="https://www.asu.edu/asujobs">Jobs</a>
-            <a class="nav-link" href="https://isearch.asu.edu/">Directory</a>
-            <a class="nav-link" href="https://www.asu.edu/about/contact">Contact ASU</a>
-            <a class="nav-link" href="https://my.asu.edu/">My ASU</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/about/locations-maps"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="secondary footer"
+              data-ga-footer="maps and locations"
+            >Maps and Locations</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/asujobs"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="secondary footer"
+              data-ga-footer="jobs"
+            >Jobs</a>
+            <a
+              class="nav-link"
+              href="https://isearch.asu.edu/"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="secondary footer"
+              data-ga-footer="directory"
+            >Directory</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/about/contact"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="secondary footer"
+              data-ga-footer="contact asu"
+            >Contact ASU</a>
+            <a
+              class="nav-link"
+              href="https://my.asu.edu/"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="secondary footer"
+              data-ga-footer="my asu"
+            >My ASU</a>
           </nav>
         </div>
       </div>
@@ -96,11 +166,41 @@
       <div class="col">
         <div class="footer-legal-links">
           <nav class="nav colophon" aria-label="University Legal and Compliance">
-            <a class="nav-link" href="https://www.asu.edu/about/copyright-trademark">Copyright and Trademark</a>
-            <a class="nav-link" href="https://www.asu.edu/accessibility/">Accessibility</a>
-            <a class="nav-link" href="https://www.asu.edu/about/privacy">Privacy</a>
-            <a class="nav-link" href="https://www.asu.edu/about/terms-of-use">Terms of Use</a>
-            <a class="nav-link" href="https://www.asu.edu/emergency/">Emergency</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/about/copyright-trademark"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="tertiary footer"
+              data-ga-footer="copyright and trademark"
+            >Copyright and Trademark</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/accessibility/"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="tertiary footer"
+              data-ga-footer="accessibility"
+            >Accessibility</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/about/privacy"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="tertiary footer"
+              data-ga-footer="privacy"
+            >Privacy</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/about/terms-of-use"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="tertiary footer"
+              data-ga-footer="terms of use"
+            >Terms of Use</a>
+            <a
+              class="nav-link"
+              href="https://www.asu.edu/emergency/"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="tertiary footer"
+              data-ga-footer="emergency"
+            >Emergency</a>
           </nav>
         </div>
       </div>
