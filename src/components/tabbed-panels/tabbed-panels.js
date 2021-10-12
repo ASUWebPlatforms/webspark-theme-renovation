@@ -17,6 +17,35 @@
     if ($('#nav-tab')[0].scrollWidth <= $('.uds-tabbed-panels').width()) {
       $('.uds-tabbed-panels .scroll-control-next').hide();
     }
+    
+    if (window.location.href.indexOf('#') !== -1 && document.getElementById('nav-tab')) {
+      // Get the fragment form the URL
+      const fragment = window.location.href.split('#').at(-1)
+      // Get the pane div
+      const pane = document.getElementById(fragment);
+      // Get the menu item.
+      const menuItem = document.getElementById(fragment + '-tab');
+
+      if (pane && menuItem) {
+        const block = menuItem.closest(".block-inline-blocktabbed-content");
+        // Remove the existing active.
+        block.querySelector('#nav-tab').querySelectorAll('.nav-link').forEach((link) => {
+          link.classList.remove("active");
+          link.ariaSelected = "false";// Does not work
+        });
+        block.querySelector('#nav-tabContent').querySelectorAll('.tab-pane').forEach((tab) => {
+          tab.classList.remove("show","active");
+        });
+
+        pane.classList.add("show","active");
+        menuItem.classList.add("active");
+        menuItem.ariaSelected = "true";
+      }
+    }
+    
+    document.querySelectorAll('.uds-tabbed-panels, #nav-tabContent').forEach((block) => {
+      block.style.display= 'block';
+    });
   });
 
   function setControlVisibility(clicked, scrollOffset) {
