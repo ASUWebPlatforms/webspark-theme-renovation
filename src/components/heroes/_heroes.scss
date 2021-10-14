@@ -24,7 +24,6 @@
     & .container {
       z-index: 1;
       position: relative;
-      padding-left: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -62,6 +61,19 @@
           }
         }
 
+      }
+    }
+    .btn-row {
+      grid-row: 3 / span 2;
+      display: flex;
+      flex-direction: column;
+
+      .btn:last-child {
+        margin-top: $uds-size-spacing-2;
+
+        & + .btn {
+          margin-left: 0;
+        }
       }
     }
     video {
