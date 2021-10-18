@@ -2,7 +2,7 @@
   .block-inline-blocktext-content {
     &.text-white {
       .formatted-text {
-        a {
+        a:not(.btn) {
           color: $uds-color-brand-gold;
         }
       }
