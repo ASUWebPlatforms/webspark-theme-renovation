@@ -29,6 +29,27 @@
   }
 }
 
+figure.caption-img {
+  img {
+    border: 1px solid $uds-color-base-gray-3;
+    margin: 0 !important;
+  }
+  figcaption {
+    display: block !important;
+    border: 1px solid #d0d0d0;
+    border-top: none;
+    opacity: 1;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: .75rem;
+    font-size: .75rem;
+    text-align: left;
+    span {
+      color: $uds-color-base-gray-5;
+      max-width: 75ch;
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   figure.align-center {
     width: 100%;
