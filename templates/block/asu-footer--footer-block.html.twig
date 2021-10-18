@@ -4,9 +4,26 @@
       <div class="row">
         <div class="col-md" id="endorsed-logo">
           {% if unit_custom_logo %}
-            {{ unit_custom_logo }}
+            <a
+              href="{{ unit_custom_logo_link }}"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="primary footer"
+              data-ga-footer="asu logo"
+            >
+              {{ unit_custom_logo }}
+            </a>
           {% else %}
-            <img src="{{ src_unit_logo }}" alt="ASU University Technology Office Arizona State University."/>
+            <a
+              href="https://www.asu.edu"
+              data-ga-footer-type="internal link"
+              data-ga-footer-section="primary footer"
+              data-ga-footer="asu logo"
+            >
+              <img
+                src="{{ src_unit_logo }}"
+                alt="ASU University Technology Office Arizona State University."
+              />
+            </a>
           {% endif %}
         </div>
         <div class="col-md" id="social-media">
@@ -114,7 +131,13 @@
     <div class="row">
       <div class="col">
         <div class="d-flex footer-innovation-links">
-          <a class="img-link" href="https://www.asu.edu/rankings">
+          <a
+            class="img-link"
+            href="https://www.asu.edu/rankings"
+            data-ga-footer-type="internal link"
+            data-ga-footer-section="secondary footer"
+            data-ga-footer="#1 in the u.s. for innovation"
+          >
             <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
           </a>
           <nav class="nav" aria-label="University Services">
