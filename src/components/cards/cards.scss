@@ -45,6 +45,12 @@
   }
 }
 
+.asu-card-carousel-container {
+  img.card-img-top {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+  }
+}
 
 @media only screen and (max-width: $uds-breakpoint-lg) {
   .uds-card-image-and-content-content-container {
