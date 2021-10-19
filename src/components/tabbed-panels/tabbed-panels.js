@@ -12,6 +12,24 @@
       }
     });
 
+    $('.uds-tabbed-panels').each(function () {
+      var panel = $(this);
+      var nav = panel.find('.nav-tabs');
+      nav.on('scroll', function (e) {
+        var scrollPos = e.target.scrollLeft;
+        if (scrollPos === 0) {
+          panel.find('.scroll-control-prev').hide();
+        } else {
+          panel.find('.scroll-control-prev').show();
+        }
+        if (nav.get(0).offsetWidth + scrollPos + 3 >= nav.get(0).scrollWidth) {
+          panel.find('.scroll-control-next').hide();
+        } else {
+          panel.find('.scroll-control-next').show();
+        }
+      });
+    });
+
     $('.uds-tabbed-panels .scroll-control-prev').hide();
 
     if ($('#nav-tab')[0].scrollWidth <= $('.uds-tabbed-panels').width()) {
