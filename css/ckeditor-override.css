@@ -228,12 +228,3 @@ button.media-library-item__edit {
     margin-left: 205px;
   }
 }
-/* Override for the CKEditor table */
-.uds-table.uds-table-default > table {
-  width: auto;
-}
-
-.uds-table.uds-table-default table tr :nth-child(n+1) {
-  min-width: unset;
-  max-width: unset;
-}
