@@ -32,5 +32,14 @@ ul.uds-list {
 }
 
 ol.uds-list, ul.uds-list {
-  max-width: 700px;
+  max-width: 700px
+}
+
+.block-inline-blocktext-content {
+  .formatted-text {
+    ul.uds-list,
+    ol.uds-list {
+      max-width: 700px;
+    }
+  }
 }
