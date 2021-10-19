@@ -1,9 +1,10 @@
 @import '../../sass/extends/pager';
 
 // Overrides.
-.pagination {
-  /*.page-link:hover {
-    background-color: transparent;
-    border-color: transparent;
-  }*/
+@media only screen and (max-width: $uds-breakpoint-lg) {
+  .pagination {
+    .page-item {
+      margin: 0 0.2rem;
+    }
+  }
 }
