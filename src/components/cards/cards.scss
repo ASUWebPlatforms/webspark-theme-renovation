@@ -37,6 +37,11 @@
       width: 100%;
       margin: 0;
     }
+
+    img.card-img-top {
+      border-top-left-radius: unset;
+      border-top-right-radius: unset;
+    }
   }
 }
 
