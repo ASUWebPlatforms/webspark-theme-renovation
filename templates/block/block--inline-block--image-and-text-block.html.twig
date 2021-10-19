@@ -20,6 +20,7 @@
   {% endif %}
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
+  {{ content.field_tooltip }}
   {% block content %}
     {% if content.field_content_position[0]['#markup'] == 'left' %}
       {% include '@renovation/image-text-block/image-text-block-left.twig' with {
