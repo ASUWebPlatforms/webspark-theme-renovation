@@ -20,3 +20,11 @@
   }
 }
 
+.uds-cookie-consent-component-wrapper {
+  .uds-cookie-consent-component {
+    a:focus {
+      background: none !important;
+      color: $uds-color-base-maroon !important;
+    }
+  }
+}
