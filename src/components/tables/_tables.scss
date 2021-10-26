@@ -10,3 +10,15 @@
   }
 }
 
+.uds-table {
+  caption {
+    caption-side: top;
+    font-size: $uds-size-font-large;
+    line-height: $uds-component-heading-four-line-height;
+    letter-spacing: $uds-component-heading-four-letter-spacing;
+    font-weight: $uds-component-heading-font-weight;
+    opacity: 1;
+    margin: $uds-component-heading-margin 0;
+    color: $uds-color-base-gray-7;
+  }
+}
