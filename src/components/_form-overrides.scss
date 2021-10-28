@@ -23,3 +23,7 @@ form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label
 form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label:after {
   content: none;
 }
+
+form.uds-form .form-check input[type=checkbox]+label:before {
+  bottom: auto;
+}
