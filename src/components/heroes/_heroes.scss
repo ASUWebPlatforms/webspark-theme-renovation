@@ -89,3 +89,15 @@
     }
 
 }
+
+@media screen and (min-width: $uds-breakpoint-md) {
+  .uds-video-hero {
+    .btn-row {
+      flex-direction: row;
+
+      .btn:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
