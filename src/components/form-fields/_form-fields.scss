@@ -1,5 +1,12 @@
 #drupal-off-canvas {
-  form.uds-form .form-check-label::after {
-    top: -3px;
+  form.uds-form {
+    .form-check-label {
+      &::before {
+        top: -0.3rem;
+      }
+      &::after {
+        top: -0.1rem;
+      }
+    }
   }
 }
