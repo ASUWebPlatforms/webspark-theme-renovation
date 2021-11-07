@@ -10,6 +10,13 @@
   'block-' ~ plugin_id|clean_class,
 ] %}
 {% set class_position = content.field_content_position[0]['#markup'] == 'right' ? 'uds-card-and-image-right'%}
+
+{% if content.field_parallax[0]['#markup'] == 1 %}
+  {% set template = 'card-and-image-parallax.twig' %}
+{% else %}
+  {% set template = 'card-and-image.twig' %}
+{% endif %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -20,10 +27,10 @@
   {{ title_suffix }}
   {{ content.field_anchor_menu_settings }}
   {% block content %}
-    {% include '@renovation/cards/card-and-image.twig' with {
+    {% include '@renovation/cards/' ~ template with {
       image_background: file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value),
       card: content.field_card,
     } %}
   {% endblock %}
-  {{ content|without('field_media', 'field_card', 'field_content_position', 'field_anchor_menu_settings') }}
+  {{ content|without('field_media', 'field_card', 'field_content_position', 'field_anchor_menu_settings', 'field_parallax') }}
 </div>
