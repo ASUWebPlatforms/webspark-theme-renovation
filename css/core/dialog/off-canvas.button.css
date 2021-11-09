@@ -40,10 +40,10 @@
   cursor: pointer;
   transition: background 0.5s ease;
   text-align: center;
-  color: #f5f5f5;
+  color: #444;
   border: 0;
   border-radius: 20em;
-  background: #777;
+  background: #E8E8E8;
   font-size: 14px;
   font-weight: 600;
 }
@@ -52,7 +52,7 @@
 #drupal-off-canvas input[type="submit"].button:active {
   z-index: 10;
   text-decoration: none;
-  color: #fff;
+  color: #333;
   border: 0;
   outline: none;
 }
@@ -62,15 +62,15 @@
 }
 #drupal-off-canvas input[type="submit"].button--primary {
   margin-top: 15px;
-  color: #fff;
+  color: #333;
   border: 0;
-  background: #277abd;
+  background: #CBDEF6;
 }
 #drupal-off-canvas input[type="submit"].button--primary:hover,
 #drupal-off-canvas input[type="submit"].button--primary:focus,
 #drupal-off-canvas input[type="submit"].button--primary:active {
   outline: none;
-  background: #236aaf;
+  background: #CBDEF6;
 }
 #drupal-off-canvas .button-action:before {
   margin-left: -0.2em; /* LTR */
