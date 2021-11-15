@@ -23,6 +23,11 @@
   }
 }
 
+// To be deleted when we update bootstrap.
+.accordion .card.card-foldable {
+  border-bottom: 1px solid #d0d0d0 !important;
+}
+
 /* TODO::
 These CSS rules are taken from the bootstrap4-theme package.
 The same CSS rules as supposed to be insided the CMS,

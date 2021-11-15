@@ -46,6 +46,12 @@
   }
 }
 
+.uds-card-and-image {
+  i.fa-null {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: $uds-breakpoint-lg) {
   .uds-card-image-and-content-content-container {
     .card-wrapper {

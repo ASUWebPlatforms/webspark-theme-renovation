@@ -17,7 +17,9 @@
 {% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <h3>{{ title }}</h3>
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
   <div class="sidebar-toggler" data-toggle="collapse" data-target="#sidebar-left" aria-expanded="false" aria-controls="sidebar-left">
     <p>Select Section</p>
     <span class="fas fa-chevron-down"/>

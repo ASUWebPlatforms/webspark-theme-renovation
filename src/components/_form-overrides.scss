@@ -35,6 +35,32 @@ form.uds-form .form-check input[type=checkbox]+label:before {
         .cke_button__anchor_icon {
           background-image: url('../../img/ck-editor/websparkanchorlink.png') !important;
         }
+        
+        .media-library-widget {
+          .fieldset-legend::after {
+            background-image: none;
+          }
+
+          .media-library-selection {
+            margin-bottom: 0;
+          }
+
+          .media-library-item--grid {
+            background: none;
+            &::before {
+              border: none;
+            }
+
+            .media-library-item__name {
+              color: inherit;
+            }
+
+            .media-library-item__attributes {
+              background: none;
+              bottom: 0.5rem;
+            }
+          }
+        }
       }
     }
   }

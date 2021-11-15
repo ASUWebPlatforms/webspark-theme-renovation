@@ -3,5 +3,13 @@
 .accordion {
   p {
     max-width: 700px;
+
+    &:first-child {
+      margin-top: $uds-size-spacing-2;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
