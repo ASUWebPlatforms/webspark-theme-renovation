@@ -32,6 +32,10 @@ form.uds-form .form-check input[type=checkbox]+label:before {
   form {
     &.uds-form {
       &.layout-builder-configure-block {
+        .cke_button__anchor_icon {
+          background-image: url('../../img/ck-editor/websparkanchorlink.png') !important;
+        }
+        
         .media-library-widget {
           .fieldset-legend::after {
             background-image: none;
