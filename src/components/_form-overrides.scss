@@ -27,3 +27,37 @@ form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label
 form.uds-form .form-check input[type=checkbox]+label:before {
   top: 0.1rem;
 }
+
+#drupal-off-canvas {
+  form {
+    &.uds-form {
+      &.layout-builder-configure-block {
+        .media-library-widget {
+          .fieldset-legend::after {
+            background-image: none;
+          }
+
+          .media-library-selection {
+            margin-bottom: 0;
+          }
+
+          .media-library-item--grid {
+            background: none;
+            &::before {
+              border: none;
+            }
+
+            .media-library-item__name {
+              color: inherit;
+            }
+
+            .media-library-item__attributes {
+              background: none;
+              bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
