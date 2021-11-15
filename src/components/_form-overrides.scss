@@ -27,3 +27,15 @@ form.uds-form.layout-builder-configure-block .form-check input[type=radio]+label
 form.uds-form .form-check input[type=checkbox]+label:before {
   top: 0.1rem;
 }
+
+#drupal-off-canvas {
+  form {
+    &.uds-form {
+      &.layout-builder-configure-block {
+        .cke_button__anchor_icon {
+          background-image: url('../../img/ck-editor/websparkanchorlink.png') !important;
+        }
+      }
+    }
+  }
+}
