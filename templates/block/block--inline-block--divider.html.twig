@@ -12,5 +12,7 @@
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
-  {% include '@renovation/divider/divider.twig' %}
+  {% include '@renovation/divider/divider.twig' with {
+    divider_type: content.field_divider_type[0]['#markup']
+  }%}
 </div>

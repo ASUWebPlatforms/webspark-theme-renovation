@@ -11,6 +11,10 @@
         margin-right: 0.5em;
       }
     }
+
+    [role=doc-subtitle] {
+      grid-row: 1;
+    }
   }
 }
 

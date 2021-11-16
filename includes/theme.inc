@@ -61,7 +61,7 @@ function renovation_preprocess(&$variables, $hook) {
   // Check if we have an error and add the required asu class.
   // Add new hooks here if they need this class on error.
   if (in_array($hook, ['input', 'textarea', 'select'])) {
-    if ($variables['element']['#errors']) {
+    if (isset($variables['element']['#errors']) && $variables['element']['#errors']) {
       $variables['attributes']['class'][] = 'is-invalid';
     }
   }

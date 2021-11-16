@@ -60,11 +60,7 @@
         menuItem.ariaSelected = "true";
       }
     }
-
-    document.querySelectorAll('.uds-tabbed-panels, #nav-tabContent').forEach((block) => {
-      block.style.display= 'block';
     });
-  });
 
   function setControlVisibility(clicked, scrollOffset) {
     var parentContainer = $(clicked).closest('.uds-tabbed-panels');
