@@ -86,6 +86,17 @@ Do not consider the *.templates.js
 
 5. Create a pull request.
 
+### Release
+
+1. Clone (if you did not do it yet) the theme repository https://github.com/ASUWebPlatforms/webspark-theme-renovation
+
+2. Create another branch
+
+3. Compile the assets using "npm run production"
+
+4. Push the changes. !Important  Do not push the compiles css
+
+5. Create a pull request.
 
 ## Layout builder related changes
 
