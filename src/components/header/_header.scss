@@ -1,0 +1,23 @@
+.block--asubrandheader {
+  .content-container {
+    border: none;
+    height: auto;
+    margin: inherit;
+    font-size: inherit;
+
+    @media screen and (min-width: $uds-breakpoint-xl) {
+      flex-direction: inherit;
+    }
+
+    .nav-link {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: $uds-breakpoint-lg) {
+    .container-xl {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
