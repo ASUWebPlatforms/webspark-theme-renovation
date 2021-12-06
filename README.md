@@ -106,3 +106,25 @@ Some of the classes from the core layout builder had to be changed. Because the 
 ## Known limitations
 
  - The versions for used libraries are pinned. you will find them in package.json. Because of this there are differences between bootstrap versions. We created a file to handle this differences: /src/sass/bootstrap-asu-upgrade.scss.
+
+
+## Unity bootstrap4-theme package / Renovation directories and mappings
+
+* https://github.com/ASUWebPlatforms/webspark-theme-renovation/tree/main/src/sass corresponds with https://github.com/ASU/asu-unity-stack/tree/dev/packages/bootstrap4-theme/src/scss with additional folders added for WS2 overrides and tweaks.
+* Don’t alter these 1:1 copies from UDS:
+  * `src/sass/extends`
+  * `src/sass/design-tokens`
+  * `src/sass/variables`
+  * `src/sass/bootstrap-asu-extends.scss`
+  * `src/sass/bootstrap-asu.scss`
+* Renovation additions and tweaks
+  * `src/sass/bootstrap-asu-upgrade.scss` - tweaks for Bootstrap version differences between UDS bootstrap4-theme and Radix
+  * `src/sass/renovation.style.scss` - Renovation Bootstrap imports
+* Renovation component SCSS mappings, custom SCSS and Twig templates for Renovation live in - Twig versions of Unity Storybook templates:
+`src/components`
+* Drupal-based Twig templates:
+`templates/`
+* Preprocess functions. Inherited from how Radix does it:
+`includes/`
+* When doing release, SCSS and JS assets are compiled manually and go into:
+`assets/`
