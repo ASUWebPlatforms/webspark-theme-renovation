@@ -1,0 +1,53 @@
+.block--asubrandheader {
+  .content-container {
+    border: none;
+    height: auto;
+    margin: inherit;
+    font-size: inherit;
+
+    @media screen and (max-width: $uds-breakpoint-xl) {
+      min-height: calc(100vh - 279px) !important;
+    }
+
+    @media screen and (min-width: $uds-breakpoint-xl) {
+      flex-direction: inherit;
+    }
+
+    .nav-link {
+      padding: 0;
+    }
+
+    .ul-heading {
+      color: black;
+    }
+
+  }
+
+  a.navbar-brand {
+    padding: 0;
+  }
+
+  @media screen and (max-width: $uds-breakpoint-lg) {
+    .container-xl {
+      padding-left: 0;
+      padding-right: 0;
+
+      .navbar-toggler {
+        padding: revert;
+      }
+
+      .header-top {
+        form {
+          label {
+            width: 100%;
+            margin-bottom: 0;
+            font-size: initial;
+            svg {
+              top: 10px
+            }
+          }
+        }
+      }
+    }
+  }
+}
