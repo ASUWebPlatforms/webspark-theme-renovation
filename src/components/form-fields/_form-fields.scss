@@ -10,3 +10,19 @@
     }
   }
 }
+
+.layout-builder__link--add {
+  color: $uds-color-base-gray-6;
+}
+
+.layout-builder__link--remove {
+  border-color: $uds-color-base-gray-6;
+  background-image: url('../../img/ui-icons/000000/ex.svg');
+}
+
+.layout-builder-block {
+  button.trigger {
+    border-color: $uds-color-base-gray-6;
+    background-image: url('../../img/ui-icons/000000/pencil.svg');
+  }
+}
