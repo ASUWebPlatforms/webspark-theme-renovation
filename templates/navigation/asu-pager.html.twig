@@ -19,6 +19,12 @@
 {% else %}
   {% set alignment = '' %}
 {% endif %}
+
+{% if show_icons == 1 %}
+  {% set page_link_icon = ' page-link-icon' %}
+{% else %}
+  {% set page_link_icon = '' %}
+{% endif %}
 {% if items %}
   <nav class="my-4" role="navigation" aria-labelledby="pagination-heading">
     <h4 id="pagination-heading" class="visually-hidden">{{ 'Pagination'|t }}</h4>
@@ -32,7 +38,7 @@
         <li class="page-item pager__item pager__item--previous">
           <a href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}"
              rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}
-             class="page-link page-link-icon">
+             class="page-link{{ page_link_icon }}">
             {{ 'Prev'|t }}
           </a>
         </li>
@@ -101,7 +107,7 @@
           <li class="page-item">
             <a href="{{ items.next.href }}" title="{{ 'Go to last page'|t }}"
                rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}
-               class="page-link page-link-icon">
+               class="page-link{{ page_link_icon }}">
               {{ 'Next'|t }}
             </a>
           </li>
