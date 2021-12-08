@@ -394,11 +394,3 @@
   color: inherit;
   background: transparent;
 }
-
-#drupal-off-canvas .media-library-item__name, #drupal-off-canvas .js-media-library-item-preview {
-  color: black;
-}
-
-#drupal-off-canvas .media-library-item__preview a {
-  color: #8c1d40;
-}
