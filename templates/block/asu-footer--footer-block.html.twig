@@ -104,20 +104,34 @@
             <p class="contribute-button"><a href="{{ cta_url }}" class="btn btn-small btn-gold">{{ cta_title }}</a></p>
           {% endif %}
         </div>
-        {% for column in columns_data %}
+        {% for key, column in columns_data %}
         <div class="col-xl flex-footer">
           <div class="card card-foldable desktop-disable-xl">
+          {% for c in column %}
             <div class="card-header">
               <h5>
-                <a id="footlink-header-{{ loop.index }}" class="collapsed" data-toggle="collapse" href="#footlink-{{ loop.index }}" role="button" aria-expanded="false" aria-controls="footlink-{{ loop.index }}">
-                  {{ column.title }}
+                <a
+                  id="footlink-header-{{ key }}-{{ loop.index }}"
+                  class="collapsed"
+                  data-toggle="collapse"
+                  href="#footlink-{{ key }}-{{ loop.index }}"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footlink-{{ key }}-{{ loop.index }}"
+                >
+                  {{ c.title }}
                   <span class="fas fa-chevron-up"></span>
                 </a>
               </h5>
             </div>
-            <div id="footlink-{{ loop.index }}" class="collapse card-body" aria-labelledby="footlink-header-{{ loop.index }}">
-              {{ column.menu_items }}
+            <div
+              id="footlink-{{ key }}-{{ loop.index }}"
+              class="collapse card-body"
+              aria-labelledby="footlink-header-{{ key }}-{{ loop.index }}"
+            >
+              {{ c.menu_items }}
             </div>
+          {% endfor %}
           </div>
         </div>
         {% endfor %}
