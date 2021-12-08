@@ -39,7 +39,8 @@ function renovation_preprocess_block(&$variables) {
     foreach ($paragraphs as $paragraph) {
       $tabs[] = [
         'heading' => $paragraph->get('field_heading')->value,
-        'copy' => $paragraph->get('field_body')->view()
+        'copy' => $paragraph->get('field_body')->view(),
+        'blocks' => $paragraph->get('field_blocks')->view(),
       ];
     }
     $variables['tabs'] = $tabs;
