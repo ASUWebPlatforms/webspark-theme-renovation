@@ -61,6 +61,54 @@ form.uds-form .form-check input[type=checkbox]+label:before {
             }
           }
         }
+<<<<<<< HEAD
+=======
+
+        .cke_button__anchor_icon {
+          background-image: url('../../img/ck-editor/websparkanchorlink.png') !important;
+        }
+      }
+
+      label {
+        svg {
+          &.uds-field-required {
+            color: $uds-color-background-error;
+          }
+        }
+      }
+
+      .form-required {
+        &::after {
+          color: $uds-color-background-error;
+        }
+      }
+    }
+
+    button.tabledrag-toggle-weight {
+      color: $uds-color-background-info;
+      &:hover {
+        color: $uds-color-background-info;
+        font-weight: $uds-font-weight-bold;
+      }
+      &:focus {
+        color: $uds-color-background-info;
+        box-shadow: none;
+      }
+    }
+
+    .alert-danger {
+      a {
+        color: $uds-color-base-gray-7;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .layout-selection {
+    li {
+      div {
+        color: $uds-color-background-info;
+>>>>>>> 9a211fc (WS2-389: Adjust contrast in other places.)
       }
     }
   }
