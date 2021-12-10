@@ -40,6 +40,9 @@
 
       function initializeFixedTable() {
         const wrapper = document.querySelector('.uds-table-fixed-wrapper');
+        if (wrapper === null) {
+          return;
+        }
 
         const container = wrapper.querySelector('.uds-table-fixed');
         const previous = wrapper.querySelector('.scroll-control.previous');
