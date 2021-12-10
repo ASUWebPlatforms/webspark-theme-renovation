@@ -81,6 +81,25 @@ form.uds-form .form-check input[type=checkbox]+label:before {
         }
       }
     }
+
+    button.tabledrag-toggle-weight {
+      color: $uds-color-background-info;
+      &:hover {
+        color: $uds-color-background-info;
+        font-weight: $uds-font-weight-bold;
+      }
+      &:focus {
+        color: $uds-color-background-info;
+        box-shadow: none;
+      }
+    }
+
+    .alert-danger {
+      a {
+        color: $uds-color-base-gray-7;
+        text-decoration: underline;
+      }
+    }
   }
 
   .layout-selection {

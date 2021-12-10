@@ -1,3 +1,17 @@
+@mixin contrast-icon($icon) {
+  border-color: $uds-color-base-gray-6;
+  background-image: url('../../img/ui-icons/000000/#{$icon}.svg');
+  &:hover {
+    background-image: url('../../img/ui-icons/000000/#{$icon}.svg');
+    border-width: 2px;
+  }
+}
+
+@mixin contrast-button($icon) {
+  button.trigger {
+    @include contrast-icon($icon)
+  }
+}
 #drupal-off-canvas {
   form.uds-form {
     .form-check-label {
@@ -16,13 +30,13 @@
 }
 
 .layout-builder__link--remove {
-  border-color: $uds-color-base-gray-6;
-  background-image: url('../../img/ui-icons/000000/ex.svg');
+  @include contrast-icon('ex');
 }
 
 .layout-builder-block {
-  button.trigger {
-    border-color: $uds-color-base-gray-6;
-    background-image: url('../../img/ui-icons/000000/pencil.svg');
-  }
+  @include contrast-button('pencil');
+}
+
+.contextual-region {
+  @include contrast-button('pencil');
 }
