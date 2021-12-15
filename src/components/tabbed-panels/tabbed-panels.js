@@ -36,31 +36,47 @@
       $('.uds-tabbed-panels .scroll-control-next').hide();
     }
 
-    if (window.location.href.indexOf('#') !== -1 && document.getElementById('nav-tab')) {
-      // Get the fragment form the URL
-      const fragment = window.location.href.split('#').at(-1)
-      // Get the pane div
-      const pane = document.getElementById(fragment);
-      // Get the menu item.
-      const menuItem = document.getElementById(fragment + '-tab');
+    const tabContentSelector = '.block-inline-blocktabbed-content';
+    const toggler = (url, state) => {
+      if (url.indexOf('#') !== -1) {
+        var fragment = url.split('#').at(-1);
 
-      if (pane && menuItem) {
-        const block = menuItem.closest(".block-inline-blocktabbed-content");
-        // Remove the existing active.
-        block.querySelector('#nav-tab').querySelectorAll('.nav-link').forEach((link) => {
-          link.classList.remove("active");
-          link.ariaSelected = "false";// Does not work
-        });
-        block.querySelector('#nav-tabContent').querySelectorAll('.tab-pane').forEach((tab) => {
-          tab.classList.remove("show","active");
-        });
+        var block = $("a[href='#" + fragment + "']").closest(tabContentSelector);
+        if (block.length !== 1) {
+          return;
+        }
 
-        pane.classList.add("show","active");
-        menuItem.classList.add("active");
-        menuItem.ariaSelected = "true";
+        // Deactivate/hide block's tabs.
+        block.find('.uds-tabbed-panels a.nav-link').removeClass('active');
+        block.find('.uds-tabbed-panels + .tab-content .tab-pane').removeClass('active show');
+
+        var pane = block.find('#' + fragment);
+        var menuItem = block.find('#' + fragment + '-tab');
+
+        if (pane.length === 1 && menuItem.length === 1) {
+          menuItem.attr('aria-selected', state);
+
+          if (state) {
+            menuItem.addClass('active');
+            pane.addClass('show active');
+          }
+          else {
+            menuItem.removeClass('active');
+            pane.removeClass('show active');
+          }
+        }
       }
     }
-    });
+
+    if ($(tabContentSelector).length > 0) {
+      toggler(window.location.href, true);
+
+      window.addEventListener("hashchange", (event) => {
+        toggler(event.oldURL, false);
+        toggler(event.newURL, true);
+      });
+    }
+  });
 
   function setControlVisibility(clicked, scrollOffset) {
     var parentContainer = $(clicked).closest('.uds-tabbed-panels');
