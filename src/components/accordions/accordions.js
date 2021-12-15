@@ -1,18 +1,30 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+(function () {
 
-
-if (window.location.href.indexOf('#') !== -1) {
-  const sectionName = window.location.href.split('#').at(-1)
-  const link = document.getElementById(sectionName);
-  
-  if (link) {
-    const section = link.closest('.card');
-    const content = section.querySelector('.card-body')
-    link.setAttribute("aria-expanded", true);
-    content.classList.add("show");
+  const toggler = (url, state) => {
+    if (url.indexOf('#') !== -1) {
+      const sectionName = url.split('#').at(-1);
+      const link = document.getElementById(sectionName);
+      if (link) {
+        const section = link.closest('.card');
+        const content = section.querySelector('.card-body')
+        link.setAttribute("aria-expanded", state);
+        if (state) {
+          content.classList.add("show");
+        }
+        else {
+          content.classList.remove("show");
+        }
+      }
+    }
   }
-}
+
+  window.addEventListener("hashchange", (event) => {
+    toggler(event.oldURL, false);
+    toggler(event.newURL, true);
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    toggler(window.location.href, true);
+  });
+
+})();
