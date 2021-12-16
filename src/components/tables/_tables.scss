@@ -5,6 +5,13 @@
       :nth-child(n+1) {
         min-width: unset;
         max-width: unset;
+        width: auto;
+      }
+
+      td {
+        p {
+          display: block;
+        }
       }
     }
   }
