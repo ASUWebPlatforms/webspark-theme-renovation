@@ -5,3 +5,39 @@
     background-color: $uds-color-background-error;
   }
 }
+
+
+// Degree detail page.
+body.toolbar-vertical {
+  article.degree-detail-page--full {
+    .uds-anchor-menu {
+      top: 156px !important
+    }
+  }
+}
+
+@media screen and (min-width: $uds-breakpoint-lg) {
+  body {
+    article.degree-detail-page--full {
+      .uds-anchor-menu {
+        top: 90px !important
+      }
+    }
+  }
+
+  body.toolbar-horizontal {
+    article.degree-detail-page--full {
+      .uds-anchor-menu {
+        top: 129px !important
+      }
+    }
+  }
+
+  body.toolbar-horizontal.toolbar-tray-open {
+    article.degree-detail-page--full {
+      .uds-anchor-menu {
+        top: 169px !important
+      }
+    }
+  }
+}
