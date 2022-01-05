@@ -14,7 +14,7 @@
  */
 function renovation_library_info_build() {
   $extensions = ['css', 'js'];
-  $theme_path = \Drupal::service('theme.manager')->getActiveTheme()->getPath();
+  $theme_path = \Drupal::service('theme_handler')->getTheme('renovation')->getPath();
   $directory = $theme_path . '/src/components';
   $extensions = array_map('preg_quote', $extensions);
   $extensions = implode('|', $extensions);
