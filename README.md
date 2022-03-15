@@ -2,7 +2,7 @@
 
 Theme for Webspark 2: Implements Web Standards 2.0
 
-## Installation
+## Installation for local development
 
 Ensure that the Radix theme and the components moule are installed. Later we can decouple this.
 
@@ -30,7 +30,7 @@ Update `proxy` in **webpack.mix.json**.
 Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
 
 
-## UDS to Renovation
+## Update Renovation with changes from Unity
 
 Here we explain how to update the code that comes from the UDS (Unity).
 
@@ -55,12 +55,14 @@ and override the existing files.
 !IMPORTANT
 Do not change those files in other way. The changes will be lost.
 
-3. Compile the changes
+3. Compile the changes (for local development)
 
 To test, you need to compile the changes `npm run dev` or `yarn dev`
-To test in the test environment push also the compiled css assets/css/renovation.style.css
+To test in the test environment push also the compiled css assets/css/renovation.style.css. (Note: for release, we don't push the compile css until all pull requests are merged. This helps us avoid conflicts.)
 
 ### JS Update
+
+When new components add Javascript to the `bootstrap4_theme` the JS needs to be incorporated into the Renovation theme, and this may require some adjustements to use Drupal behaviors.
 
 1. Clone the repository or particular file from https://github.com/ASU/asu-unity-stack/
 
@@ -72,9 +74,11 @@ Do not consider the *.templates.js
 
 4. Copy the code inside a Drupal behavior
 
-4.1. Helper: Search for other existing examples in other components.
+4.1. Tip: Search for examples in other components to see how this is done.
 
 ### Push to repository
+
+If doing development in a team sandbox site, the following steps explain commiting your sandbox changes back to the main repository to create a pull request.
 
 1. Clone (if you did not do it yet) the theme repository https://github.com/ASUWebPlatforms/webspark-theme-renovation
 
@@ -82,7 +86,7 @@ Do not consider the *.templates.js
 
 3. Add the modified files
 
-4. Push the changes. !Important  Do not push the compiles css
+4. Push the changes. !Important  Do not push the compiles css (This is only done at the end of development, while preparing a releease).
 
 5. Create a pull request.
 
@@ -96,7 +100,9 @@ Do not consider the *.templates.js
 
 4. Push the changes. !Important  Do not push the compiles css
 
-5. Create a pull request.
+5. Create a pull request for this theme's repo.
+
+Once all PRs for the release are merged and the release is ready, the final step is to compile and push the CSS to this theme and create the tag, and update the upstream with that tag.
 
 ## Layout builder related changes
 
