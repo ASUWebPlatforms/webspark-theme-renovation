@@ -96,11 +96,13 @@ If doing development in a team sandbox site, the following steps explain commiti
 
 2. Create another branch
 
-3. Compile the assets using "npm run production"
+3. Follow the steps under "Update Renovation with changes from Unity" but use the command below to compile the assets.
 
-4. Push the changes. !Important  Do not push the compiles css
+4. Compile the assets using "npm run production"
 
-5. Create a pull request for this theme's repo.
+5. Push the changes. !Important  Do not push the compiles css
+
+6. Create a pull request for this theme's repo.
 
 Once all PRs for the release are merged and the release is ready, the final step is to compile and push the CSS to this theme and create the tag, and update the upstream with that tag.
 
