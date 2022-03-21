@@ -10,7 +10,15 @@
       <a id="accordion-header-{{ link_id|lower }}" class="collapsed"
          href="#accordion-content-{{ link_id|lower }}" data-toggle="collapse"
          role="button" aria-expanded="false"
-         aria-controls="accordion-content-{{ link_id|lower }}">
+         aria-controls="accordion-content-{{ link_id|lower }}"
+         data-ga-event="collapse"
+         data-ga-action="open"
+         data-ga-name="onclick"
+         data-ga-type="click"
+         data-ga-section="accordion block"
+         data-ga-region="main content"
+         data-ga-text="{{ heading }}"
+         data-ga-component="">
         {# If there is an icon print it else print header only. #}
         {% if is_icon  %}
         <span class="card-icon">
