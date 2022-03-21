@@ -5,6 +5,7 @@ style:
       assets/css/renovation.style.css: {}
   js:
     assets/js/renovation.script.js: {}
+    js/datalayer.js: {}
   dependencies:
     - core/jquery
     - core/drupal

@@ -16,7 +16,18 @@
             {{ ctas }}
           </div>
           <div id="banner-close" class="banner-close">
-            <button type="button" class="btn btn-circle btn-circle-alt-black close" aria-label="Close"><i class="fas fa-times"></i></button>
+            <button 
+              type="button" 
+              class="btn btn-circle btn-circle-alt-black close" 
+              aria-label="Close"
+              data-ga-event="modal"
+              data-ga-action="close"
+              data-ga-name="onclick"
+              data-ga-type="click"
+              data-ga-section="{{ title }}"
+              data-ga-region="main content"
+              data-ga-text="close cross"
+              data-ga-component=""><i class="fas fa-times"></i></button>
           </div>
         </div>
       </div>
