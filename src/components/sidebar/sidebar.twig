@@ -41,7 +41,15 @@
                  data-toggle="collapse"
                  data-target="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
                  aria-expanded="false"
-                 aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}">
+                 aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                 data-ga-event="collapse"
+                 data-ga-action="open"
+                 data-ga-name="onclick"
+                 data-ga-type="click"
+                 data-ga-section="{{ title }}"
+                 data-ga-region="main content"
+                 data-ga-text="{{ item.title|replace({' ' : '-'})|lower }}"
+                 data-ga-component="">
                 {{ item.title }}
                 <span class="fas fa-chevron-down"></span>
               </a>

@@ -42,10 +42,29 @@
 
   {% if media_bundle == 'video' %}
     <div class="buttons">
-      <button class="first play" type="button">
+      <button 
+        class="first play" 
+        type="button"
+        data-ga-event="link"
+        data-ga-action="click"
+        data-ga-name="onclick"
+        data-ga-type="internal link"
+        data-ga-section="{{ title }}"
+        data-ga-region="main content"
+        data-ga-text="play button">
         <i class="fa fa-play"></i>
       </button>
-      <button class="second pause" type="button">
+      <button 
+        class="second pause" 
+        type="button"
+        data-ga-event="link"
+        data-ga-action="click"
+        data-ga-name="onclick"
+        data-ga-type="internal link"
+        data-ga-section="{{ title }}"
+        data-ga-region="main content"
+        data-ga-text="pause button"
+        data-ga-component="">
         <i class="fa fa-pause"></i>
       </button>
     </div>
