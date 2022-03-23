@@ -48,7 +48,7 @@
                  data-ga-type="click"
                  data-ga-section="{{ title }}"
                  data-ga-region="main content"
-                 data-ga-text="{{ item.title|replace({' ' : '-'})|lower }}"
+                 data-ga-text="{{ item.title }}"
                  data-ga-component="">
                 {{ item.title }}
                 <span class="fas fa-chevron-down"></span>
@@ -61,7 +61,18 @@
                  data-parent=".sidebar">
               {% if item.below %}
                 {% for subitem in item.below %}
-                  {{ link(subitem.title, subitem.url, { 'class': nav_link_class }) }}
+                  {{ link(
+                    subitem.title, 
+                    subitem.url, { 
+                      'class': nav_link_class, 
+                      'data-ga-event':'link', 
+                      'data-ga-action':'click',
+                      'data-ga-name':'onclick', 
+                      'data-ga-type':'internal link', 
+                      'data-ga-region':'main content', 
+                      'data-ga-section':title, 
+                      'data-ga-text':subitem.title, 
+                      'data-ga-component':'' }) }}
                 {% endfor %}
               {% endif %}
 
@@ -70,7 +81,19 @@
           </div><!-- end .card -->
         {% else %}
           <div class="nav-link-container">
-            {{ link(item.title, item.url, { 'id': item.title|replace({' ' : '-'})|lower, 'class': nav_link_class }) }}
+            {{ link(
+              item.title,
+              item.url, { 
+                'id': item.title|replace({' ' : '-'})|lower, 
+                'class': nav_link_class, 
+                'data-ga-event':'link', 
+                'data-ga-action':'click',
+                'data-ga-name':'onclick', 
+                'data-ga-type':'internal link', 
+                'data-ga-region':'main content', 
+                'data-ga-section':title, 
+                'data-ga-text':item.title, 
+                'data-ga-component':'' }) }}
           </div>
         {% endif %}
       {% endfor %}
