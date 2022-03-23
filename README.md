@@ -123,6 +123,7 @@ Some of the classes from the core layout builder had to be changed. Because the 
   * `src/sass/extends`
   * `src/sass/design-tokens`
   * `src/sass/variables`
+* Relay updates from UDS into these, but avoid breaking overrides and additional includes:
   * `src/sass/bootstrap-asu-extends.scss`
   * `src/sass/bootstrap-asu.scss`
 * Renovation additions and tweaks
