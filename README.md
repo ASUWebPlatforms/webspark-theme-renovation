@@ -49,8 +49,7 @@ https://github.com/ASU/asu-unity-stack/
 In order to update the CSS from the Unity you will need to follow these steps:
 
 1. Clone the repository or particular file from https://github.com/ASU/asu-unity-stack/
-2. Copy the scss files or contents from https://github.com/ASU/asu-unity-stack/tree/dev/packages/bootstrap4-theme/src/scss
-and override the existing files.
+2. Copy the scss files or contents from https://github.com/ASU/asu-unity-stack/tree/dev/packages/bootstrap4-theme/src/scss and override the existing files, with the exception of `src/sass/bootstrap-asu-extends.scss` and `src/sass/bootstrap-asu.scss` which require you to make updates but maintain any path overrides and custom imports included for the CMS.
 
 !IMPORTANT
 Do not change those files in other way. The changes will be lost.
@@ -123,6 +122,7 @@ Some of the classes from the core layout builder had to be changed. Because the 
   * `src/sass/extends`
   * `src/sass/design-tokens`
   * `src/sass/variables`
+* Relay updates from UDS into these, but avoid breaking overrides and additional includes:
   * `src/sass/bootstrap-asu-extends.scss`
   * `src/sass/bootstrap-asu.scss`
 * Renovation additions and tweaks

@@ -434,10 +434,7 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
   }
 
   .navbar-nav {
-    max-height: calc(100vh - 270px);
-    overflow-y: auto;
     .nav-link {
-      text-transform: capitalize;
       padding: $uds-size-spacing-2 $uds-size-spacing-4 $uds-size-spacing-1
         $uds-size-spacing-4;
       border-top: 1px solid $uds-color-base-gray-3;
@@ -481,9 +478,17 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
   }
 
   #menubar {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    min-height: calc(100vh - 110px);
+    .header-content-container {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      min-height: calc(100vh - 270px);
+      max-height: calc(100vh - 270px);
+      margin-bottom: 50px;
+
+      & > *:last-child {
+        margin-bottom: 50px;
+      }
+    }
 
     &.collapsing {
       height: unset !important;
@@ -676,7 +681,6 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
   .dropdown-item {
     padding: $uds-size-spacing-2 $uds-size-spacing-1;
     white-space: normal;
-    text-transform: capitalize;
 
     &:visited {
       color: $uds-color-base-gray-7;
@@ -848,6 +852,11 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
         margin: 0;
         width: 50%;
       }
+      .header-content-container {
+        form {
+          margin-left: auto;
+        }
+      }
       #menubar {
         justify-content: flex-end !important;
         width: 50% !important;
@@ -855,8 +864,18 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
     }
 
     #menubar {
-      overflow: initial;
-      min-height: auto;
+      .header-content-container {
+        display: flex;
+        min-height: auto;
+        overflow: visible;
+        margin-bottom: auto;
+        width: 100%;
+        justify-content: space-between;
+        justify-items: flex-end;
+        & > *:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     .navbar-nav {
@@ -982,7 +1001,6 @@ $fa-search: url($image-assets-path + '/font-awesome-svg/search.svg');
 
       h3 {
         margin-top: 0;
-        text-transform: capitalize;
       }
     }
 
@@ -1115,7 +1133,7 @@ the content of the header
 .uds-full-width {
   .uds-content-align {
     max-width: 1920px;
-    width: 100%;
+    width: calc(100% - 2rem);
     margin: 0 $uds-size-spacing-2;
 
     @include media-breakpoint-up(md) {
