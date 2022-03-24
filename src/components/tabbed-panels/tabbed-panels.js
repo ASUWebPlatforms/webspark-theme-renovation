@@ -1,7 +1,4 @@
-import { googleAnalytics } from '../../../src/js/googleAnalytics';
-
-export const initTabs = function () {
-  'use strict';
+(function ($) {
   jQuery(function () {
     $(document).on('click', function (e) {
       setButtonsCompatibility(e);
@@ -88,7 +85,4 @@ export const initTabs = function () {
 
     setControlVisibility(clicked, scrollOffset);
   };
-
-  // Init goolge analytics
-  googleAnalytics();
-};
+}(jQuery));
