@@ -24,7 +24,7 @@
             const type = element.getAttribute('data-ga-type');
             const section = element.getAttribute('data-ga-section');
             const region = element.getAttribute('data-ga-region');
-            const text = element.getAttribute('data-ga');
+            const text = element.getAttribute('data-ga-text');
             const component = element.getAttribute('data-ga-component');
             
             pushGAEvent({
