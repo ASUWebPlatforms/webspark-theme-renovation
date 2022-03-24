@@ -48,8 +48,7 @@
                  data-ga-type="click"
                  data-ga-section="{{ title }}"
                  data-ga-region="main content"
-                 data-ga-text="{{ item.title }}"
-                 data-ga-component="">
+                 data-ga-text="{{ item.title }}">
                 {{ item.title }}
                 <span class="fas fa-chevron-down"></span>
               </a>
@@ -71,8 +70,7 @@
                       'data-ga-type':'internal link', 
                       'data-ga-region':'main content', 
                       'data-ga-section':title, 
-                      'data-ga-text':subitem.title, 
-                      'data-ga-component':'' }) }}
+                      'data-ga-text':subitem.title }) }}
                 {% endfor %}
               {% endif %}
 
@@ -92,8 +90,7 @@
                 'data-ga-type':'internal link', 
                 'data-ga-region':'main content', 
                 'data-ga-section':title, 
-                'data-ga-text':item.title, 
-                'data-ga-component':'' }) }}
+                'data-ga-text':item.title }) }}
           </div>
         {% endif %}
       {% endfor %}
