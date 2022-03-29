@@ -24,11 +24,10 @@ If you prefer to use [Yarn](https://yarnpkg.com) instead of npm, install Yarn by
 Go to the root of Renovation theme and run the following commands: `npm install` or `yarn install`.
 
 #### Step 3
-Update `proxy` in **webpack.mix.json**.
+Create a duplicate of `config.js` and rename it to `config.local.js`. Update the `proxy` key with the URL of your local development server.
 
 #### Step 4
 Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
-
 
 ## Update Renovation with changes from Unity
 
