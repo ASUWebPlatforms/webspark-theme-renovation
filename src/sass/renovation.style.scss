@@ -42,7 +42,7 @@
 @import "base/helpers";
 @import "base/elements";
 @import "base/typography";
-@import "base/_drupal-admin-tweaks";
+@import "base/drupal-admin-tweaks";
 
 // Unity
 // -----------------------------------------------------------------------------
@@ -66,3 +66,4 @@
 @import "block/block";
 @import "content/node.page";
 @import "content/node.article";
+@import "content/theme-tweaks";

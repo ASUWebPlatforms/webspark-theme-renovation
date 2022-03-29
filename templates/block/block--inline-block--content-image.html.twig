@@ -5,7 +5,6 @@
  */
 #}
 {% set classes = [
-  'row',
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
@@ -23,10 +22,10 @@
   {{ content.field_anchor_menu_settings }}
   {% block content %}
     {% include '@renovation/image-overlap/image-overlap.twig' with {
-      image: file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value),
+      image: content.field_media,
       heading: content.field_heading,
       content: content.field_formatted_text[0],
     } %}
   {% endblock %}
-  {{ content|without('field_media', 'field_heading', 'field_formatted_text', 'field_content_position') }}
+  {{ content|without('field_media', 'field_heading', 'field_formatted_text', 'field_content_position', 'field_anchor_menu_settings') }}
 </div>

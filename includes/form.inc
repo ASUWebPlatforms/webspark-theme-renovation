@@ -10,6 +10,12 @@ function renovation_form_alter(&$form, &$form_state, $form_id) {
   // Add classes to cancel button on Layout Builder discard/revert changes.
   if ($form_id == 'layout_builder_discard_changes' || $form_id == 'layout_builder_revert_overrides') {
     $form['actions']['cancel']['#attributes']['class'][] = 'btn btn-dark';
+
+    // Changes in the revert form wording.
+    if ($form_id == 'layout_builder_revert_overrides') {
+      $form['#title'] = t('Are you sure you want to revert this page to defaults, which will delete all content on this page?');
+      $form['actions']['submit']['#value'] = t('Confirm');
+    }
   }
 
   // Add the class required for all the forms in front theme.

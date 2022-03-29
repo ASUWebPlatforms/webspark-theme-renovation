@@ -9,14 +9,7 @@
     nav {
       ol.breadcrumb {
         border-radius: 0;
-        padding-left: 0;
         margin-bottom: 0;
-        @media screen and (max-width: $uds-breakpoint-sm) {
-          padding-left: 32px;
-        }
-        @media screen and (max-width: $uds-breakpoint-md) {
-          padding-left: 32px;
-        }
       }
     }
   }
@@ -29,13 +22,6 @@
       max-width: 1200px;
       ol.breadcrumb {
         border-radius: 0;
-        padding-left: 0;
-        @media screen and (max-width: $uds-breakpoint-sm) {
-          padding-left: 20px;
-        }
-        @media screen and (max-width: $uds-breakpoint-md) {
-          padding-left: 20px;
-        }
       }
     }
   }

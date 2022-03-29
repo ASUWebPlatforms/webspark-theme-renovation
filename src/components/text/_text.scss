@@ -1,0 +1,17 @@
+.gray-7-bg {
+  .block-inline-blocktext-content {
+    &.text-white {
+      .formatted-text {
+        a:not(.btn) {
+          color: $uds-color-brand-gold;
+        }
+      }
+    }
+  }
+}
+
+.block-inline-blocktext-content {
+  a {
+    display: inline-block;
+  }
+}

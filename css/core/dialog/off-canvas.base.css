@@ -42,7 +42,7 @@
   #drupal-off-canvas acronym,
   #drupal-off-canvas address,
   #drupal-off-canvas big,
-  #drupal-off-canvas button,
+  #drupal-off-canvas button:not(.close),
   #drupal-off-canvas cite,
   #drupal-off-canvas code,
   #drupal-off-canvas del,

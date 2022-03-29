@@ -1,5 +1,21 @@
 (function ($) {
   jQuery(function () {
+    $(document).on('click', function (e) {
+      setButtonsCompatibility(e);
+    });
+
+    document.querySelectorAll('.uds-tabbed-panels').forEach((item) => {
+      const nav = item.querySelector('.nav-tabs');
+      nav.addEventListener('scroll', (event) => {
+        const scrollPos = event.target.scrollLeft;
+        const prevButton = item.querySelector('.scroll-control-prev');
+        const nextButton = item.querySelector('.scroll-control-next');
+        const atFarRight = nav.offsetWidth + scrollPos + 3 >= nav.scrollWidth;
+        prevButton.style.display = scrollPos === 0 ? 'none' : 'block';
+        nextButton.style.display = atFarRight ? 'none' : 'block';
+      });
+    });
+
     $('.scroll-control-next').on('click', function (e) {
       if (window.innerWidth > 992) {
         slideNav(this, e, -1);
@@ -19,11 +35,18 @@
     }
   });
 
-  function setControlVisibility(clicked, scrollOffset) {
-    var parentContainer = $(clicked).closest('.uds-tabbed-panels');
-    var parentNav = $(clicked).siblings('.nav-tabs');
-    var scrollPosition = parentNav.data('scroll-position') * 1;
-    var tabPosition = parentNav[0].scrollWidth - scrollOffset;
+  const setButtonsCompatibility = (e) => {
+    const targets = ['a', 'button'];
+    if (targets.includes(e.target.localName)) {
+      e.target.focus();
+    }
+  };
+
+  const setControlVisibility = (clicked, scrollOffset) => {
+    const parentContainer = $(clicked).closest('.uds-tabbed-panels');
+    const parentNav = $(clicked).siblings('.nav-tabs');
+    const scrollPosition = parentNav.data('scroll-position') * 1;
+    const tabPosition = parentNav[0].scrollWidth - scrollOffset;
 
     if (scrollPosition == 0) {
       parentContainer.find('.scroll-control-prev').hide();
@@ -35,14 +58,14 @@
     } else {
       parentContainer.find('.scroll-control-next').show();
     }
-  }
+  };
 
-  function slideNav(clicked, e, direction) {
+  const slideNav = (clicked, e, direction) => {
     e.preventDefault();
-    var parentNav = $(clicked).siblings('.nav-tabs');
-    var scrollPosition = parentNav.data('scroll-position') * 1;
-    var navItems = parentNav.find('.nav-item').toArray();
-    var scrollOffset = parentNav.css('left').replace('px', '') * 1;
+    const parentNav = $(clicked).siblings('.nav-tabs');
+    let scrollPosition = parentNav.data('scroll-position') * 1;
+    const navItems = parentNav.find('.nav-item').toArray();
+    let scrollOffset = parentNav.css('left').replace('px', '') * 1;
     var adjustNavItem = 0;
 
     if (direction == 1 && scrollPosition > 0) {
@@ -57,7 +80,9 @@
     for (var i = 0; i < scrollPosition; i++) {
       scrollOffset += $(navItems[i]).outerWidth();
     }
+
     parentNav.scrollLeft(scrollOffset);
+
     setControlVisibility(clicked, scrollOffset);
-  }
+  };
 }(jQuery));

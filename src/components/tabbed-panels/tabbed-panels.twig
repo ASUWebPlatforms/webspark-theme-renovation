@@ -1,5 +1,6 @@
 {# Generate tab headings #}
-<nav class="uds-tabbed-panels{% if is_dark %} uds-tabbed-panels-dark{% endif %}">
+<nav class="uds-tabbed-panels uds-content-align{% if is_dark %} uds-tabbed-panels-dark{% endif %}">
+
   <div class="nav nav-tabs" id="nav-tab" role="tablist"  data-scroll-position="0">
     {% for tab in tabs %}
       {% if loop.first %}
@@ -9,7 +10,14 @@
            href="#nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
            role="tab"
            aria-controls="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
-           aria-selected="true">
+           aria-selected="true"
+           data-ga-event="link"
+           data-ga-action="click"
+           data-ga-name="onclick"
+           data-ga-type="internal link"
+           data-ga-section=""
+           data-ga-region=""
+           data-ga-text="">
           {{ tab.heading }}
         </a>
       {% else %}
@@ -19,17 +27,48 @@
            href="#nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
            role="tab"
            aria-controls="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
-           aria-selected="false">
+           aria-selected="false"
+           data-ga-event="link"
+           data-ga-action="click"
+           data-ga-name="onclick"
+           data-ga-type="internal link"
+           data-ga-section=""
+           data-ga-region=""
+           data-ga-text="">
           {{ tab.heading }}
         </a>
       {% endif %}
     {% endfor %}
   </div>
-    <a class="scroll-control-prev" href="#carouselExampleControls" role="button" data-scroll="prev" tabIndex="-1">
+    <a
+      class="scroll-control-prev"
+      href="#carouselExampleControls"
+      role="button"
+      data-scroll="prev"
+      tabIndex="-1"
+      data-ga-event="select"
+      data-ga-action="click"
+      data-ga-name="onclick"
+      data-ga-type="carousel"
+      data-ga-section=""
+      data-ga-region="main content"
+      data-ga-text="left chevron">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="scroll-control-next" href="#carouselExampleControls" role="button" data-scroll="next" tabIndex="-1">
+    <a
+      class="scroll-control-next"
+      href="#carouselExampleControls"
+      role="button"
+      data-scroll="next"
+      tabIndex="-1"
+      data-ga-event="select"
+      data-ga-action="click"
+      data-ga-name="onclick"
+      data-ga-type="carousel"
+      data-ga-section=""
+      data-ga-region="main content"
+      data-ga-text="right chevron">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -44,6 +83,8 @@
            role="tabpanel"
            aria-labelledby="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab">
         {{ tab.copy|raw }}
+
+        {{ tab.blocks }}
       </div>
     {% else %}
       <div class="tab-pane fade{% if is_dark %} text-white{% endif %}"
@@ -51,6 +92,8 @@
            role="tabpanel"
            aria-labelledby="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab">
         {{ tab.copy|raw }}
+
+        {{ tab.blocks }}
       </div>
     {% endif %}
   {% endfor %}

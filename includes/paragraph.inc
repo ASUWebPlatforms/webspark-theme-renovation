@@ -7,6 +7,8 @@ function renovation_preprocess_paragraph(&$variables) {
   /* @var \Drupal\paragraphs\Entity\Paragraph */
   $paragraph = $variables['elements']['#paragraph'];
   $bundle = $paragraph->getType();
+  $parent = $paragraph->getParentEntity();
+  $variables['parent_id'] = $parent ? $parent->id() : '';
 
   // CTA Paragraph.
   if ($bundle == 'cta') {

@@ -5,7 +5,6 @@
  */
 #}
 {% set classes = [
-  'row',
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
@@ -30,5 +29,5 @@
       heading_color: content['#block_content'].field_heading_color.value,
     } %}
   {% endblock %}
-  {{ content|without('field_media', 'field_card', 'field_heading', 'field_formatted_text') }}
+  {{ content|without('field_media', 'field_card', 'field_heading', 'field_formatted_text', 'field_anchor_menu_settings') }}
 </div>

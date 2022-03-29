@@ -14,6 +14,18 @@
 /* See _forms.scs from bootstrap */
 .invalid-feedback {
   color: $uds-color-font-dark-error;
+  }
+
+// The _cards.css from bootstrap was updated.
+.page__footer .card-header {
+  &:first-child {
+    @include border-radius(0 0 0 0);
+  }
+}
+
+// To be deleted when we update bootstrap.
+.accordion .card.card-foldable {
+  border-bottom: 1px solid #d0d0d0 !important;
 }
 
 /* TODO::

@@ -17,11 +17,14 @@ function renovation_preprocess_field(&$variables) {
 
   // Field CTAs on banner.
   if ($field_name == 'field_ctas' || $field_name == 'field_cta') {
-    // Gert background.
+    // Get background.
     $background_color = getBackgroundColor($container);
+    // Get heading
+    $section_heading = getSectionHeader($container);
     // Get the paragraph.
     $buttons = [];
     $paragraphs = $variables['items'];
+
     foreach ( $paragraphs as $paragraph) {
       /** @var  \Drupal\paragraphs\Entity\Paragraph */
       $paragraph_values = $paragraph['content']['#paragraph'];
@@ -30,6 +33,7 @@ function renovation_preprocess_field(&$variables) {
         $cta = $paragraph_values->get('field_cta_link')->getValue()[0];
         // Get the icon.
         $icon = get_icon($paragraph_values);
+
         $buttons[] = [
           'background_color' => $background_color,
           'link' => Url::fromUri($cta['uri']),
@@ -37,6 +41,7 @@ function renovation_preprocess_field(&$variables) {
           'color' => isset($cta['options']['attributes']['class']) ? $cta['options']['attributes']['class'] : '',
           'icon' => $icon ? $icon : '',
           'target' => isset($cta['options']['attributes']['target']) ? $cta['options']['attributes']['target'] : '',
+          'heading' => $section_heading,
         ];
       }
     }
@@ -75,6 +80,15 @@ function get_icon(\Drupal\paragraphs\Entity\Paragraph $paragraph_values) {
 function getBackgroundColor($container) {
   if ($container->hasField('field_banner_background_color') && !$container->get('field_banner_background_color')->isEmpty()) {
     return $container->get('field_banner_background_color')->value;
+  }
+  else {
+    return null;
+  }
+}
+
+function getSectionHeader($container) {
+  if ($container->hasField('field_heading') && !$container->get('field_heading')->isEmpty()) {
+    return $container->get('field_heading')->value;
   }
   else {
     return null;
