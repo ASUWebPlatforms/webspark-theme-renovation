@@ -11,6 +11,3 @@
 
 # Ignore node modules.
 node_modules
-
-# Ignore local development config
-config.local.js
