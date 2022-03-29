@@ -4,7 +4,7 @@ Theme for Webspark 2: Implements Web Standards 2.0
 
 ## Installation for local development
 
-Ensure that the Radix theme and the components module are installed. Later we can decouple this.
+Ensure that the Radix theme and the components moule are installed. Later we can decouple this.
 
 For historical reasons when cloning this repo use:
 
@@ -24,9 +24,7 @@ If you prefer to use [Yarn](https://yarnpkg.com) instead of npm, install Yarn by
 Go to the root of Renovation theme and run the following commands: `npm install` or `yarn install`.
 
 #### Step 3
-Copy the contents of `./config.default.js` into a new file called `./config.local.js`. There, you can update the `proxy` option to match your local development environment.
-
-**NOTE**: The file `./config.local.js` is ignored by `.gitignore`.
+Update `proxy` in **webpack.mix.json**.
 
 #### Step 4
 Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
