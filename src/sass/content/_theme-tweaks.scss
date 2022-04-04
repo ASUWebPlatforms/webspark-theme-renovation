@@ -1,0 +1,6 @@
+/* Make skip to content link visible upon focus (it was hidden by the ASU
+Header */
+.sr-only-focusable:active, .sr-only-focusable:focus {
+    position: relative;
+    z-index: 1050;
+}

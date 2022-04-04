@@ -7,7 +7,7 @@
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
  */
-const proxy = 'http://asusite.ddev.site';
+const config = require('./config.local.js');
 const mix = require('laravel-mix');
 
 /*
@@ -28,7 +28,7 @@ mix
  |--------------------------------------------------------------------------
  */
 mix.browserSync({
-  proxy: proxy,
+  proxy: config.proxy,
   files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
   stream: true,
 });

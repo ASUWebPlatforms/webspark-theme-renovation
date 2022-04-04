@@ -50,23 +50,24 @@ Due to the fact that this theme is somewhat different from the source content in
 
 ### How to compile Sass files for release
 1. Go to the root of Renovation theme and run the following commands: `npm install` or `yarn install`.
-2. Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
-3. Make changes as described in "Reconciling Unity with Renovation."
-4. When you have finished making your changes, compile the assets for production by running `npm run production`. **Important!** Do not add the compiled assets (found in `assets/css` and `assets/js`) to your git commit at this point.
-5. Add all other changed files with `git add path/file`.
-6. Commit changes in git and push to the remote repository.
-7. Create a pull request against the `main` branch.
-8. Verify that **ALL** pending pull requests for the release have been merged.
-9. Pull all the latest changes into your branch from the main branch with `git pull origin main`.
-10. Fix any conficts, if necessary, and commit your changes.
-11. When you feel that the release is ready, the final step is to compile and push the CSS. Do this by running `npm run production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes.
-12. Push the commit to the remote repository.
-13. When your pull request has been approved, merge it into the main branch.
-14.  Create a new tag for the release (using semantic versioning principles), and update the composer.json file in `webspark-release-testing/upstream-configuration/` with that tag for `"asuwebplatforms/webspark-theme-renovation"`.
-15.  Increment the version number at the bottom of the composer.json file.
-16.  That's it! Submit the release for testing and do a happy dance (until you get bug reports back).
+2. Create a duplicate of `config.js` and rename it to `config.local.js`. Update the `proxy` key with the URL of your local development server.
+3. Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
+4. Make changes as described in "Reconciling Unity with Renovation."
+5. When you have finished making your changes, compile the assets for production by running `npm run production`. **Important!** Do not add the compiled assets (found in `assets/css` and `assets/js`) to your git commit at this point.
+6. Add all other changed files with `git add path/file`.
+7. Commit changes in git and push to the remote repository.
+8. Create a pull request against the `main` branch.
+9. Verify that **ALL** pending pull requests for the release have been merged.
+10. Pull all the latest changes into your branch from the main branch with `git pull origin main`.
+11. Fix any conficts, if necessary, and commit your changes.
+12. When you feel that the release is ready, the final step is to compile and push the CSS. Do this by running `npm run production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes.
+13. Push the commit to the remote repository.
+14. When your pull request has been approved, merge it into the main branch.
+15. Create a new tag for the release (using semantic versioning principles), and update the composer.json file in `webspark-release-testing/upstream-configuration/` with that tag for `"asuwebplatforms/webspark-theme-renovation"`.
+16. Increment the version number at the bottom of the composer.json file.
+17. That's it! Submit the release for testing and do a happy dance (until you get bug reports back).
 
 ## Caveats
 - Some of the classes from the core layout builder had to be changed. Because the core ones override everything we write here, we had to disable them from .info file and recreate them in the /css folder.
 - The versions for libraries being used in this theme are **pinned**. You will be able to find the version numbers in package.json.
-- Working on the theme can be made easier by utilizing the `watch` feature provided by webpack (as mentioned in Step 2 of "How to compile Sass files for release"). However, getting set up to do this can be tricky. To make it work, you will need to update the `proxy` value in the `webpack.mix.json` file to match your local development environment. The default example is for use with DDEV, but it can be changed to whatever you use for local development. For more information on developing with the Radix theme using webpack, check out this excellent [tutorial](https://www.youtube.com/watch?v=ak1IOcYnN9s).
+- Working on the theme can be made easier by utilizing the `watch` feature provided by webpack (as mentioned in Step 2 of "How to compile Sass files for release"). For more information on developing with the Radix theme using webpack, check out this excellent [tutorial](https://www.youtube.com/watch?v=ak1IOcYnN9s).
