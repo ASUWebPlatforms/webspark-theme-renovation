@@ -8,3 +8,4 @@
 .vscode
 # Ignore node modules.
 node_modules
+config.local.js
