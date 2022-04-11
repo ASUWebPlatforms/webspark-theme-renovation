@@ -56,13 +56,14 @@
 @import 'extends/alt_styling';
 @import '../components/form-overrides';
 @import '../components/layouts/layouts';
-@import 'extends/media_embed';
+@import 'renovation-extends/media_embed';
 @import '../components/page404/page404';
 @import '../components/paragraphs/paragraphs';
 @import '../components/regions/regions';
-@import 'extends/tabs';
+@import 'renovation-variables/tabs';
+@import 'renovation-extends/tabs';
 @import '../components/tabs/tabs';
-@import 'extends/testimonials';
+@import 'renovation-extends/testimonials';
 @import '../components/ckeditor/ckeditor';
 @import '../components/testimonial-carousel/testimonial-carousel';
 @import '../components/story-hero/story-hero'; // override for image.
