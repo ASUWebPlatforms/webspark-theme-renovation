@@ -4,10 +4,14 @@
  * Theme and preprocess functions for blocks.
  */
 
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\crop\Entity\Crop;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -46,6 +50,68 @@ function renovation_preprocess_block(&$variables) {
     $variables['tabs'] = $tabs;
   }
 
+}
 
+/**
+ * Gets the video poster image if set.
+ *
+ * @param array $variables
+ *    The block variables.
+ *
+ * @return string
+ *    The Poster image URL, empty string if not found.
+ */
+function getPosterImage(array $variables): string {
+  if (!$variables['content']['#block_content'] instanceof BlockContent) {
+    return '';
+  }
 
+  /** @var \Drupal\block_content\Entity\BlockContent $block */
+  $block = $variables['content']['#block_content'];
+
+  if (!$block->hasField('field_background_image')) {
+    return '';
+  }
+
+  $poster_entity = $block->get('field_background_image')->referencedEntities();
+
+  if (empty($poster_entity)) {
+    return '';
+  }
+
+  $poster_media = reset($poster_entity);
+
+  /** @var \Drupal\media\Entity\Media $poster_media */
+  if (!($poster_media instanceof Media) || $poster_media->hasField('field_media_image') === FALSE) {
+    return '';
+  }
+
+  $poster_image = $poster_media->get('field_media_image')->referencedEntities();
+  if (empty($poster_image)) {
+    return '';
+  }
+
+  /** @var \Drupal\file\Entity\File $poster_image */
+  $poster_image = reset($poster_image);
+
+  $poster_url = NULL;
+  if (Crop::cropExists($poster_image->getFileUri(), 'mobile_video_poster')) {
+    $style = ImageStyle::load('video_poster_image');
+    if ($style) {
+      $poster_url = $style->buildUrl($poster_image->getFileUri());
+    }
+  }
+  else {
+    // There is no crop - get image file URL.
+    $poster_url = file_create_url($poster_image->getFileUri());
+  }
+
+  return $poster_url;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function renovation_preprocess_block__inline_block__video_hero(&$variables) {
+    $variables['poster'] = getPosterImage($variables);
 }

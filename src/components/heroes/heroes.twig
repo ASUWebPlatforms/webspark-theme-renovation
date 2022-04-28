@@ -9,9 +9,11 @@
 
 {% if media_bundle == 'video' %}
   <div class="uds-video-hero {% if has_button_row %} has-btn-row{% endif %}">
-    <video autoplay muted loop playsinline class="fixed-background">
-      <source src="{{ video_url }}">
-    </video>
+    {% include '@renovation/heroes/video.twig'  with {
+      source: video_url,
+      video_class: 'fixed-background',
+      poster: poster,
+    } %}
     <div class="container">
 {% endif %}
 
