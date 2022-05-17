@@ -15,9 +15,9 @@
            data-ga-action="click"
            data-ga-name="onclick"
            data-ga-type="internal link"
-           data-ga-section=""
-           data-ga-region=""
-           data-ga-text="">
+           data-ga-section="{{ label }}"
+           data-ga-region="main content"
+           data-ga-text="{{ tab.heading }}">
           {{ tab.heading }}
         </a>
       {% else %}
@@ -32,9 +32,9 @@
            data-ga-action="click"
            data-ga-name="onclick"
            data-ga-type="internal link"
-           data-ga-section=""
-           data-ga-region=""
-           data-ga-text="">
+           data-ga-section="{{ label }}"
+           data-ga-region="main content"
+           data-ga-text="{{ tab.heading }}">
           {{ tab.heading }}
         </a>
       {% endif %}
@@ -50,7 +50,7 @@
       data-ga-action="click"
       data-ga-name="onclick"
       data-ga-type="carousel"
-      data-ga-section=""
+      data-ga-section="{{ label }}"
       data-ga-region="main content"
       data-ga-text="left chevron">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -66,7 +66,7 @@
       data-ga-action="click"
       data-ga-name="onclick"
       data-ga-type="carousel"
-      data-ga-section=""
+      data-ga-section="{{ label }}"
       data-ga-region="main content"
       data-ga-text="right chevron">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
