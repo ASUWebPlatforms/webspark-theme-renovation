@@ -14,7 +14,7 @@
           data-ga-action="open"
           data-ga-name="onclick"
           data-ga-type="click"
-          data-ga-section="default"
+          data-ga-section="{{ label }}"
           data-ga-region="main content"
           data-ga-text="{{ tab.heading }}">{{ tab.heading }}</a>
       {% else %}
@@ -30,7 +30,7 @@
           data-ga-action="close"
           data-ga-name="onclick"
           data-ga-type="click"
-          data-ga-section="default"
+          data-ga-section="{{ label }}"
           data-ga-region="main content"
           data-ga-text="{{ tab.heading }}">{{ tab.heading }}</a>
       {% endif %}
