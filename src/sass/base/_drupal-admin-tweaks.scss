@@ -19,24 +19,26 @@ body .layout-builder-block {
 }
 
 // Adjust the styles of the description boxes found in .layout-builder-configure-section
-#drupal-off-canvas .form-text,
-#drupal-off-canvas .form-tel,
-#drupal-off-canvas .form-email,
-#drupal-off-canvas .form-url,
-#drupal-off-canvas .form-search,
-#drupal-off-canvas .form-number,
-#drupal-off-canvas .form-color,
-#drupal-off-canvas .form-file,
-#drupal-off-canvas .form-textarea,
-#drupal-off-canvas .form-date,
-#drupal-off-canvas .form-time {
-  &.description {
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    color: #ddd !important;
-    font-size: 10px !important;
-    margin-top: 0 !important;
-    padding-left: 0;
+#drupal-off-canvas {
+  .form-text,
+  .form-tel,
+  .form-email,
+  .form-url,
+  .form-search,
+  .form-number,
+  .form-color,
+  .form-file,
+  .form-textarea,
+  .form-date,
+  .form-time {
+    &.description {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      color: #ddd !important;
+      font-size: 10px !important;
+      margin-top: 0 !important;
+      padding-left: 0;
+    }
   }
 }

@@ -118,11 +118,11 @@ form.uds-form .form-check input[type=checkbox]+label:before {
 
   .description {
     &.text-muted {
-      color: $uds-color-base-gray-7 !important;
+      color: inherit !important;
     }
 
     a {
-      color: $uds-color-base-gray-7;
+      color: inherit;
       text-decoration: underline;
     }
   }
