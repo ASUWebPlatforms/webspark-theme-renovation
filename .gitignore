@@ -9,3 +9,7 @@
 # Ignore node modules.
 node_modules
 config.local.js
+
+# Ignore SASS source maps
+*.script.js.map
+*.style.css.map
