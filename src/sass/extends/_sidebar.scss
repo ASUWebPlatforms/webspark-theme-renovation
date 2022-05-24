@@ -164,7 +164,7 @@ $nav-item-min-height: 3rem;
     }
 
     .card-body > .nav-link {
-      padding: 0 $uds-size-spacing-5 0 $uds-size-spacing-3;
+      padding: 1rem $uds-size-spacing-5 0 $uds-size-spacing-3;
 
       &.is-active {
         &:after {
