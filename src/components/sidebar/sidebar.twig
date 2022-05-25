@@ -61,15 +61,15 @@
               {% if item.below %}
                 {% for subitem in item.below %}
                   {{ link(
-                    subitem.title, 
-                    subitem.url, { 
-                      'class': nav_link_class, 
-                      'data-ga-event':'link', 
+                    subitem.title,
+                    subitem.url, {
+                      'class': nav_link_class,
+                      'data-ga-event':'link',
                       'data-ga-action':'click',
-                      'data-ga-name':'onclick', 
-                      'data-ga-type':'internal link', 
-                      'data-ga-region':'main content', 
-                      'data-ga-section':title, 
+                      'data-ga-name':'onclick',
+                      'data-ga-type':'internal link',
+                      'data-ga-region':'main content',
+                      'data-ga-section':title,
                       'data-ga-text':subitem.title }) }}
                 {% endfor %}
               {% endif %}
@@ -81,15 +81,15 @@
           <div class="nav-link-container">
             {{ link(
               item.title,
-              item.url, { 
-                'id': item.title|replace({' ' : '-'})|lower, 
-                'class': nav_link_class, 
-                'data-ga-event':'link', 
+              item.url, {
+                'id': item.title|replace({' ' : '-'})|lower,
+                'class': nav_link_class,
+                'data-ga-event':'link',
                 'data-ga-action':'click',
-                'data-ga-name':'onclick', 
-                'data-ga-type':'internal link', 
-                'data-ga-region':'main content', 
-                'data-ga-section':title, 
+                'data-ga-name':'onclick',
+                'data-ga-type':'internal link',
+                'data-ga-region':'main content',
+                'data-ga-section':title,
                 'data-ga-text':item.title }) }}
           </div>
         {% endif %}
@@ -97,3 +97,5 @@
     {% endblock %}
   </nav><!-- end .sidebar -->
 {% endif %}
+
+{{ attach_library('renovation/sidebar') }}
