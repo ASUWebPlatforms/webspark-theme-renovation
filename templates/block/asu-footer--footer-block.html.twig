@@ -155,7 +155,20 @@
               class="collapse card-body"
               aria-labelledby="footlink-header-{{ key }}-{{ loop.index }}"
             >
-              {{ c.menu_items }}
+              {# WS2-1268: Adding block title to data-ga-footer-component attribute.
+                 Rendered html, replaced with added c.title value, re-rendered.
+               #}
+              {% for menu_item in c.menu_items %}
+
+                {% set data_component = 'data-ga-footer-component="' ~ c.title ~ '"' %}
+                {% set rendered_item = menu_item|render %}
+                {% set new_menu_item = rendered_item|replace({ 'data-component-replace=""': data_component }) %}
+                
+                {% autoescape false %}
+                  {{ new_menu_item }}
+                {% endautoescape %}
+
+              {% endfor %}
                 
             </div>
           {% endfor %}
