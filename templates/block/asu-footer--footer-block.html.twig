@@ -111,7 +111,7 @@
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
               data-ga-footer="{{ link_title }}" 
-              data-ga-footer-component=""
+              data-ga-footer-component="{{ unit_name }}"
               href="{{ link_url }}">{{ link_title }}</a></p>
           {% endif %}
           {% if cta_url and cta_title %}
@@ -121,7 +121,7 @@
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
               data-ga-footer="{{ cta_title }}"
-              data-ga-footer-component=""
+              data-ga-footer-component="{{ unit_name }}"
               href="{{ cta_url }}" class="btn btn-small btn-gold">{{ cta_title }}</a></p>
           {% endif %}
         </div>
