@@ -111,7 +111,7 @@
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
               data-ga-footer="{{ link_title }}" 
-              data-ga-footer-component=""
+              data-ga-footer-component="{{ unit_name }}"
               href="{{ link_url }}">{{ link_title }}</a></p>
           {% endif %}
           {% if cta_url and cta_title %}
@@ -121,7 +121,7 @@
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
               data-ga-footer="{{ cta_title }}"
-              data-ga-footer-component=""
+              data-ga-footer-component="{{ unit_name }}"
               href="{{ cta_url }}" class="btn btn-small btn-gold">{{ cta_title }}</a></p>
           {% endif %}
         </div>
@@ -155,7 +155,27 @@
               class="collapse card-body"
               aria-labelledby="footlink-header-{{ key }}-{{ loop.index }}"
             >
-              {{ c.menu_items }}
+              {# WS2-1268: Adding block title to data-ga-footer-component attribute.
+               Building menu items here to access block title, rather than in AsuFooterBlock.php
+               TODO: Rewrite this module as UDS react components similar to the ASU Header
+             #}
+            {% for menu_item in c.menu_items %}
+              
+              {% if menu_item.0|render|length > 0 %}
+                <a href="{{ menu_item.0 }}" 
+                  class="nav-link" 
+                  data-ga-footer-type="internal link" 
+                  data-ga-footer-region="footer" 
+                  data-ga-footer-section="primary footer" 
+                  data-ga-footer="{{ menu_item.1 }}" 
+                  data-ga-footer-component="{{ c.title }}" 
+                  >{{ menu_item.1 }}</a>
+              {% else %}
+                <span class="nav-link">{{ menu_item.1 }}</span>
+
+              {% endif %}
+
+            {% endfor %}
                 
             </div>
           {% endfor %}
