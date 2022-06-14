@@ -103,7 +103,8 @@ function getPosterImage(array $variables): string {
   }
   else {
     // There is no crop - get image file URL.
-    $poster_url = file_create_url($poster_image->getFileUri());
+    $poster_url = \Drupal::service('file_url_generator')
+      ->generateAbsoluteString($poster_image->getFileUri());
   }
 
   return $poster_url;
