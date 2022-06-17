@@ -14,8 +14,9 @@
 
 {% for item in items %}
   <div{{ attributes.addClass(classes) }}>
-    {% include '@renovation/headings/heading.twig' with {
+    {% include '@renovation/headings/heading-highlighted.twig' with {
       html_tag: 'h2',
+      highlight: 'gold',
       heading: item.content['#context'].value,
     } %}
   </div>
