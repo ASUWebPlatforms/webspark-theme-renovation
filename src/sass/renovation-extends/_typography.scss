@@ -1,24 +1,42 @@
+b,
+strong {
+  font-weight: $uds-font-weight-bold;
+}
+
+.bg-dark,
+.bg-primary,
+.bg-black {
+  :not(.btn) a {
+    color: $light;
+  }
+}
+
+.bg-light,
+.bg-secondary,
+.bg-white {
+  :not(.btn) a {
+    color: $primary;
+  }
+}
+
 .bg-white,
 .bg-gray-1,
 .bg-gray-2 {
-  a {
+  :not(.btn) a {
     color: $uds-color-base-maroon;
   }
-  a:visited {
+
+  :not(.btn) a:visited {
     color: $uds-color-base-darkmaroon;
   }
 }
 
 .bg-gray-7 {
-  a {
+  :not(.btn) a {
     color: $uds-color-base-gold;
   }
-  a:visited {
+
+  :not(.btn) a:visited {
     color: $uds-color-base-darkgold;
   }
-}
-
-b,
-strong {
-  font-weight: $uds-font-weight-bold;
 }
