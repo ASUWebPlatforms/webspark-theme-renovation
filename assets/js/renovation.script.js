@@ -18120,8 +18120,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alexander/Code/repos/webspark-theme-renovation/src/js/renovation.script.js */"./src/js/renovation.script.js");
-module.exports = __webpack_require__(/*! /Users/alexander/Code/repos/webspark-theme-renovation/src/sass/renovation.style.scss */"./src/sass/renovation.style.scss");
+__webpack_require__(/*! /Users/apersky/DDEV/_repos/webspark-theme-renovation/src/js/renovation.script.js */"./src/js/renovation.script.js");
+module.exports = __webpack_require__(/*! /Users/apersky/DDEV/_repos/webspark-theme-renovation/src/sass/renovation.style.scss */"./src/sass/renovation.style.scss");
 
 
 /***/ })

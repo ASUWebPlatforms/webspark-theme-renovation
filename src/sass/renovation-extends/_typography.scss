@@ -6,7 +6,7 @@ strong {
 .bg-dark,
 .bg-primary,
 .bg-black {
-  :not(.btn) a {
+  a:not(.btn) {
     color: $light;
   }
 }
@@ -14,7 +14,7 @@ strong {
 .bg-light,
 .bg-secondary,
 .bg-white {
-  :not(.btn) a {
+  a:not(.btn) {
     color: $primary;
   }
 }
@@ -22,21 +22,21 @@ strong {
 .bg-white,
 .bg-gray-1,
 .bg-gray-2 {
-  :not(.btn) a {
+  a:not(.btn) {
     color: $uds-color-base-maroon;
   }
 
-  :not(.btn) a:visited {
+  a:not(.btn):visited {
     color: $uds-color-base-darkmaroon;
   }
 }
 
 .bg-gray-7 {
-  :not(.btn) a {
+  a:not(.btn) {
     color: $uds-color-base-gold;
   }
 
-  :not(.btn) a:visited {
+  a:not(.btn):visited {
     color: $uds-color-base-darkgold;
   }
 }
