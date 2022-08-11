@@ -98,6 +98,10 @@ form.uds-form {
       opacity: 0;
     }
 
+    .tableselect.form-check-input {
+      opacity: 1;
+    }
+
     // Shared styling for Radios and Checkboxes.
     input[type='radio'],
     input[type='checkbox'] {
