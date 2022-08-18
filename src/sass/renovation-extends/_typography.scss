@@ -6,7 +6,7 @@ strong {
 .bg-dark,
 .bg-primary,
 .bg-black {
-  a:not(.btn) {
+  a:not(.btn, .nav-link) {
     color: $light;
   }
 }
@@ -14,7 +14,7 @@ strong {
 .bg-light,
 .bg-secondary,
 .bg-white {
-  a:not(.btn) {
+  a:not(.btn, .nav-link) {
     color: $primary;
   }
 }
@@ -22,21 +22,21 @@ strong {
 .bg-white,
 .bg-gray-1,
 .bg-gray-2 {
-  a:not(.btn) {
+  a:not(.btn, .nav-link) {
     color: $uds-color-base-maroon;
   }
 
-  a:not(.btn):visited {
+  a:not(.btn, .nav-link):visited {
     color: $uds-color-base-darkmaroon;
   }
 }
 
 .bg-gray-7 {
-  a:not(.btn) {
+  a:not(.btn, .nav-link) {
     color: $uds-color-base-gold;
   }
 
-  a:not(.btn):visited {
+  a:not(.btn, .nav-link):visited {
     color: $uds-color-base-darkgold;
   }
 }

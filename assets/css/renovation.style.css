@@ -25686,15 +25686,15 @@ label {
   border-top: solid 4px #ffc627;
 }
 
-.bg-dark a:not(.btn):not(.uds-modal-close-btn),
-.bg-primary a:not(.btn):not(.uds-modal-close-btn),
-.bg-black a:not(.btn):not(.uds-modal-close-btn) {
+.bg-dark a,
+.bg-primary a,
+.bg-black a {
   color: #e8e8e8;
 }
 
-.bg-light a:not(.btn):not(.uds-modal-close-btn),
-.bg-secondary a:not(.btn):not(.uds-modal-close-btn),
-.bg-white a:not(.btn):not(.uds-modal-close-btn) {
+.bg-light a,
+.bg-secondary a,
+.bg-white a {
   color: #8c1d40;
 }
 
@@ -27361,6 +27361,18 @@ a.text-gold:visited:not(.btn):not(.uds-modal-close-btn) {
   color: #fff;
   background-color: #8c1d40;
   border-color: #8c1d40;
+}
+
+.bg-dark a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-primary a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-black a:not(.btn, .uds-modal-close-btn, .nav-link) {
+  color: #e8e8e8;
+}
+
+.bg-light a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-secondary a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-white a:not(.btn, .uds-modal-close-btn, .nav-link) {
+  color: #8c1d40;
 }
 
 #calendar .calendar-grid {
@@ -34453,15 +34465,15 @@ label {
   border-top: solid 4px #ffc627;
 }
 
-.bg-dark a:not(.btn):not(.uds-modal-close-btn),
-.bg-primary a:not(.btn):not(.uds-modal-close-btn),
-.bg-black a:not(.btn):not(.uds-modal-close-btn) {
+.bg-dark a,
+.bg-primary a,
+.bg-black a {
   color: #e8e8e8;
 }
 
-.bg-light a:not(.btn):not(.uds-modal-close-btn),
-.bg-secondary a:not(.btn):not(.uds-modal-close-btn),
-.bg-white a:not(.btn):not(.uds-modal-close-btn) {
+.bg-light a,
+.bg-secondary a,
+.bg-white a {
   color: #8c1d40;
 }
 
@@ -36128,6 +36140,18 @@ a.text-gold:visited:not(.btn):not(.uds-modal-close-btn) {
   color: #fff;
   background-color: #8c1d40;
   border-color: #8c1d40;
+}
+
+.bg-dark a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-primary a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-black a:not(.btn, .uds-modal-close-btn, .nav-link) {
+  color: #e8e8e8;
+}
+
+.bg-light a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-secondary a:not(.btn, .uds-modal-close-btn, .nav-link),
+.bg-white a:not(.btn, .uds-modal-close-btn, .nav-link) {
+  color: #8c1d40;
 }
 
 #calendar .calendar-grid {

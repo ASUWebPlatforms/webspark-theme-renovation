@@ -87,21 +87,15 @@ label {
 .card-event .card-header {
   border-top: solid 4px $gold;
 }
-
-.bg-dark,
-.bg-primary,
-.bg-black {
-  a:not(.btn) {
-    color: $light;
-  }
+.bg-dark a,
+.bg-primary a,
+.bg-black a {
+  color: $light;
 }
-
-.bg-light,
-.bg-secondary,
-.bg-white {
-  a:not(.btn) {
-    color: $primary;
-  }
+.bg-light a,
+.bg-secondary a,
+.bg-white a {
+  color: $primary;
 }
 
 .sr-only:not(:focus):not(:active) {

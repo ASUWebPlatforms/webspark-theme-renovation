@@ -7,3 +7,19 @@
   background-color: $primary;
   border-color: $primary;
 }
+
+.bg-dark,
+.bg-primary,
+.bg-black {
+  a:not(.btn, .nav-link) {
+    color: $light;
+  }
+}
+
+.bg-light,
+.bg-secondary,
+.bg-white {
+  a:not(.btn, .nav-link) {
+    color: $primary;
+  }
+}
