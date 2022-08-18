@@ -48,7 +48,7 @@
 // -----------------------------------------------------------------------------
 @import "design-tokens/variables";
 @import "bootstrap-asu";
-@import "bootstrap-asu-extends";
+@import "bootstrap-asu-extends"; // NOTE: This is already imported in bootstrap-asu.scss
 
 // Layout
 // -----------------------------------------------------------------------------
@@ -67,3 +67,4 @@
 @import "content/node.page";
 @import "content/node.article";
 @import "content/theme-tweaks";
+@import "renovation-extends/form-fields";
