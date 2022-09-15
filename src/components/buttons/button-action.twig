@@ -1,3 +1,4 @@
+{% if url is not empty %}
 <a 
     href="{{ url }}" 
     class="btn {{ button_color }}" 
@@ -11,3 +12,4 @@
     data-ga-region="main content"
     data-ga-text="{{ title }}" 
     {% if sub_heading is empty %}data-ga-component="" />{{ title }}</a>{% else %}data-ga-component="{{ heading }}" />{{ title }}</a>{% endif %}
+{% endif %}
