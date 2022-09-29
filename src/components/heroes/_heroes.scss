@@ -34,9 +34,38 @@
       margin: auto auto 3rem auto;
       width: 100%;
 
+      /* WS2-1215 - Sub heading added to video hero */
+      [role='doc-subtitle'] {
+        @include like-h3;
+        display: inline-block;
+        grid-row: 2;
+        line-height: 1;
+        .highlight-white {
+          @include like-h3-highlight-white;
+        }
+        .highlight-black {
+          @include like-h3-highlight-black;
+        }
+        .highlight-gold {
+          @include like-h3-highlight-gold;
+        }
+        span {
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          margin-left: 0.15em;
+        }
+      }
+
+      /* WS2-1215 - CSS adjustments for h1 and .content */
       h1 {
         padding-left: 0;
         color: #ffffff;
+        margin: 0 0 0 0.6rem;
+        max-width: 700px;
+      }
+
+      .content {
+        margin-top: 1.5rem;
       }
 
       .buttons {

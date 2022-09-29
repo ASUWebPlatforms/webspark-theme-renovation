@@ -10,4 +10,4 @@ mix.webpackConfig({
   devtool: 'source-map'
 })
 
-mix.sourceMaps(true,'eval-source-map');
+mix.sourceMaps(false,'eval-source-map');
