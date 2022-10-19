@@ -35,13 +35,13 @@
           <div class="card card-foldable">
 
             <div class="card-header">
-              <a id="{{ item.title|replace({' ' : '-'})|lower }}"
+              <a id="{{ item.title|clean_id|lower }}"
                  class="collapsed nav-link"
-                 href="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                 href="#cardBody{{ item.title|clean_id|lower }}"
                  data-toggle="collapse"
-                 data-target="#cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                 data-target="#cardBody{{ item.title|clean_id|lower }}"
                  aria-expanded="false"
-                 aria-controls="cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+                 aria-controls="cardBody{{ item.title|clean_id|lower }}"
                  data-ga-event="collapse"
                  data-ga-action="open"
                  data-ga-name="onclick"
@@ -54,9 +54,9 @@
               </a>
             </div>
 
-            <div id="cardBody{{ item.title|replace({' ' : '-'})|lower }}"
+            <div id="cardBody{{ item.title|clean_id|lower }}"
                  class="collapse card-body"
-                 aria-labelledby="{{ item.title|replace({' ' : '-'})|lower }}"
+                 aria-labelledby="{{ item.title|clean_id|lower }}"
                  data-parent=".sidebar">
               {% if item.below %}
                 {% for subitem in item.below %}
@@ -82,7 +82,7 @@
             {{ link(
               item.title,
               item.url, {
-                'id': item.title|replace({' ' : '-'})|lower,
+                'id': item.title|clean_id|lower,
                 'class': nav_link_class,
                 'data-ga-event':'link',
                 'data-ga-action':'click',
