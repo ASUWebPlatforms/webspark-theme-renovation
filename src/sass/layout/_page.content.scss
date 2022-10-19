@@ -1,5 +1,36 @@
 // Page: Content
 // -----------------------------------------------------------------------------
 .page__content {
+}
 
+body {
+  // When logged out
+  article.degree-detail-page--full .uds-anchor-menu {
+    top: 116px !important;
+
+    @include media-breakpoint-up(xl) {
+      top: 89px !important;
+    }
+  }
+
+  // When logged in
+  &.toolbar-vertical {
+    article.degree-detail-page--full .uds-anchor-menu {
+      top: 116px !important;
+
+      @media (min-width: 610px) {
+        top: 155px !important;
+      }
+    }
+  }
+
+  &.toolbar-horizontal {
+    article.degree-detail-page--full .uds-anchor-menu {
+      top: 195px !important;
+
+      @include media-breakpoint-up(xl) {
+        top: 168px !important;
+      }
+    }
+  }
 }
