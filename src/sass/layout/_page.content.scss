@@ -34,5 +34,17 @@ body {
         top: 168px !important;
       }
     }
+
+.page-wrapper-webspark main {
+  @include media-breakpoint-down(md) {
+    margin-top: 4px;
+  }
+
+  @include media-breakpoint-only(lg) {
+    margin-top: -28px;
+  }
+
+  @include media-breakpoint-only(xl) {
+    margin-top: -6px;
   }
 }
