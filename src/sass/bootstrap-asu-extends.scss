@@ -1,69 +1,78 @@
-// css Bootstrap doesn't have variables for
-@import 'extends/misc';
-@import '../components/alerts/alerts';
-@import '../components/backgrounds/backgrounds';
-@import '../components/banners/banners';
-@import '../components/buttons/buttons';
-@import 'extends/calendar';
-@import 'extends/badges';
-@import '../components/icons/icons';
-@import '../components/image/images';
-@import 'extends/image-text-block';
-@import '../components/text/text';
-@import '../components/image-text-block/image-text-block';
-@import 'extends/image-overlap';
-@import 'extends/inset-box';
-@import '../components/cards/cards';
-@import '../components/lists/lists';
-@import '../components/headings/headings';
-@import 'extends/dividers';
-@import '../components/pager/pager';
-@import '../components/tabbed-panels/tabbed-panels';
-@import '../components/heroes/heroes';
-@import '../components/breadcrumb/breadcrumb';
-@import '../components/sidebar/sidebar';
-// @import 'extends/typography';
-@import 'extends/globalfooter';
-@import '../components/global-footer/global-footer';
-@import '../components/blockquote/blockquote';
-@import 'extends/global-header';
-@import 'extends/form-fields';
-@import '../components/form-fields/form-fields';
-@import 'extends/quote-image-background';
-@import '../components/tooltips/tooltips';
-@import '../components/video/video';
-@import '../components/cards/card-and-image';
-@import '../components/grid-links/grid-links';
-// @import '../components/back-to-top/back-to-top';https://asudev.jira.com/browse/UDS-646
-@import 'extends/display-list';
-@import 'extends/charts-and-graphs';
-@import 'extends/anchor-menu';
-@import '../components/anchors/anchors';
-@import 'extends/card-image-and-content';
-@import 'extends/card-arrangements';
-@import 'extends/pagination';
-@import '../components/modals/modals';
-@import 'extends/image-background-with-cta';
-@import 'extends/tables';
-@import '../components/tables/tables';
-@import 'extends/person-profile';
-@import 'extends/image-parallax';
-@import '../components/cards/card-and-image-parallax';
+// ----------------------------------------------------------------------------
+// CSS that Bootstrap doesn't have variables for.
+// ----------------------------------------------------------------------------
 
-// Misc
-@import '../components/accordions/accordions';// imports cards.
-@import '../components/block/block';
-@import 'extends/alt_styling';
-@import '../components/form-overrides';
-@import '../components/layouts/layouts';
-@import 'renovation-extends/media_embed';
-@import '../components/page404/page404';
-@import '../components/paragraphs/paragraphs';
-@import '../components/regions/regions';
-@import 'renovation-variables/tabs';
-@import 'renovation-extends/tabs';
-@import '../components/tabs/tabs';
-@import 'renovation-extends/testimonials';
-@import '../components/ckeditor/ckeditor';
-@import '../components/testimonial-carousel/testimonial-carousel';
-@import '../components/story-hero/story-hero'; // override for image.
+@import "extends/misc";
+@import "../components/alerts/alerts";
+@import "../components/backgrounds/backgrounds";
+@import "../components/banners/banners";
+@import "../components/buttons/buttons";
+@import "extends/calendar";
+@import "extends/badges";
+@import "../components/icons/icons";
+@import "../components/image/images";
+@import "extends/image-text-block";
+@import "../components/text/text";
+@import "../components/image-text-block/image-text-block";
+@import "extends/image-overlap";
+@import "extends/inset-box";
+@import "../components/cards/cards";
+@import "../components/lists/lists";
+@import "../components/headings/headings";
+@import "extends/dividers";
+@import "../components/pager/pager";
+@import "../components/tabbed-panels/tabbed-panels";
+@import "../components/heroes/heroes";
+@import "../components/breadcrumb/breadcrumb";
+@import "../components/sidebar/sidebar";
+// @import 'extends/typography';
+@import "extends/globalfooter";
+@import "../components/global-footer/global-footer";
+@import "../components/blockquote/blockquote";
+@import "extends/global-header";
+@import "extends/form-fields";
+@import "../components/form-fields/form-fields";
+@import "extends/quote-image-background";
+@import "../components/tooltips/tooltips";
+@import "../components/video/video";
+@import "../components/cards/card-and-image";
+@import "../components/grid-links/grid-links";
+// See: https://asudev.jira.com/browse/UDS-646
+// @import '../components/back-to-top/back-to-top';
+@import "extends/display-list";
+@import "extends/charts-and-graphs";
+@import "extends/anchor-menu";
+@import "../components/anchors/anchors";
+@import "extends/card-image-and-content";
+@import "extends/card-arrangements";
+@import "extends/pagination";
+@import "../components/modals/modals";
+@import "extends/image-background-with-cta";
+@import "extends/tables";
+@import "../components/tables/tables";
+@import "extends/person-profile";
+@import "extends/image-parallax";
+@import "../components/cards/card-and-image-parallax";
+
+// ----------------------------------------------------------------------------
+// Misc.
+// ----------------------------------------------------------------------------
+
+// This also imports cards
+@import "../components/accordions/accordions";
+@import "../components/block/block";
+@import "extends/alt_styling";
+@import "../components/form-overrides";
+@import "../components/layouts/layouts";
+@import "renovation-extends/media_embed";
+@import "../components/page404/page404";
+@import "../components/paragraphs/paragraphs";
+@import "../components/regions/regions";
+@import "renovation-variables/tabs";
+@import "renovation-extends/tabs";
+@import "../components/tabs/tabs";
+@import "renovation-extends/testimonials";
+@import "../components/ckeditor/ckeditor";
+@import "../components/testimonial-carousel/testimonial-carousel";
+// Includes an override for images
+@import "../components/story-hero/story-hero";
