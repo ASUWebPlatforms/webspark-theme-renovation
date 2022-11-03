@@ -24,7 +24,8 @@
   {{ content.field_anchor_menu_settings }}
   {% block content %}
     <div id="{{ attributes.id }}">
-      {{ content|without('field_anchor_menu_settings') }}
+      {{ content.field_tooltip }}
+      {{ content|without('field_tooltip', 'field_anchor_menu_settings', 'field_card_orientation') }}
     </div>
   {% endblock %}
 </div>
