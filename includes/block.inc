@@ -30,7 +30,8 @@ function renovation_preprocess_block(&$variables) {
 
   $plugin_id = $variables['base_plugin_id'] ?? '';
 
-  if ($plugin_id == 'inline_block') {
+  // WS2-1437 - Add variables to block-content blocks for unique_id
+  if (($plugin_id == 'inline_block') || ($plugin_id == 'block_content')) {
     $variables['block'] = $variables['content']['#block_content'];
   }
 
