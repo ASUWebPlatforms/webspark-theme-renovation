@@ -11,7 +11,8 @@
 }
 
 .block-inline-blocktext-content {
-  a {
-    display: inline;
+  /* WS2-1480 - target anchor tags wrapping font-awesome svg */
+  :is(a):has(span):has(svg) {
+    display: inline-block;
   }
 }
