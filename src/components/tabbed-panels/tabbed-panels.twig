@@ -5,11 +5,11 @@
     {% for tab in tabs %}
       {% if loop.first %}
         <a class="nav-item nav-link active"
-           id="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab"
+           id="nav-{{ tab.heading|clean_id|lower }}-tab"
            data-toggle="tab"
-           href="#nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           href="#nav-{{ tab.heading|clean_id|lower }}"
            role="tab"
-           aria-controls="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           aria-controls="nav-{{ tab.heading|clean_id|lower }}"
            aria-selected="true"
            data-ga-event="link"
            data-ga-action="click"
@@ -22,11 +22,11 @@
         </a>
       {% else %}
         <a class="nav-item nav-link"
-           id="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab"
+           id="nav-{{ tab.heading|clean_id|lower }}-tab"
            data-toggle="tab"
-           href="#nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           href="#nav-{{ tab.heading|clean_id|lower }}"
            role="tab"
-           aria-controls="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           aria-controls="nav-{{ tab.heading|clean_id|lower }}"
            aria-selected="false"
            data-ga-event="link"
            data-ga-action="click"
@@ -79,18 +79,18 @@
   {% for tab in tabs %}
     {% if loop.first %}
       <div class="tab-pane fade{% if is_dark %} text-white{% endif %} show active"
-           id="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           id="nav-{{ tab.heading|clean_id|lower }}"
            role="tabpanel"
-           aria-labelledby="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab">
+           aria-labelledby="nav-{{ tab.heading|clean_id|lower }}-tab">
         {{ tab.copy|raw }}
 
         {{ tab.blocks }}
       </div>
     {% else %}
       <div class="tab-pane fade{% if is_dark %} text-white{% endif %}"
-           id="nav-{{ tab.heading|replace({' ' : '-'})|lower }}"
+           id="nav-{{ tab.heading|clean_id|lower }}"
            role="tabpanel"
-           aria-labelledby="nav-{{ tab.heading|replace({' ' : '-'})|lower }}-tab">
+           aria-labelledby="nav-{{ tab.heading|clean_id|lower }}-tab">
         {{ tab.copy|raw }}
 
         {{ tab.blocks }}
