@@ -92,7 +92,6 @@
             {% endif %}
           </nav>
         </div>
-
       </div>
     </div>
   </div>
@@ -106,17 +105,17 @@
           <h5>{{ unit_name }}</h5>
           {% if link_url and link_title %}
             <p class="contact-link">
-            <a 
+            <a
               data-ga-footer-type="internal link"
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
-              data-ga-footer="{{ link_title }}" 
+              data-ga-footer="{{ link_title }}"
               data-ga-footer-component="{{ unit_name }}"
               href="{{ link_url }}">{{ link_title }}</a></p>
           {% endif %}
           {% if cta_url and cta_title %}
             <p class="contribute-button">
-            <a 
+            <a
               data-ga-footer-type="internal link"
               data-ga-footer-region="footer"
               data-ga-footer-section="primary footer"
@@ -160,23 +159,19 @@
                TODO: Rewrite this module as UDS react components similar to the ASU Header
              #}
             {% for menu_item in c.menu_items %}
-              
               {% if menu_item.0|render|length > 0 %}
-                <a href="{{ menu_item.0 }}" 
-                  class="nav-link" 
-                  data-ga-footer-type="internal link" 
-                  data-ga-footer-region="footer" 
-                  data-ga-footer-section="primary footer" 
-                  data-ga-footer="{{ menu_item.1 }}" 
-                  data-ga-footer-component="{{ c.title }}" 
+                <a href="{{ menu_item.0 }}"
+                  class="nav-link"
+                  data-ga-footer-type="internal link"
+                  data-ga-footer-region="footer"
+                  data-ga-footer-section="primary footer"
+                  data-ga-footer="{{ menu_item.1 }}"
+                  data-ga-footer-component="{{ c.title }}"
                   >{{ menu_item.1 }}</a>
               {% else %}
                 <span class="nav-link">{{ menu_item.1 }}</span>
-
               {% endif %}
-
             {% endfor %}
-                
             </div>
           {% endfor %}
           </div>
@@ -192,16 +187,6 @@
     <div class="row">
       <div class="col">
         <div class="d-flex footer-innovation-links">
-          <a
-            class="img-link"
-            href="https://www.asu.edu/rankings"
-            data-ga-footer-type="internal link"
-            data-ga-footer-section="secondary footer"
-            data-ga-footer="#1 in the u.s. for innovation"
-            data-ga-footer-component=""
-          >
-            <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
-          </a>
           <nav class="nav" aria-label="University Services">
             <a
               class="nav-link"
@@ -244,6 +229,16 @@
               data-ga-footer-component=""
             >My ASU</a>
           </nav>
+          <a
+            class="img-link"
+            href="https://www.asu.edu/rankings"
+            data-ga-footer-type="internal link"
+            data-ga-footer-section="secondary footer"
+            data-ga-footer="#1 in the u.s. for innovation"
+            data-ga-footer-component=""
+          >
+            <img src="{{ src_footer_img }}" alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2020">
+          </a>
         </div>
       </div>
     </div>
