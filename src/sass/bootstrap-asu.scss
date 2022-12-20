@@ -128,6 +128,8 @@ $theme-colors: map-remove($theme-colors, 1, 3, 5);
 @import "../../node_modules/bootstrap/scss/print";
 
 // Import ASU customizations
+// Placing here and not in renovation.style.scss
+// in order to maintain the cascade of the rules below
 @import "bootstrap-asu-upgrade";
 @import "bootstrap-asu-extends";
 
