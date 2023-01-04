@@ -113,6 +113,10 @@ $bg-sizes: ("-25": 25%, "-33": 33%, "-50": 50%, "-66": 66%, "-75": 75%, "-100": 
   max-width: 1920px;
 }
 
+.center-container {
+  margin: 0 auto;
+}
+
 .content-description-container {
   background-color: $uds-color-base-gray-1;
   width: 100%;
