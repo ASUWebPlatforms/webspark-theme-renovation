@@ -15,3 +15,8 @@ Header */
 .sr-only-focusable:focus {
   padding: 0.25rem 0.5rem !important;
 }
+
+// Fix the hover color of the paginated links
+.pagination .page-link:hover {
+  color: inherit;
+}
