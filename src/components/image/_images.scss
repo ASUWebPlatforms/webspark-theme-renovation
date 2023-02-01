@@ -30,14 +30,13 @@
 }
 
 figure.caption-img {
-  display: table;
   caption-side: bottom;
   img {
     border: 1px solid $uds-color-base-gray-3;
     margin: 0 !important;
   }
   figcaption {
-    display: table-caption;
+    display: flex;
     border: 1px solid #d0d0d0;
     border-top: none;
     opacity: 1;
@@ -46,8 +45,10 @@ figure.caption-img {
     font-size: .75rem;
     text-align: left;
     span {
-      color: $uds-color-base-gray-5;
+      flex-grow: 1;
       max-width: 75ch;
+      width: 0;
+      color: $uds-color-base-gray-5;
     }
   }
 }
