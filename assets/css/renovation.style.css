@@ -35024,6 +35024,10 @@ Header */
   padding: 0.25rem 0.5rem !important;
 }
 
+.pagination .page-link:hover {
+  color: inherit;
+}
+
 form.uds-form .form-check .tableselect.form-check-input {
   opacity: 1;
 }
