@@ -73,6 +73,15 @@
         }
       }
     }
+
+    caption {
+      caption-side: top;
+      font-size: $uds-size-font-xl;
+    }
+  }
+
+  &:has(caption) {
+    padding-top: $uds-size-spacing-4;
   }
 }
 
