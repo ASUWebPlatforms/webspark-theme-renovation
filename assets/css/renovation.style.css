@@ -27628,7 +27628,7 @@ Cards - Table of Contents
 }
 
 figure.caption-img {
-  display: table;
+
   caption-side: bottom;
 }
 figure.caption-img img {
@@ -27636,7 +27636,7 @@ figure.caption-img img {
   margin: 0 !important;
 }
 figure.caption-img figcaption {
-  display: table-caption;
+  display: flex;
   border: 1px solid #d0d0d0;
   border-top: none;
   opacity: 1;
@@ -27646,8 +27646,10 @@ figure.caption-img figcaption {
   text-align: left;
 }
 figure.caption-img figcaption span {
-  color: #747474;
+  flex-grow: 1;
   max-width: 75ch;
+  width: 0;
+  color: #747474;
 }
 
 @media (max-width: 767.98px) {
@@ -35036,7 +35038,9 @@ Header */
 .sr-only-focusable:focus {
   padding: 0.25rem 0.5rem !important;
 }
-
+.pagination .page-link:hover {
+  color: inherit;
+}
 form.uds-form .form-check .tableselect.form-check-input {
   opacity: 1;
 }
