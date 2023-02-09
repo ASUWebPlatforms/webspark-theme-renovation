@@ -27628,6 +27628,7 @@ Cards - Table of Contents
 }
 
 figure.caption-img {
+
   caption-side: bottom;
 }
 figure.caption-img img {
@@ -35009,6 +35010,20 @@ h4 span.highlight-white,
     margin-bottom: -48px;
   }
 }
+.article--headinfo {
+  font-weight: 700;
+}
+.article--headinfo.article--byline > .lead + hr {
+  margin: 2rem 0;
+  max-width: 700px;
+}
+.article--headinfo.article--date-published {
+  margin-bottom: 1rem;
+}
+.article--headinfo.article--author {
+  text-transform: uppercase;
+}
+
 /* Make skip to content link visible upon focus (it was hidden by the ASU
 Header */
 .sr-only-focusable:active,
@@ -35023,11 +35038,9 @@ Header */
 .sr-only-focusable:focus {
   padding: 0.25rem 0.5rem !important;
 }
-
 .pagination .page-link:hover {
   color: inherit;
 }
-
 form.uds-form .form-check .tableselect.form-check-input {
   opacity: 1;
 }
