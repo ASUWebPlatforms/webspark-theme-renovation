@@ -4,6 +4,7 @@ Theme for Webspark 2: Implements Web Standards 2.0
 Contents
 - [Renovation Theme](#renovation-theme)
   - [General Information](#general-information)
+- [](#)
   - [Developer Information](#developer-information)
     - [Set up local development](#set-up-local-development)
     - [Reconciling Unity with Renovation](#reconciling-unity-with-renovation)
@@ -31,36 +32,36 @@ Due to the fact that this theme is somewhat different from the source content in
 
 ### Reconciling Unity with Renovation
 1. Determine which files have changed since the last Webspark2 release.
-    - Use the [check-element-changes](https://github.com/ASU/asu-unity-stack#check-element-changes) tool in UDS to determine which files need attention. This tool will alert you to which bootstrap4-theme design components have had changes in their code since a date you specify. It also instructs you to run a git command to see ALL of the files that have changed since the selected date.
-2. For each bootstrap4-theme design component which has changed, clone the corresponding repository from UDS to your local environment. Since Unity is a mono-repo, you really only need to clone https://github.com/ASU/asu-unity-stack and make sure it is up-to-date. You can find the bootstrap4-theme design components in their respective stories (organisms, molecules, etc) within the bootstrap4-theme.
-   1. The bootstrap4-theme design component will map to the **src/components** directory within the Renovation theme. For example, ```asu-unity-stack/packages/bootstrap4-theme/stories/molecules/tabbed-panels``` correlates with ```webspark-theme-renovation/src/components/tabbed-panels```. In these two directories, you will often find more than one JavaScript files.
-   2. You can roughly connect the `*.templates.js` file with the `*.twig` file for the component in Renovation. Make note of any changes in the `*.templates.js` file and adjust the `*.twig` file accordingly.
-   3. The `*.js` file in UDS will sometimes match the `*.js` file in Renovation, but sometimes changes have been made to accommodate the Drupal way of doing things. The most common of these differences will often be related to Drupal behaviors. See the [JavaScript API documentation](https://www.drupal.org/docs/drupal-apis/javascript-api/javascript-api-overview) for more information. Because of the potential for differences, please **DO NOT** simply copy/paste this file from UDS to Renovation. Instead, open the file in both repositories and compare what you see in UDS with what you find in Renovation. If there are changes, manually add those changes to the Renovation file. The code from UDS may need to be wrapped in a Drupal behavior in order to make it work.
-3. To update and compile the **Sass/CSS**, you will need to copy some of the Sass files from UDS to Renovation, and some of them you will need to edit in the manner described above. The source files in UDS are located at `asu-unity-stack/packages/bootstrap4-theme/src/scss/`. This directory contains several subdirectories and files. The destination directory in Renovation is: `webspark-theme-renovation/src/sass/`. As you will notice, the contents of these directories is similar, but not exactly the same. The following information will help explain the differences.
-   1. The `design-tokens` folder contains a `_variables.scss` file which can be copied verbatim from UDS to Renovation. A second file, `_extra-vars.scss` exists in Renovation for Drupal-specific styles.
-   2. The `extends` folder contains customized bootstrap files that can be copied directly from UDS without any alteration into the Renovation theme.
-   3. The `variables` folder contains customized bootstrap files that can be copied directly, except there is a `_tabs.scss` file in Renovation that does not exist in UDS.
-   4. The other directories in Renovation contain additional styles that are unique to Renovation and Drupal.
-   5. There are several files that aggregate and import many of the scss files. Specific instructions about them are as follows:
-      - `bootstrap-asu-extends.scss`: You will notice that this file is significantly different in Renovation from what you see in UDS. This is because the paths to the styles are necessarily different, due to the fact that the bootstrap4-theme design components are being added differently in Drupal than in Unity. Please note the `../components/` paths on some imports, whereas some of them directly pull from `extends/`. **DO NOT** copy/paste this file directly, but rather go through it line-by-line to ensure all styles are imported.
-      - `bootstrap-asu.scss`: Similarly, this file imports many styles from bootstrap into the theme. Please note that the `$image-assets-path` is different in Renovation than UDS (the image file in Renovation is located up one level in the codebase).
-   6. `bootstrap-asu-upgrade.scss`: This file reconciles the fact that UDS and Renovation are currently on different versions of Bootstrap. It brings the two into alignment in Renovation.
-   7. The other files and folders contain Renovation-specific styles.
-   8. **PLEASE NOTE:** When updating bootstrap4-theme design components or Sass files in preparation for a Webspark2 release, it is important not to push the compiled Sass and JS assets until all pull requests have been merged. This helps to avoid regressions and conflicts.
+   - Use the [check-element-changes](https://github.com/ASU/asu-unity-stack#check-element-changes) tool in UDS to determine which files need attention. This tool will alert you to which bootstrap4-theme design components have had changes in their code since a date you specify. It also instructs you to run a git command to see ALL of the files that have changed since the selected date.
+2. Update to the version of the `bootstrap4-theme` package from Unity you want to use for this release. [See the bootstrap4-theme package registry](https://github.com/ASU/asu-unity-stack/pkgs/npm/bootstrap4-theme). Please use Yarn for package management to ensure consistency. E.g. `yarn upgrade @asu/bootstrap4-theme@1.10.3`
+This step updates the `bootstrap4-theme` package in your `node_modules` folder. Note: we commit the `bootstrap4-theme` package's folder in order to ensure we have all the assets needed by the theme, and to ensure we are not copying duplicate assets into the theme. Please leave the package's files where they are and reference them as needed.
+3. The package will provide the scss files and other assets you need but does not include template stories files. To update the templates based on your findings from step 1., refer to the package version number which will correspond to a GitHub tag. Browse to the templates in GitHub using that tag. An easy way to do this is to [browse to the release](https://github.com/ASU/asu-unity-stack/releases) and click the tag link for the package release.
+4. Templates that exist as stories in Unity will be found at a path such as:
+`asu-unity-stack/packages/bootstrap4-theme/stories/**/*.templates.stories.js`
+and their Webspark 2 Twig template counterpart can be found at:
+`webspark-theme-renovation/src/components/**/*.twig`
+You can roughly connect the stories in the `*.templates.stories.js` file with the `*.twig` file for the component in Renovation. Make note of any changes in the `*.templates.stories.js` file and adjust the Renovation `*.twig` file accordingly.
+5. There may be JS files that have gotten updated too, and the process of bringing those updates into WS2 will vary, but the JS file will usually be in the same folder as the Twig template. The non-story `*.js` file in UDS will sometimes match the `*.js` file in Renovation, but sometimes changes have been made to accommodate the Drupal way of doing things. The most common of these differences will often be related to Drupal behaviors. See the [JavaScript API documentation](https://www.drupal.org/docs/drupal-apis/javascript-api/javascript-api-overview) for more information. Because of the potential for differences, please **DO NOT** simply copy/paste this file from UDS to Renovation. Instead, open the file in both repositories and compare what you see in UDS with what you find in Renovation. If there are changes, manually add those changes to the Renovation file. The code from UDS may need to be wrapped in a Drupal behavior in order to make it work.
+6. To update and compile the **Sass/CSS** from the `bootstrap4-theme` along with our Renovation customizations for use in the theme, there are several files implemented in Renovation that aggregate and import many of the scss files. Specific instructions about them are as follows:
+   - Renovation theme's `src/sass/bootstrap-asu-extends.scss`: You will notice that this file is significantly different in Renovation from what you see in the package's own `node_modules/@asu/bootstrap4-theme/src/scss/bootstrap-asu-extends.scss`. This is because the paths to the styles are necessarily different, due to the fact that the `bootstrap4-theme` design components are being added differently in Drupal than in Unity. Please note the `../components/` paths for templates from our theme on some imports, whereas others reference the the `extends/` folder from the package in `node_modules`. **DO NOT** copy/paste updates from the `bootstrap4-package` extends file directly into the Renovation version, but rather go through it line-by-line to ensure all styles are imported and updated appropriately.
+   - Renovation theme's `src/sass/bootstrap-asu.scss`: Similarly, this file imports many styles from the `bootstrap4-theme` package into the Renovation theme. Please note that the `$image-assets-path` is different in Renovation than UDS.
+   - Renovation theme's `src/sass/bootstrap-asu-upgrade.scss`: This file reconciles the fact that UDS and Renovation are currently on different versions of Bootstrap. It fills the gaps to bring the two into alignment in Renovation.
+
+**PLEASE NOTE:** When updating `bootstrap4-theme` design components or Sass files it is a best practice to not push the compiled Sass and JS assets until all pull requests have been merged and the final release is being prepared. This helps to avoid regressions and conflicts.
 
 ### How to compile Sass files for release
-1. Go to the root of Renovation theme and run the following commands: `npm install` or `yarn install`.
+1. Go to the root of Renovation theme and run the following commands: `yarn install`.
 2. Create a duplicate of `config.js` and rename it to `config.local.js`. Update the `proxy` key with the URL of your local development server.
-3. Run the following command to compile Sass and watch for changes: `npm run watch` or `yarn watch`.
+3. Run the following command to compile Sass and watch for changes: `yarn watch`.
 4. Make changes as described in "Reconciling Unity with Renovation."
-5. When you have finished making your changes, compile the assets for production by running `npm run production`. **Important!** Do not add the compiled assets (found in `assets/css` and `assets/js`) to your git commit at this point.
+5. When you have finished making your changes, compile the assets for production by running `yarn production`. **Important!** Do not add the compiled assets (found in `assets/css` and `assets/js`) to your git commit at this point.
 6. Add all other changed files with `git add path/file`.
 7. Commit changes in git and push to the remote repository.
 8. Create a pull request against the `main` branch.
 9. Verify that **ALL** pending pull requests for the release have been merged.
 10. Pull all the latest changes into your branch from the main branch with `git pull origin main`.
 11. Fix any conficts, if necessary, and commit your changes.
-12. When you feel that the release is ready, the final step is to compile and push the CSS. Do this by running `npm run production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes.
+12. When you feel that the release is ready, the final step is to compile and push the CSS. Do this by running `yarn production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes.
 13. Push the commit to the remote repository.
 14. When your pull request has been approved, merge it into the main branch.
 15. Create a new tag for the release (using semantic versioning principles), and update the composer.json file in `webspark-release-testing/upstream-configuration/` with that tag for `"asuwebplatforms/webspark-theme-renovation"`.
