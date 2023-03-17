@@ -9,6 +9,7 @@
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
+  'block-inline-blockhero',
 ] %}
 {# Get an array of buttons so they can be counted. #}
 {%  set buttons = content.field_two_cta['#object'].get('field_two_cta').value %}
