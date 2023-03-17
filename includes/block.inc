@@ -21,7 +21,12 @@ function renovation_preprocess_block(&$variables) {
   $block_id = $variables['derivative_plugin_id'];
 
   // Per WS2-1215 - Add video hero heading bg color
-  if (($block_id == 'hero') || ($block_id == 'video_hero')) {
+  // And custom (reusable) hero blocks, too. See WS2-1550
+  if (
+    ($block_id == 'hero')
+    || ($block_id == 'video_hero')
+    || (isset($variables['bundle']) && $variables['bundle'] == 'hero')
+  ) {
     // Get the key of the selected value from the background color field.
     /** @var Drupal\block_content\ $block_content */
     $block_content = $variables['content']['#block_content'];
