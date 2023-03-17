@@ -9,7 +9,12 @@
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
+  'block-inline-blockhero',
 ] %}
+{# We add block-inline-blockhero to ensure that this class is always there. It
+   isn't added normally outside of layout builder contexts, but we want to
+   uniformly apply styles. See WS2-1550 #}
+
 {# Get an array of buttons so they can be counted. #}
 {%  set buttons = content.field_two_cta['#object'].get('field_two_cta').value %}
 
@@ -36,5 +41,3 @@
     media_bundle: 'image',
   } %}
 </div>
-
-
