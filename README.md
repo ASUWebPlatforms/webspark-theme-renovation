@@ -61,7 +61,17 @@ You can roughly connect the stories in the `*.templates.stories.js` file with th
 9. Verify that **ALL** pending pull requests for the release have been merged.
 10. Pull all the latest changes into your branch from the main branch with `git pull origin main`.
 11. Fix any conficts, if necessary, and commit your changes.
-12. When you feel that the release is ready, the final step is to compile and push the CSS. Do this by running `yarn production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes.
+12. When the release is ready, the final step is to compile the CSS for production before your last commit. Do this by running `yarn production` again. This time, make sure that you add the changed files in the `assets` directory with `git add` and then commit the changes. If you get the following error while compiling the scss
+  ```
+  Module build failed (from ./node_modules/postcss-loader/src/index.js):
+  JisonLexerError: Lexical error on line 1: Unrecognized text./
+  [...and then a reference to some scss variables here...]
+  ```
+  find the offending variables in the `node_modules` code. These variables are probably used inside of a `calc()` function. To resolve for the Renovation compilation script, wrap the variables in `#{}`. For example this
+  `max-height: calc($uds-card-height - $uds-size-spacing-8);`
+  should become
+  `max-height: calc(#{$uds-card-height} - #{$uds-size-spacing-8});`
+  (Note: this may be able to be resolved with changes on the UDS side, but because at the time of this writing we are embarking on updating to Bootstrap 5, these may change, and the issue can be revisited if it still is an issue after the update.) 
 13. Push the commit to the remote repository.
 14. When your pull request has been approved, merge it into the main branch.
 15. Create a new tag for the release (using semantic versioning principles), and update the composer.json file in `webspark-release-testing/upstream-configuration/` with that tag for `"asuwebplatforms/webspark-theme-renovation"`.
