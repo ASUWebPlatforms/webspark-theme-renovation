@@ -3,6 +3,7 @@
 
   {% if media_bundle == 'image' %}
     <div class="uds-hero-{{ size }} {% if size == 'lg' %} hide-content{% endif %}{% if has_button_row %} has-btn-row{% endif %}">
+      <div class="hero-overlay"></div>
       <img class="hero" src="{{ hero_background }}" alt="{{ hero_alt }}" />
   {% endif %}
 
