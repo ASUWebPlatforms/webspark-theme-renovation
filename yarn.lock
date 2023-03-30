@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@asu/bootstrap4-theme@1.10.5":
-  version "1.10.5"
-  resolved "https://npm.pkg.github.com/download/@asu/bootstrap4-theme/1.10.5/bdf136012e98930839bd52e58adb36dbefd5eb69#bdf136012e98930839bd52e58adb36dbefd5eb69"
-  integrity sha512-snN1Uy6jznOEWBQ3hp7k+PTCYN7CBBQ2iMhwzJmn28/MtjNvJQEqgMyzlFbj4Wv3EaUi0phR1Y3kUWc6rp6Tlg==
+"@asu/bootstrap4-theme@1.10.6":
+  version "1.10.6"
+  resolved "https://npm.pkg.github.com/download/@asu/bootstrap4-theme/1.10.6/9b140276e39585081592a4c47d58382862a55206#9b140276e39585081592a4c47d58382862a55206"
+  integrity sha512-kS/vcfXr2pCZLJS9B1M56MIFW+tTQP6PXe933jKf68jZ1KEwVlW7qlgRpAYpsbKUIJNpln2rQIyS3SMScw/fjg==
   dependencies:
     react ">= 16.14.0 < 18"
     react-dom ">= 16.14.0 < 18"
