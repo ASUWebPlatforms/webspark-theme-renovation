@@ -1,20 +1,9 @@
 .block-inline-blockimage-and-text-block {
   .uds-image-text-block-text-container {
     padding: $uds-size-spacing-6;
-
     // Recommended by Debbie Flitner.
     :is(h2, h3, h4, h5, h6):first-of-type {
       margin-top: 0;
-    }
-
-    // Workaround recommended by Debbie Flitner.
-    @media screen and (min-width: $uds-breakpoint-lg) {
-      .col-12 {
-        &.py-1 {
-          padding-bottom: 0 !important;
-          padding-top: 0 !important;
-        }
-      }
     }
   }
 }
