@@ -4,7 +4,7 @@
     <h3>
       <span class="{{ highlight }}">{{ heading }}</span>
     </h3>
-    <p>{{ body_text['#text']|spaceless|replace({'</p><p>': '<br/>', '<p>': '', '</p>': ''})|raw }}</p>
+    <p>{{ body_text['#text']|spaceless|replace({'</p><p>': '<br>'})|striptags('<a><br>')|raw }}</p>
     {% if citation_author is not empty or citation_description is not empty %}
       <div class="citation">
         <div class="citation-content">
